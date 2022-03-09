@@ -5,7 +5,7 @@ const Carousel = () => {
   return (
   //  this is where Mya will add Carousel on landing page
   <p>
-    TESTING
+    CAROUSEL TESTING
   </p>
   );
 };
