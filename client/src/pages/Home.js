@@ -3,6 +3,7 @@ import React from 'react';
 // import { QUERY_THOUGHTS } from '../utils/queries';
 import Carousel from '../components/Carousel';
 import About from '../components/About';
+import Contact from '../components/Contact';
 
 
 const Home = () => {
@@ -15,6 +16,9 @@ const Home = () => {
     </div>
     <div>
       <About /> 
+    </div>
+    <div>
+      <Contact />
     </div>
   
 </body>

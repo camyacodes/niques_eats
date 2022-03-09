@@ -8,7 +8,7 @@ const About = () => {
 
 
         <div class="col-md-4">
-        <img src={ profile } class="img-fluid rounded-start"  alt="owner of Nique's Eats" />
+        <img src={ profile } class="img-fluid rounded-3 p-4"  alt="owner of Nique's Eats" />
         </div>
 
        <div class="col-md-8">

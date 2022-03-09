@@ -100,11 +100,41 @@ color:#512b00 !important;
 }
 
 .about {
-  font-size: 15px;
+  font-size: 1rem;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-style: italic;
-
 }
+/* ABOUT ME SECTION ENDS */
+
+
+
+/* CONTACT SECTION */
+#contact {
+background-color: #703C00;
+color:var(--tertiary);
+}
+
+
+
+
+#contact ul {
+  font-size: 1rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   color:var(--tertiary)
+}
+
+#email {
+  text-decoration: none;
+}
+
+#map-description {
+  font-size: 1rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* CONTACT SECTION ENDS */
+
+
 .btn,
 .pill {
   font-size: 1.3rem;
@@ -229,7 +259,10 @@ color:#512b00 !important;
 
 /* FOOTER */
 footer {
+  position:absolute;
   background-color: var(--light);
   color: var(--dark);
+  right:0;
 }
+
 
