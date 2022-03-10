@@ -2,7 +2,7 @@ import React from "react";
 // import { useQuery } from '@apollo/client';
 // import { QUERY_THOUGHTS } from '../utils/queries';
 import Hero from "../components/Hero";
-// import heroBanner from "../components/heroBanner";
+import HomeInfoCards from "../components/home-info-cards";
 import About from "../components/About";
 import Contact from "../components/Contact";
 
@@ -11,6 +11,9 @@ const Home = () => {
 		<body>
 			<div>
 				<Hero />
+			</div>
+			<div>
+				<HomeInfoCards />
 			</div>
 			<div>
 				<About />
