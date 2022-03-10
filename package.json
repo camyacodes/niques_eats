@@ -22,5 +22,9 @@
   "homepage": "https://github.com/camyacodes/niques_eats#readme",
   "devDependencies": {
     "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "react-bootstrap": "^2.2.0"
   }
 }

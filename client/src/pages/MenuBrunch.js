@@ -29,13 +29,13 @@ const MenuBrunch = () => {
       </div>
 
       <div id="brunch-dishes">
-        <div class="dishes card"  style="width: 18rem;" id="brunch-dish-1">
+        {/* <div class="dishes card"  style="width: 18rem;" id="brunch-dish-1">
           <img class="dish-img card-img-top" alt="brunch dish 1 image" src={ Dish1 } />
           <div class="card-body">
           <p class="dish-name">Dish 1</p>
           <p class="dish-price">$24</p>
           </div>
-        </div>
+        </div> */}
 
         <div class="dishes" id="brunch-dish-2">
           <img class="dish-img" alt="brunch dish 1 image" />
