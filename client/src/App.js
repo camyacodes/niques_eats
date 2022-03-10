@@ -37,7 +37,7 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/profile/:username?" component={Profile} />
-          <Route exact path="/menu/brunch" component={MenuBrunch} />
+          <Route exact path="/menu" component={MenuBrunch} />
           <Route exact path="/menu/dinner" component={MenuDinner} />
 
 
