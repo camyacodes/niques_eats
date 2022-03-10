@@ -1,5 +1,10 @@
 import React from 'react';
 import Dish1 from '../assets/shrimp-n-grits.jpg';
+import {
+  Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button, Col, Row,
+} from 'reactstrap';
+
 
 const MenuBrunch = () => {
 
@@ -13,70 +18,58 @@ const MenuBrunch = () => {
 
 
    <div id="menu-tabs"> 
+   <Row>
+   <Col sm="6">
       <h3 id='brunch-tab'>
         BRUNCH
       </h3>
+      </Col>
+      <Col sm="6">
       <h3 id="dinner-tab">
         DINNER
       </h3>
+      </Col>
+      </Row>
    </div>
 
    <div id="brunch">
       <div id="nav-buttons">
-        <button>MAIN DISHES</button>
-        <button src="#sides">SIDES</button>
-        <button src="#dessert">DESSERT</button>
+        <Button outline color="warning">MAIN DISHES</Button>
+        <Button href="#sides" outline color="warning">SIDES</Button>
+        <Button href="#dessert" outline color="warning">DESSERT</Button>
       </div>
 
       <div id="brunch-dishes">
-        {/* <div class="dishes card"  style="width: 18rem;" id="brunch-dish-1">
-          <img class="dish-img card-img-top" alt="brunch dish 1 image" src={ Dish1 } />
-          <div class="card-body">
-          <p class="dish-name">Dish 1</p>
-          <p class="dish-price">$24</p>
-          </div>
-        </div> */}
+    
+      <div>
+        <Col sm="3">
+      <Card>
+        <CardImg top width="100%" src={Dish1} alt="Card image cap" />
+        <CardBody>
+          <CardTitle tag="h5">Shrimp and Grits</CardTitle>
+          <CardSubtitle tag="h6" className="mb-2 text-muted">$ 12</CardSubtitle>
+          {/* <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText> */}
+          <Button>Add to Cart</Button>
+        </CardBody>
+      </Card>
+      </Col>
+    </div>
 
-        <div class="dishes" id="brunch-dish-2">
-          <img class="dish-img" alt="brunch dish 1 image" />
-          <p class="dish-name">Dish 2</p>
-          <p class="dish-price">$24</p>
-        </div>
-
-        <div class="dishes" id="brunch-dish-3">
-          <img class="dish-img" alt="brunch dish 1 image" />
-          <p class="dish-name">Dish 3</p>
-          <p class="dish-price">$24</p>
-        </div>
-
-        <div class="dishes" id="brunch-dish-4">
-          <img class="dish-img" alt="brunch dish 1 image" />
-          <p class="dish-name">Dish 4</p>
-          <p class="dish-price">$24</p>
-        </div>
-
-        <div class="dishes" id="brunch-dish-5">
-          <img class="dish-img" alt="brunch dish 1 image" />
-          <p class="dish-name">Dish 5</p>
-          <p class="dish-price">$24</p>
-        </div>
-
-        <div class="dishes" id="brunch-dish-6">
-          <img class="dish-img" alt="brunch dish 1 image" />
-          <p class="dish-name">Dish 6</p>
-          <p class="dish-price">$24</p>
-        </div>
-
+ 
+  
 
         {/* SIDES */}
         <h2 id="sides">SIDES</h2>
-        <div class="dishes" id="brunch-dish-7">
-          <img class="dish-img" alt="brunch dish 1 image" />
-          <p class="dish-name">Dish 7</p>
-          <p class="dish-price">$24</p>
 
 
-        </div>
+      
+
+
+
+
+
+      {/* DESSERT */}
+      <h2 id="dessert">DESSERT</h2>
 
       </div>
 
