@@ -9,6 +9,8 @@ import NoMatch from './pages/NoMatch';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import SocialButtons from './components/Social-buttons';
+import MenuBrunch from './pages/MenuBrunch';
+import MenuDinner from './pages/MenuDinner';
 
 
 const httpLink = createHttpLink({
@@ -35,6 +37,8 @@ function App() {
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/profile" component={Profile} />
           <Route exact path="/profile/:username?" component={Profile} />
+          <Route exact path="/menu/brunch" component={MenuBrunch} />
+          <Route exact path="/menu/dinner" component={MenuDinner} />
 
 
           <Route component={NoMatch} />
