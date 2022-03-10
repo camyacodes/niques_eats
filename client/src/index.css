@@ -140,6 +140,11 @@ a:visited {
 }
 
 /* HOME PAGE INFO CARDS SECTION */
+
+#home-info-cards {
+	background-color: #E6D7C4;
+}
+
 .info-img {
 	width: 300px;
 	height: 300px;

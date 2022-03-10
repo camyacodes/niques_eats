@@ -3,7 +3,7 @@ import React from "react";
 export default function HomeInfoCards() {
 	return (
 		<div>
-			<div class="container info-container">
+			<div class="container info-container" id="home-info-cards">
 				{/* First row of info cards */}
 				<div class="row info-row">
 					<div class="col-sm info-section">
