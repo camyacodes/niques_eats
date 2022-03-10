@@ -108,11 +108,11 @@ a:visited {
 }
 
 #hero-text {
-  margin: 0;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+	margin: 0;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /* SOCIAL MEDIA LINKS */
@@ -138,6 +138,27 @@ a:visited {
 	text-decoration: none;
 	text-align: center;
 }
+
+/* HOME PAGE INFO CARDS SECTION */
+.info-img {
+	width: 300px;
+	height: 300px;
+}
+
+.info-text {
+	padding: 120px 0;
+	text-align: center;
+}
+
+.info-section {
+	margin: 0px;
+}
+
+div.col-sm.info-section {
+	padding: 0px;
+}
+
+
 
 /* ABOUT ME SECTION */
 #about {
