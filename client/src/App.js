@@ -30,7 +30,7 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
           <SocialButtons />
-          <div className="container">
+          <div>
         <Switch>
           <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={Login} />

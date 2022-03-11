@@ -1,4 +1,7 @@
-const photos = [
+
+
+
+export const MainDishes  = [
     {
         name: "Beef Stew",
         price: "$ 17",
@@ -48,6 +51,9 @@ const photos = [
         image: `/assets/main-dishes/spinach_lasagna.jpg`,
         description: "Powder brownie carrot cake chocolate bar apple pie. Jujubes I love gummies I love cake cake. Pie soufflé tiramisu oat cake jelly-o fruitcake chupa chups donut. Sweet roll marzipan powder I love gummies caramels.",
     },
+] 
+
+export const Sides = [
     {
         name: "Biscuit",
         price: "$ 3",
@@ -79,5 +85,36 @@ const photos = [
 
 ]
 
+export const Desserts = [
+    {
+        name: "Carrot Cake",
+        price: "$ 5",
+        category: "desserts",
+        image: `/assets/desserts/carrot-cake.jpg`,
+        description: "Oat cake wafer cookie pudding I love liquorice. I love sesame snaps dessert candy canes ice cream halvah sweet carrot cake. Wafer sweet carrot cake I love cupcake I love.",
+    },
+    {
+        name: "Chocolate Brownie",
+        price: "$ 5",
+        category: "desserts",
+        image: `/assets/desserts/chocolate-brownie.jpg`,
+        description: "Jelly beans donut marzipan I love powder jelly muffin pie. Donut I love I love gingerbread cake toffee cake pudding. Icing croissant caramels sugar plum halvah wafer.",
+    },
+    {
+        name: "Pecan Pie",
+        price: "$ 5",
+        category: "desserts",
+        image: `/assets/desserts/pecan-pie.jpeg`,
+        description: "Tiramisu cake chupa chups danish topping I love sugar plum. I love biscuit biscuit topping danish shortbread candy jelly beans. Candy canes candy canes cupcake pastry sweet roll ice cream dessert. Carrot cake macaroon gingerbread powder dessert I love marshmallow I love I love.",
+    },
+    {
+        name: "Red Velvet Cake",
+        price: "$ 5",
+        category: "desserts",
+        image: `/assets/desserts/Red-Velvet.png`,
+        description: "Soufflé cotton candy cotton candy gummies donut cake cookie. Halvah lollipop croissant bear claw cake shortbread tart apple pie sweet roll. Pastry dessert wafer marshmallow cotton candy I love. Liquorice apple pie toffee I love shortbread gummies cheesecake.",
+    },
 
-export default photos;
+]
+
+

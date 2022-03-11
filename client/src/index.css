@@ -20,7 +20,7 @@
 
 html,
 body {
-	min-height: 100%;
+	min-height: 100vh;
 }
 
 body {
@@ -330,6 +330,13 @@ div.col-sm.info-section {
 
 
 /* MENU */
+#brunch-background {
+	/* background-image: url('assets/brunch-menu-background.png'); */
+	padding: 5rem;
+	
+}
+
+
 #brunch-tab {
 	background-color: var(--tertiary);
 	padding: 0.75vw 0.75vw 0.75vw 3vw;
@@ -364,14 +371,27 @@ div.col-sm.info-section {
 	text-align-last: center;
 }
 
-/* #dish-img {
-	height: 20vw;
-	width: 20vw;
-} */
+#scroll-to-top {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	color: #9e713e;
+	text-align: center;
+	background-color: #d6a05e44;
+	;
+	}
 
-
-
-
+	#scroll-to-top:hover {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		color: var(--dark);
+		text-align: center;
+		background-color: #d6a05e44;
+		;
+		}
 
 
 
@@ -382,3 +402,5 @@ footer {
 	color: var(--dark);
 	right: 0;
 }
+
+

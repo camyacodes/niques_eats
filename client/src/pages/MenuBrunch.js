@@ -1,5 +1,5 @@
 import React from 'react';
-import photos from '../photosdata'
+import  { MainDishes, Sides, Desserts } from '../photosdata'
 import Photo from '../components/Photo/index';
 import {
   Card, CardImg, CardText, CardBody,
@@ -11,7 +11,7 @@ const MenuBrunch = () => {
 
 
     return (
- <div> 
+ <div id="brunch-background"> 
 
    <div id="title">
      <h1 class="fs-1 text">MENU</h1> 
@@ -55,7 +55,7 @@ const MenuBrunch = () => {
 
 
 
-      <div className='row row-cols-1 row-cols-md-3'>{photos.map(photo => {return <Photo photo={photo}/>})}</div>
+      <div className='row row-cols-1 row-cols-md-3'>{MainDishes.map(photo => {return <Photo photo={photo}/>})}{MainDishes.map(photo => {return <Photo photo={photo}/>})}</div>
 
 
         {/* {photos.map(photo =>{
@@ -72,7 +72,8 @@ const MenuBrunch = () => {
 
         {/* SIDES */}
         <Col xs="6" sm="4"><h2 id="sides" class="active-menu">SIDES</h2></Col>
-     
+        <div className='row row-cols-1 row-cols-md-3'>{Sides.map(photo => {return <Photo photo={photo}/>})}{Sides.map(photo => {return <Photo photo={photo}/>})}</div>
+        
 
 
       
@@ -83,6 +84,7 @@ const MenuBrunch = () => {
 
       {/* DESSERT */}
       <Col xs="6" sm="4"><h2 id="dessert" class="active-menu">DESSERT</h2></Col>
+        <div className='row row-cols-1 row-cols-md-3'>{Desserts.map(photo => {return <Photo photo={photo}/>})}{Desserts.map(photo => {return <Photo photo={photo}/>})}</div>
       
 
       </div>
@@ -90,7 +92,9 @@ const MenuBrunch = () => {
    </div>
 
 
-
+  <div id="scroll-to-top" className ="footer">
+  <a href="#title"> <h4>Scroll To Top ^</h4> </a>
+  </div>
 
  </div>
     );
