@@ -1,5 +1,6 @@
 import React from 'react';
-import Dish1 from '../assets/shrimp-n-grits.jpg';
+import photos from '../photosdata'
+import Photo from '../components/Photo/index';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, Col, Row,
@@ -13,7 +14,7 @@ const MenuBrunch = () => {
  <div> 
 
    <div id="title">
-     <h1>MENU</h1> 
+     <h1 class="fs-1 text">MENU</h1> 
    </div>
 
 
@@ -33,33 +34,45 @@ const MenuBrunch = () => {
    </div>
 
    <div id="brunch">
+
       <div id="nav-buttons">
-        <Button outline color="warning">MAIN DISHES</Button>
-        <Button href="#sides" outline color="warning">SIDES</Button>
-        <Button href="#dessert" outline color="warning">DESSERT</Button>
+      <Row>
+        <Col xs="6" sm="4"> <h2 class="active-menu">MAIN DISHES</h2></Col>
+        <Col xs="6" sm="4"> <a href="#sides">
+        <Button outline color="warning">SIDES</Button>
+        </a></Col>
+        <Col sm="4"><a href="#dessert">
+        <Button outline color="warning">DESSERT</Button>
+        </a></Col>
+      </Row>
       </div>
 
+
+       
+
       <div id="brunch-dishes">
-    
-      <div>
-        <Col sm="3">
-      <Card>
-        <CardImg top width="100%" src={Dish1} alt="Card image cap" />
-        <CardBody>
-          <CardTitle tag="h5">Shrimp and Grits</CardTitle>
-          <CardSubtitle tag="h6" className="mb-2 text-muted">$ 12</CardSubtitle>
-          {/* <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText> */}
-          <Button>Add to Cart</Button>
-        </CardBody>
-      </Card>
-      </Col>
-    </div>
+
+
+
+
+      <div className='row row-cols-1 row-cols-md-3'>{photos.map(photo => {return <Photo photo={photo}/>})}</div>
+
+
+        {/* {photos.map(photo =>{
+          return <div className='col-md-6'> 
+                  <div>
+                    <Photo photo={photo}/>
+                  </div>                  
+              </div>
+   })} */}
+
 
  
   
 
         {/* SIDES */}
-        <h2 id="sides">SIDES</h2>
+        <Col xs="6" sm="4"><h2 id="sides" class="active-menu">SIDES</h2></Col>
+     
 
 
       
@@ -69,7 +82,8 @@ const MenuBrunch = () => {
 
 
       {/* DESSERT */}
-      <h2 id="dessert">DESSERT</h2>
+      <Col xs="6" sm="4"><h2 id="dessert" class="active-menu">DESSERT</h2></Col>
+      
 
       </div>
 
