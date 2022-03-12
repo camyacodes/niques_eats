@@ -11,31 +11,35 @@ const MenuBrunch = () => {
 
 
     return (
- <div id="brunch-background"> 
+ <div > 
 
-   <div id="title">
-     <h1 class="fs-1 text">MENU</h1> 
-   </div>
+<div id="title">
+  <span >MENU </span>
+</div>
 
 
    <div id="menu-tabs"> 
    <Row>
       <Col sm="6">
-      <h3 id='brunch-tab'>
+      <h3 id='active-tab'>
         BRUNCH
       </h3>
       </Col>
       <Col sm="6">
-      <h3 id="dinner-tab">
+      <a href="/menu/dinner"><h3 id="not-active-tab">
         DINNER
-      </h3>
+      </h3></a>
       </Col>
       </Row>
    </div>
 
+
+
+
+   <div id="brunch-background">
    <div id="brunch">
 
-      <div id="nav-buttons">
+   <div id="nav-buttons">
       <Row>
         <Col xs="6" sm="4"> <h2 class="menu-nav-buttons">MAIN DISHES</h2></Col>
         <Col xs="6" sm="4"> <a href="#sides">
@@ -58,36 +62,26 @@ const MenuBrunch = () => {
       <div className='row row-cols-1 row-cols-md-2'>{MainDishes.map(photo => {return <Photo photo={photo}/>})}{MainDishes.map(photo => {return <Photo photo={photo}/>})}</div>
 
 
-        {/* {photos.map(photo =>{
-          return <div className='col-md-6'> 
-                  <div>
-                    <Photo photo={photo}/>
-                  </div>                  
-              </div>
-   })} */}
-
-
- 
-  
 
         {/* SIDES */}
-        <Col xs="6" sm="4"><h2 id="sides" class="active-menu">SIDES</h2></Col>
+        <Col xs="6" sm="4"><h2 id="sides" class="active-menu  menu-nav-buttons">SIDES</h2></Col>
         <div className='row row-cols-1 row-cols-md-3'>{Sides.map(photo => {return <Photo photo={photo}/>})}{Sides.map(photo => {return <Photo photo={photo}/>})}</div>
         
 
 
       
 
-
+ 
 
 
 
       {/* DESSERT */}
-      <Col xs="6" sm="4"><h2 id="dessert" class="active-menu">DESSERT</h2></Col>
+      <Col xs="6" sm="4"><h2 id="dessert" class="active-menu menu-nav-buttons">DESSERT</h2></Col>
         <div className='row row-cols-1 row-cols-md-3'>{Desserts.map(photo => {return <Photo photo={photo}/>})}{Desserts.map(photo => {return <Photo photo={photo}/>})}</div>
       
 
       </div>
+
 
    </div>
 
@@ -96,6 +90,11 @@ const MenuBrunch = () => {
   <a href="#title"> <h4>Scroll To Top ^</h4> </a>
   </div>
 
+
+
+
+
+</div>
  </div>
     );
   };

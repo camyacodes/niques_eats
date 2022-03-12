@@ -30,7 +30,7 @@ body {
 	padding: 0;
 	font-weight: 400;
 	line-height: 1.5;
-	font-size: 20px;
+	font-size: 1.5vw;
 	color: var(--dark);
 	background-color: #fffaf4;
 	font-family: "Lilita One", cursive;
@@ -47,34 +47,6 @@ h6 {
 	line-height: 1.25;
 }
 
-h1 {
-	font-size: 2.25rem;
-}
-
-h2 {
-	font-size: 2rem;
-}
-
-h3 {
-	font-size: 1.75rem;
-}
-
-h4 {
-	font-size: 1.5rem;
-}
-
-h5 {
-	font-size: 1.25rem;
-}
-
-h6 {
-	font-size: 1rem;
-}
-
-p {
-	font-size: 1.1rem;
-	margin-top: 0;
-}
 
 a {
 	color: var(--dark);
@@ -331,39 +303,53 @@ div.col-sm.info-section {
 
 
 
-/* MENU */
+/* MENU - BRUNCH*/
 #brunch-background {
-	/* background-image: url('assets/brunch-menu-background.png'); */
+	background-image: url('assets/brunch-menu-background.png');
+	padding: 5rem;
+	
+}
+
+#dinner-background {
+	background-image: url('assets/brunch-menu-background.png');
 	padding: 5rem;
 	
 }
 
 
-#brunch-tab {
+#title {
+	font-size: 5vw;
+	text-align: center;
+}
+
+#active-tab {
 	background-color: var(--tertiary);
 	padding: 0.75vw 0.75vw 0.75vw 3vw;
 	margin: 0;
 	border: 0;
+	font-size: 3vw;
 }
 
-#dinner-tab {
+#not-active-tab {
 	background-color: #cbc1b4;
 	color: #512b00b4;
 	padding: 0.75vw 0.75vw 0.75vw 3vw;
 	margin: 0;
 	border: 0;
+	font-size: 3vw;
 }
 
-#dinner-tab:hover {
+#not-active-tab:hover {
 	background-color: #f6e9d7;
 	color: #512b00ef;
 	padding: 0.75vw 0.75vw 0.75vw 3vw;
 	margin: 0;
 	border: 0;
+	font-size: 3vw;
 }
 
 #dish-card {
- width: 30rem;
+ width: 20rem;
 }
 
 
@@ -376,6 +362,13 @@ div.col-sm.info-section {
 .menu-nav-buttons{
 	background-color: #e8b16d;
 	text-align-last: center;
+	font-size: 1.5vw;
+}
+.menu-nav-buttons:hover{
+	background-color: var(--primary);
+	color: var(--quatrinary);
+	text-align-last: center;
+	font-size: 1.5vw;
 }
 
 #scroll-to-top {
@@ -399,6 +392,17 @@ div.col-sm.info-section {
 		background-color: #d6a05e44;
 		;
 		}
+
+
+/* MENU - DINNER/
+
+
+
+
+
+
+
+
 
 
 
