@@ -28,6 +28,9 @@ const Header = () => {
           </li>
           <li class="nav-item">
           <a class="nav-link" href="/signup">SIGNUP</a>
+            </li>
+            <li class="nav-item">
+          <a class="nav-link" href="/checkout">CHECKOUT</a>
           </li>
         </ul>
       </div>

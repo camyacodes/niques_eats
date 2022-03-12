@@ -1,5 +1,5 @@
 :root {
-	--primary: #78490e;
+	--primary: #77480e;
 	--secondary: #703c00;
 	--tertiary: #f4e9dc;
 	--quatrinary: #e8b16d;
@@ -251,7 +251,7 @@ div.col-sm.info-section {
 }
 
 /* FORM */
-.form-label,
+/* .form-label,
 .form-input,
 .form-textarea {
 	display: block;
@@ -323,7 +323,7 @@ div.col-sm.info-section {
 	opacity: 1;
 	-webkit-transform: scale(1);
 	transform: scale(1);
-}
+} */
 
 /* FOOTER */
 footer {

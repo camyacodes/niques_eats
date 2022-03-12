@@ -11,7 +11,7 @@ import Signup from './pages/Signup';
 import SocialButtons from './components/Social-buttons';
 import MenuBrunch from './pages/MenuBrunch';
 import MenuDinner from './pages/MenuDinner';
-
+import Checkout from './pages/Checkout';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -39,6 +39,7 @@ function App() {
           <Route exact path="/profile/:username?" component={Profile} />
           <Route exact path="/menu" component={MenuBrunch} />
           <Route exact path="/menu/dinner" component={MenuDinner} />
+          <Route exact path="/checkout" component={Checkout} />
 
 
           <Route component={NoMatch} />
