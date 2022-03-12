@@ -8,7 +8,7 @@ export default function CheckoutInfo() {
 			{/* container start */}
 			<div class="container">
 				{/* whole column begin */}
-				<div class="row w-50">
+				<div class="row">
 					{/* Only column begin */}
 					<div class="col">
 						{/* Header */}
