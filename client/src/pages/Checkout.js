@@ -1,6 +1,7 @@
 import React from "react";
 import CheckoutInfo from "../components/checkout-info";
 import CartSummary from "../components/cart-summary";
+import Calendar from "../components/Calendar";
 
 export default function Checkout() {
 	return (
@@ -9,6 +10,7 @@ export default function Checkout() {
 				
 			<CheckoutInfo />
 			<CartSummary />
+			<Calendar />
 			</body>
 		
 	);
