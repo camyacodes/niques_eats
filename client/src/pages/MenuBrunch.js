@@ -1,11 +1,11 @@
 import React from 'react';
 import  { MainDishes, Sides, Desserts } from '../photosdata'
-import Photo from '../components/Photo/index';
+import Dish from '../components/Dish-card';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, Col, Row,
 } from 'reactstrap';
-
+import "../styles/brunch-menu.css"
 
 const MenuBrunch = () => {
 
@@ -59,13 +59,13 @@ const MenuBrunch = () => {
 
 
 
-      <div className='row row-cols-1 row-cols-md-2'>{MainDishes.map(photo => {return <Photo photo={photo}/>})}{MainDishes.map(photo => {return <Photo photo={photo}/>})}</div>
+      <div className='row row-cols-1 row-cols-md-2'>{MainDishes.map(photo => {return <Dish photo={photo}/>})}{MainDishes.map(photo => {return <Dish photo={photo}/>})}</div>
 
 
 
         {/* SIDES */}
         <Col xs="6" sm="4"><h2 id="sides" class="active-menu  menu-nav-buttons">SIDES</h2></Col>
-        <div className='row row-cols-1 row-cols-md-3'>{Sides.map(photo => {return <Photo photo={photo}/>})}{Sides.map(photo => {return <Photo photo={photo}/>})}</div>
+        <div className='row row-cols-1 row-cols-md-3'>{Sides.map(photo => {return <Dish photo={photo}/>})}{Sides.map(photo => {return <Dish photo={photo}/>})}</div>
         
 
 
@@ -77,7 +77,7 @@ const MenuBrunch = () => {
 
       {/* DESSERT */}
       <Col xs="6" sm="4"><h2 id="dessert" class="active-menu menu-nav-buttons">DESSERT</h2></Col>
-        <div className='row row-cols-1 row-cols-md-3'>{Desserts.map(photo => {return <Photo photo={photo}/>})}{Desserts.map(photo => {return <Photo photo={photo}/>})}</div>
+        <div className='row row-cols-1 row-cols-md-3'>{Desserts.map(photo => {return <Dish photo={photo}/>})}{Desserts.map(photo => {return <Dish photo={photo}/>})}</div>
       
 
       </div>

@@ -1,0 +1,100 @@
+
+
+
+
+
+#dinner-background {
+	background-image: url('../assets/dinner-menu-background.png');
+	padding: 5rem;
+	background-size: contain;
+}
+
+
+#title {
+	font-size: 5vw;
+	text-align: center;
+}
+
+#active-tab {
+	background-color: var(--tertiary);
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+#not-active-tab {
+	background-color: #cbc1b4;
+	color: #512b00b4;
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+#not-active-tab:hover {
+	background-color: #f6e9d7;
+	color: #512b00ef;
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+#dish-card {
+ width: 20rem;
+}
+
+
+
+#brunch {
+	background-color: var(--tertiary);
+	padding: 2vw;
+	border: 0px;
+}
+.menu-nav-buttons{
+	background-color: #e8b16d;
+	text-align-last: center;
+	font-size: 1.5vw;
+}
+.menu-nav-buttons:hover{
+	background-color: var(--primary);
+	color: var(--quatrinary);
+	text-align-last: center;
+	font-size: 1.5vw;
+}
+
+
+
+#scroll-to-top {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	color: #9e713e;
+	text-align: center;
+	background-color: #d6a05e44;
+	;
+	}
+
+	#scroll-to-top:hover {
+		position: fixed;
+		width: 100%;
+		left: 0;
+		bottom: 0;
+		color: var(--dark);
+		text-align: center;
+		background-color: #d6a05e44;
+		;
+		}
+
+
+
+
+
+
+
+
+
+
+
