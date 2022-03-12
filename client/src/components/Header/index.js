@@ -26,16 +26,11 @@ const Header = () => {
           <li className="nav-item">
           <a className="nav-link" href="/login">LOGIN</a>
           </li>
-<<<<<<< HEAD
           <li class="nav-item">
           <a class="nav-link" href="/signup">SIGNUP</a>
             </li>
             <li class="nav-item">
           <a class="nav-link" href="/checkout">CHECKOUT</a>
-=======
-          <li className="nav-item">
-          <a className="nav-link" href="/signup">SIGNUP</a>
->>>>>>> 10fde97361e09c1daf96d681aeb1453d6d99e855
           </li>
         </ul>
       </div>
