@@ -1,7 +1,10 @@
 
 
 
-
+#dinner-menu {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:black;
+}
 
 #dinner-background {
 	background-image: url('../assets/dinner-menu-background.png');
@@ -15,24 +18,25 @@
 	text-align: center;
 }
 
-#active-tab {
-	background-color: var(--tertiary);
+#active-tab-dinner {
+	background-color: black;
+    color: var(--light);
 	padding: 0.75vw 0.75vw 0.75vw 3vw;
 	margin: 0;
 	border: 0;
 	font-size: 3vw;
 }
 
-#not-active-tab {
-	background-color: #cbc1b4;
-	color: #512b00b4;
+#not-active-tab-dinner {
+	background-color: #b9b9b9;
+	color: #000000b4;
 	padding: 0.75vw 0.75vw 0.75vw 3vw;
 	margin: 0;
 	border: 0;
 	font-size: 3vw;
 }
 
-#not-active-tab:hover {
+#not-active-tab-dinner:hover {
 	background-color: #f6e9d7;
 	color: #512b00ef;
 	padding: 0.75vw 0.75vw 0.75vw 3vw;
@@ -52,14 +56,15 @@
 	padding: 2vw;
 	border: 0px;
 }
-.menu-nav-buttons{
-	background-color: #e8b16d;
+.menu-nav-buttons-dinner{
+	background-color: var(--tertiary);
 	text-align-last: center;
 	font-size: 1.5vw;
+    padding: 1rem;
 }
-.menu-nav-buttons:hover{
-	background-color: var(--primary);
-	color: var(--quatrinary);
+.menu-nav-buttons-dinner:hover{
+	background-color: rgb(178, 167, 155);
+	color: var(--dark);
 	text-align-last: center;
 	font-size: 1.5vw;
 }
