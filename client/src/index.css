@@ -1,5 +1,5 @@
 :root {
-	--primary: #78490e;
+	--primary: #77480e;
 	--secondary: #703c00;
 	--tertiary: #f4e9dc;
 	--quatrinary: #e8b16d;
@@ -17,6 +17,8 @@
 * {
 	box-sizing: border-box;
 }
+
+
 
 html,
 body {

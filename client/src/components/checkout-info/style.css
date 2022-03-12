@@ -1,0 +1,42 @@
+.padding-left {
+    padding-left: 0;
+}
+
+.form-check-input:checked {
+    background-color: #512b00 !important; 
+    border-color: #512b00 !important;
+}
+
+.login-prompt {
+    background-color: #e8b16d;
+    height: 75px;
+    width: 100%;
+    line-height: 50px;
+    padding-left: 10px;
+    padding-top: 13px;
+  
+  }
+  
+  .deliver-method {
+    margin-left: 100px;
+    margin-top: 5px;
+    height: 50px;
+    width: 150px;
+    font-size: 25px;
+    border-radius: 30px;
+    background-color: #77480e;
+    color: #f4e9dc;
+    border: none;
+  }
+  
+  .cont-btn {
+    border-radius: 20px;
+    height: 50px;
+    width: 300px;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 150px;
+    background-color: #77480e;
+    color: #f4e9dc;
+    border: none;
+  }
