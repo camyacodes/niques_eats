@@ -1,0 +1,37 @@
+.cart-cards {
+    border: 2px solid;
+    width: 35%;;
+}
+
+.date {
+    height: 40px;
+    padding-top: 8px;
+    background-color: #77480e;
+    color: #f4e9dc
+}
+
+.summary {
+    height: 100px;
+    padding-top: 5px;
+}
+
+.counter {
+    padding-right: 2px;
+    border: 1px solid black;
+    height: 30px;
+}
+
+.counter span {
+    margin-left: 5px;
+}
+
+ul {
+    list-style-type: none;
+    line-height: 20px;
+}
+
+.cart-price {
+    height: 100px;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
