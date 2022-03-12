@@ -11,6 +11,7 @@ const db = require('./config/connection');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+
 const startServer = async () => {
   // create a new Apollo server and pass in our schema data
   const server = new ApolloServer({ 
@@ -28,12 +29,6 @@ const startServer = async () => {
   // log where we can go to test our GQL API
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-  context: authMiddleware
-});
 
 
 // Initialize the Apollo server
@@ -56,3 +51,4 @@ db.once('open', () => {
     console.log(`API server running on port ${PORT}!`);
   });
 });
+
