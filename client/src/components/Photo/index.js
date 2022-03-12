@@ -8,7 +8,7 @@ import {
 export default function Photo({photo}) {
     return (
  
-        <Container className="themed-container" fluid={true}>
+        <Container className="themed-container p-5" fluid={true} id="dish-card">
         <Col>
         <Card>
           <CardImg top width="100%" src={photo.image} alt="Card image cap" id="dish-img" class="rounded mx-auto d-block"/>

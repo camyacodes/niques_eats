@@ -20,7 +20,7 @@ const MenuBrunch = () => {
 
    <div id="menu-tabs"> 
    <Row>
-   <Col sm="6">
+      <Col sm="6">
       <h3 id='brunch-tab'>
         BRUNCH
       </h3>
@@ -37,12 +37,12 @@ const MenuBrunch = () => {
 
       <div id="nav-buttons">
       <Row>
-        <Col xs="6" sm="4"> <h2 class="active-menu">MAIN DISHES</h2></Col>
+        <Col xs="6" sm="4"> <h2 class="menu-nav-buttons">MAIN DISHES</h2></Col>
         <Col xs="6" sm="4"> <a href="#sides">
-        <Button outline color="warning">SIDES</Button>
+        <h2 class="menu-nav-buttons">SIDES</h2>
         </a></Col>
         <Col sm="4"><a href="#dessert">
-        <Button outline color="warning">DESSERT</Button>
+        <h2 class="menu-nav-buttons">DESSERT</h2>
         </a></Col>
       </Row>
       </div>
@@ -55,7 +55,7 @@ const MenuBrunch = () => {
 
 
 
-      <div className='row row-cols-1 row-cols-md-3'>{MainDishes.map(photo => {return <Photo photo={photo}/>})}{MainDishes.map(photo => {return <Photo photo={photo}/>})}</div>
+      <div className='row row-cols-1 row-cols-md-2'>{MainDishes.map(photo => {return <Photo photo={photo}/>})}{MainDishes.map(photo => {return <Photo photo={photo}/>})}</div>
 
 
         {/* {photos.map(photo =>{

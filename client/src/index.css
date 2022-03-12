@@ -360,13 +360,18 @@ div.col-sm.info-section {
 	border: 0;
 }
 
+#dish-card {
+ width: 30rem;
+}
+
+
 
 #brunch {
 	background-color: var(--tertiary);
 	padding: 2vw;
 	border: 0px;
 }
-.active-menu{
+.menu-nav-buttons{
 	background-color: #e8b16d;
 	text-align-last: center;
 }
