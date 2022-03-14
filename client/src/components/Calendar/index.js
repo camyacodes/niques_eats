@@ -1,15 +1,13 @@
-import React from 'react'
-import '../Calendar/style.css'
-import $ from 'jquery';
+import React from "react";
+import "react-datetime/css/react-datetime.css";
+import Datetime from "react-datetime";
+import moment from "moment";
 
 export default function Calendar() {
-  const Picker = $( function() {
-    $( "#datepicker" ).datepicker();
-  });
-
-  return (
-    <div>
-          <p>Select Date: <input type="text" id="datepicker" /></p>
-    </div>
-  )
+  var currentWk = moment().week(12);
+	var valid = function (current) {
+		return moment(current).isBetween('2022-03-13', '2022-03-20');
+	};
+  
+	return <Datetime timeFormat={false} isValidDate={ valid } />;
 }
