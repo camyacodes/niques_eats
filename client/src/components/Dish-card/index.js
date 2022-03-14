@@ -44,7 +44,7 @@ export default function Dish({ photo }) {
                 <CardTitle tag="h5" class="col text-start">{photo.name}</CardTitle>
                 <CardSubtitle tag="h5" className="col text-end">{photo.price}</CardSubtitle>
               </div>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#meal${photo.id}`}>
                 Add to Cart
               </button>
             </CardBody>
@@ -53,14 +53,14 @@ export default function Dish({ photo }) {
       </Container>
 
 
-      <div class="dish-modal">
-        <div class="modal fade"
-          id="exampleModal"
+      <div class="dish-modal ">
+        <div class="modal fade "
+          id={`meal${photo.id}`}
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-sm">
             <div class="modal-content">
 
               <div class="modal-header">
@@ -81,18 +81,22 @@ export default function Dish({ photo }) {
                 </div>
               </div>
 
+            <div class="container">
+              <div class="modal-footer row justify-content-center">
+                <Calendar class="col-2"/>
 
-              <div class="modal-footer row">
-                <Calendar class="col-3"/>
-
-                <div className='nput-group col-6 row i'>
+                <div className="input-group col-2">
                   <button type="button" onClick={() => handleDecrement()} className="input-group-text col-1">-</button>
-                  <div className='"form-control text-center col-1'>{i}</div>
+                  <div className="form-control text-center col-1">{i}</div>
                   <button type="button" onClick={() => handleIncrement()} className="input-group-text col-1">+</button>
                 </div>
 
-                <button type="button" class="btn btn-primary col-5 m-3">Add to Cart</button>
+                <button type="button" class="btn btn-primary col-7 m-3">Add to Cart</button>
               </div>
+              </div>
+
+
+
             </div>
           </div>
         </div>

@@ -59,7 +59,7 @@ const MenuBrunch = () => {
 
 
 
-      <div className='row row-cols-1 row-cols-md-2'>{MainDishes.map(photo => {return <Dish photo={photo}/>})}{MainDishes.map(photo => {return <Dish photo={photo}/>})}</div>
+      <div className='row row-cols-1 row-cols-md-3'>{MainDishes.map(photo => {return <Dish photo={photo}/>})}{MainDishes.map(photo => {return <Dish photo={photo}/>})}</div>
 
 
 
