@@ -11,8 +11,8 @@ export default function Checkout() {
 				
 			<CheckoutInfo />
 			<CartSummary />
-			{/* <Calendar /> */}
 			<CartCanvas />
+			<Calendar />
 			</body>
 		
 	);
