@@ -33,6 +33,7 @@
     "react-bootstrap": "^2.2.0",
     "react-datepicker": "^4.7.0",
     "react-datetime": "^3.1.1",
+    "react-quantity-picker": "^1.0.3",
     "reactstrap": "^9.0.1",
     "stripe": "^8.209.0"
   }
