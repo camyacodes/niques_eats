@@ -5,24 +5,37 @@ import {
   Container, Modal, ModalHeader, ModalBody, ModalFooter, NavItem
 } from 'reactstrap';
 import Calendar from '../Calendar';
-import QtyPicker from 'react-quantity-picker';
+// import QtyPicker from 'react-quantity-picker';
 import "../../styles/modal.css"
 
 
 export default function Dish({ photo }) {
 
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const i = 1
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+  // const i = 1
 
-  const handleDecrement = (i) => {
-    this.i--
+  // const handleDecrement = (i) => {
+  //   this.i--
+  // }
+
+  // const handleIncrement = (i) => {
+  //   this.i++
+  // }
+
+  const [counter, setCounter] = useState(0);
+
+  function handleIncrement() {
+    setCounter((prevCounter) => prevCounter + 1)
   }
 
-  const handleIncrement = (i) => {
-    this.i++
+  function handleDecrement() {
+    if(counter === 0){
+      return;  
+    }
+    setCounter((prevCounter) => prevCounter - 1)
   }
 
 
@@ -86,9 +99,9 @@ export default function Dish({ photo }) {
                 <Calendar class="col-2"/>
 
                 <div className="input-group col-2">
-                  <button type="button" onClick={() => handleDecrement()} className="input-group-text col-1">-</button>
-                  <div className="form-control text-center col-1">{i}</div>
-                  <button type="button" onClick={() => handleIncrement()} className="input-group-text col-1">+</button>
+                  <button type="button" onClick={handleDecrement} className="input-group-text col-1">-</button>
+                  <div className="form-control text-center col-1">{counter}</div>
+                  <button type="button" onClick={handleIncrement} className="input-group-text col-1">+</button>
                 </div>
 
                 <button type="button" class="btn btn-primary col-7 m-3">Add to Cart</button>
