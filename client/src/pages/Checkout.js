@@ -10,11 +10,13 @@ export default function Checkout() {
 		
 			<body>
 				
-			<CheckoutInfo />
-			<CartSummary />
-			<DishModal />
-			<CartCanvas />
-			<Calendar />
+			
+			<div className="row">
+			<h1 className="mt-5">CHECKOUT</h1>
+				<CheckoutInfo />
+				<CartSummary />
+			</div>
+			
 			</body>
 		
 	);

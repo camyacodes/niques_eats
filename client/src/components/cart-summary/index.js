@@ -3,10 +3,9 @@ import "../cart-summary/style.css";
 
 export default function CartSummary() {
 	return (
-        <div>
-            <h1 className="d-flex justify-content-center">Cart Summary</h1>
+        <div className="col-1">
 			<div class="container cart-cards">
-				<div class="row row-cols-1 ">
+				<div class="row row-cols-1 w-100">
 					<div class="col date">
 						<div class="d-flex justify-content-between">
 							<p>Monday</p>

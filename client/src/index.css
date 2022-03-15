@@ -312,4 +312,18 @@ footer {
 	right: 0;
 }
 
+/* CHECKOUT PAGE STYLING */
+
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.col-1 {
+	flex: 1
+}
+
+.col-2 {
+	flex:2
+}
 
