@@ -5,7 +5,7 @@ export default function CartSummary() {
 	return (
         <div className="col-1">
 			<div class="container cart-cards">
-				<div class="row row-cols-1 w-100">
+				<div class="row row-cols-1">
 					<div class="col date">
 						<div class="d-flex justify-content-between">
 							<p>Monday</p>
@@ -64,8 +64,9 @@ export default function CartSummary() {
 							<p>12.00</p>
 						</div></div>
 					<div class="col cart-price">Add Order Notes</div>
-                    <div class="col cart-price">Subtotal</div>
-					<div class="col cart-price">Total</div>
+                    <div class="col">Subtotal</div>
+                    <div class="col ">Delivery Fees</div>
+					<div class="col mb-4">Total</div>
 					
 				</div>
 			</div>
