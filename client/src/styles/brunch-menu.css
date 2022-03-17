@@ -12,6 +12,10 @@
 	border: 0px;
 }
 
+#brunch-dishes {
+	align-items: center;
+}
+
 #title {
 	font-size: 5vw;
 	text-align: center;
