@@ -1,26 +1,36 @@
-const faker = require('faker');
+const { faker } = require("@faker-js/faker");
 
-const db = require('../config/connection');
-const {  User } = require('../models');
+const db = require("../config/connection");
+const { Menu } = require("../models");
 
-db.once('open', async () => {
-  
-  await User.deleteMany({});
+db.once("open", async () => {
+	await Menu.deleteMany({});
 
-  // create user data
-  const userData = [];
+	// create user data
+	const menuData = [];
 
-  for (let i = 0; i < 50; i += 1) {
-    const username = faker.internet.userName();
-    const email = faker.internet.email(username);
-    const password = faker.internet.password();
+	for (let i = 0; i < 20; i += 1) {
+		const name = faker.commerce.product();
+		const price = faker.commerce.price();
+		const meal_time = "brunch";
+		const category = "main";
+		const description = faker.lorem.sentence();
+		const image = faker.image.imageUrl();
+		const quantity = 0;
 
-    userData.push({ username, email, password });
-  }
+		menuData.push({
+			name,
+			price,
+			meal_time,
+			category,
+			description,
+			image,
+			quantity,
+		});
+	}
 
-  const createdUsers = await User.collection.insertMany(userData);
+	const createdMenu = await Menu.collection.insertMany(menuData);
 
-
-  console.log('all done!');
-  process.exit(0);
+	console.log("all done!");
+	process.exit(0);
 });
