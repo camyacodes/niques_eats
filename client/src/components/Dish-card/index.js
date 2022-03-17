@@ -9,7 +9,7 @@ import Calendar from '../Calendar';
 import "../../styles/modal.css"
 
 
-export default function Dish({ photo }) {
+export default function Dish({ meal }) {
 
   // const [show, setShow] = useState(false);
 
@@ -48,16 +48,16 @@ export default function Dish({ photo }) {
 
 
             <div>
-              <CardImg top width="100%" src={photo.image} alt="Card image cap" id="dish-img" class="rounded mx-auto d-block" />
+              <CardImg top width="100%" src={meal.image} alt="Card image cap" id="dish-img" class="rounded mx-auto d-block" />
             </div>
 
 
             <CardBody>
               <div class="row align-items-center">
-                <CardTitle tag="h5" class="col text-start">{photo.name}</CardTitle>
-                <CardSubtitle tag="h5" className="col text-end">{photo.price}</CardSubtitle>
+                <CardTitle tag="h5" class="col text-start">{meal.name}</CardTitle>
+                <CardSubtitle tag="h5" className="col text-end">{meal.price}</CardSubtitle>
               </div>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#meal${photo.id}`}>
+              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#meal${meal.id}`}>
                 Add to Cart
               </button>
             </CardBody>
@@ -68,7 +68,7 @@ export default function Dish({ photo }) {
 
       <div class="dish-modal ">
         <div class="modal fade "
-          id={`meal${photo.id}`}
+          id={`meal${meal.id}`}
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
@@ -88,9 +88,9 @@ export default function Dish({ photo }) {
 
               <div class="modal-body">
                 <div class="row align-items-center">
-                  <CardImg top width="100%" src={photo.image} alt="Card image cap" id="dish-img" class="rounded mx-auto d-block" />
-                  <CardTitle tag="h5" class="col  text-start">{photo.name}</CardTitle>
-                  <CardSubtitle tag="h5" className="col text-end">{photo.price}</CardSubtitle>
+                  <CardImg top width="100%" src={meal.image} alt="Card image cap" id="dish-img" class="rounded mx-auto d-block" />
+                  <CardTitle tag="h5" class="col  text-start">{meal.name}</CardTitle>
+                  <CardSubtitle tag="h5" className="col text-end">{meal.price}</CardSubtitle>
                 </div>
               </div>
 
