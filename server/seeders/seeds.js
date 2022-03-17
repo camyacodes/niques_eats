@@ -2,9 +2,13 @@ const { faker } = require("@faker-js/faker");
 
 const db = require("../config/connection");
 const { Menu } = require("../models");
+const { User } = require("../models");
 
 db.once("open", async () => {
-	await Menu.deleteMany({});
+	console.log(Menu);
+
+
+	await Menu.deleteMany();
 
 	// create user data
 	const menuData = [];
@@ -31,6 +35,27 @@ db.once("open", async () => {
 
 	const createdMenu = await Menu.collection.insertMany(menuData);
 
-	console.log("all done!");
+	console.log("menu created!");
+
+	console.log(User);
+
+
+	await User.deleteMany();
+
+	// create userdata
+	const userData = [];
+
+	for (let i = 0; i < 20; i += 1) {
+		const username = faker.internet.userName();
+		const email = faker.internet.email(username);
+		const password = faker.internet.password();
+
+		userData.push({ username, email, password });
+	}
+
+	const createdUsers = await User.collection.insertMany(userData);
+
+	console.log("users seeded");
+
 	process.exit(0);
 });

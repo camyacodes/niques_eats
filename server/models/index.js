@@ -1,3 +1,5 @@
 const Menu = require("./Menu");
 
-module.exports = { Menu };
+const User = require('./User');
+
+module.exports = { Menu, User };
