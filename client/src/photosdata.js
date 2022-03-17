@@ -1,6 +1,3 @@
-
-
-
 export const MainDishes  = [
     {
         name: "Beef Stew",

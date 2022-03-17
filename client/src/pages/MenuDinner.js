@@ -63,13 +63,13 @@ const MenuDinner = () => {
 
 
 
-      <div className='row row-cols-1 row-cols-md-2'>{MainDishes.map(photo => {return <Dish photo={photo}/>})}{MainDishes.map(photo => {return <Dish photo={photo}/>})}</div>
+      <div className='row row-cols-1 row-cols-md-2'>{MainDishes.map(meal => {return <Dish meal={meal}/>})}{MainDishes.map(meal => {return <Dish meal={meal}/>})}</div>
 
 
 
         {/* SIDES */}
         <Col xs="6" sm="4"><h2 id="sides" class="active-menu  menu-nav-buttons-dinner">SIDES</h2></Col>
-        <div className='row row-cols-1 row-cols-md-3'>{Sides.map(photo => {return <Dish photo={photo}/>})}{Sides.map(photo => {return <Dish photo={photo}/>})}</div>
+        <div className='row row-cols-1 row-cols-md-3'>{Sides.map(meal => {return <Dish meal={meal}/>})}{Sides.map(meal => {return <Dish meal={meal}/>})}</div>
         
 
 
@@ -81,7 +81,7 @@ const MenuDinner = () => {
 
       {/* DESSERT */}
       <Col xs="6" sm="4"><h2 id="dessert" class="active-menu menu-nav-buttons-dinner">DESSERT</h2></Col>
-        <div className='row row-cols-1 row-cols-md-3'>{Desserts.map(photo => {return <Dish photo={photo}/>})}{Desserts.map(photo => {return <Dish photo={photo}/>})}</div>
+        <div className='row row-cols-1 row-cols-md-3'>{Desserts.map(meal => {return <Dish meal={meal}/>})}{Desserts.map(meal => {return <Dish meal={meal}/>})}</div>
       
 
       </div>
