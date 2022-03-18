@@ -13,7 +13,7 @@ const Hero = () => {
 								Home made meals delivered for your convenience
 							</p>
 							<p className="text-center">
-								<a href="#" class="btn btn-large">
+								<a href="/menu" class="btn btn-large">
 									ORDER NOW
 								</a>
 							</p>
