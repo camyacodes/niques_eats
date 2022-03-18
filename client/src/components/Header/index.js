@@ -12,16 +12,16 @@ const Header = () => {
       <div className="collapse navbar-collapse nav-fill w-100" id="navbarNav">
         <ul className="navbar-nav nav-fill w-100">
           <li className="nav-item">
-          <a className="nav-link" href="/home">HOME</a>
+          <a className="nav-link" href="/">HOME</a>
           </li>
           <li className="nav-item">
           <a className="nav-link" href="/menu">MENU</a>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="/home#about">ABOUT</a>
+          <a className="nav-link" href="/#about">ABOUT</a>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="/home#contact">CONTACT</a>
+          <a className="nav-link" href="/#contact">CONTACT</a>
           </li>
           <li className="nav-item">
           <a className="nav-link" href="/login">LOGIN</a>
