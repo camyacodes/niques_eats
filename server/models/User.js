@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 const bcrypt = require('bcrypt');
 
 
-const UserSchema = new Schema({
+const userSchema = new Schema({
   username: {
     type: String,
     required: true,
@@ -12,14 +12,21 @@ const UserSchema = new Schema({
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
+    match: [/.+@.+\..+/, 'Must match an email address!']
   },
   password: {
     type: String,
     required: true,
     minlength: 5
   }
-});
+},
+{
+  toJSON: {
+    virtuals: true
+  }
+}
+);
 
 // set up pre-save middleware to create password
 userSchema.pre('save', async function(next) {
@@ -38,6 +45,6 @@ userSchema.methods.isCorrectPassword = async function(password) {
 
 
 
-const User = model('User', UserSchema);
+const User = model('User', userSchema);
 
 module.exports = User;
