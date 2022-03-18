@@ -52,8 +52,6 @@ function App() {
           <Route exact path="/menu" component={MenuBrunch} />
           <Route exact path="/menu/dinner" component={MenuDinner} />
           <Route exact path="/checkout" component={Checkout} />
-
-
           <Route component={NoMatch} />
         </Switch>
       </div>

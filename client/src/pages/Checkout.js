@@ -11,8 +11,8 @@ export default function Checkout() {
 			<body>
 				
 			
-			<div className="row">
-			<h1 className="mt-5">CHECKOUT</h1>
+			<div className="row p-5">
+			<h1 className="m-5">CHECKOUT</h1>
 				<CheckoutInfo />
 				<CartSummary />
 			</div>
