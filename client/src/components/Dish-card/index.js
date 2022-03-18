@@ -40,9 +40,9 @@ export default function Dish({ photo }) {
 
 
             <CardBody>
-              <div class="row align-items-center">
-                <CardTitle tag="h5" class="col text-start">{photo.name}</CardTitle>
-                <CardSubtitle tag="h5" className="col text-end">{photo.price}</CardSubtitle>
+              <div class="row ">
+                <CardTitle tag="h5" class="col ">{photo.name}</CardTitle>
+                <CardSubtitle tag="h5" className="col ">{photo.price}</CardSubtitle>
               </div>
               <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#meal${photo.id}`}>
                 Add to Cart
