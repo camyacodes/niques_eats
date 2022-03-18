@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Auth from '../../utils/auth';
 
 const Header = () => {
+
+
+  const logout = event => {
+    event.preventDefault();
+    Auth.logout();
+  };
+
   return (
 
     <nav className="navbar navbar-expand-md navbar-light">
@@ -12,26 +20,47 @@ const Header = () => {
       <div className="collapse navbar-collapse nav-fill w-100" id="navbarNav">
         <ul className="navbar-nav nav-fill w-100">
           <li className="nav-item">
-          <a className="nav-link" href="/">HOME</a>
+          <Link to="/">
+          <h3>HOME</h3>
+          </Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="/menu">MENU</a>
+          <Link to="/menu">
+          <h3>MENU</h3>
+          </Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="/#about">ABOUT</a>
+          <Link to="/#about">
+          <h3>ABOUT</h3>
+          </Link>
           </li>
           <li className="nav-item">
-          <a className="nav-link" href="/#contact">CONTACT</a>
+          <Link to="/#contact">
+          <h3>CONTACT</h3>
+          </Link>
           </li>
+
+        {Auth.loggedIn() ? (
+            <>
+            <Link to="/menu">
+          <h3>MENU</h3>
+          </Link>
           <li className="nav-item">
-          <a className="nav-link" href="/login">LOGIN</a>
+          <Link to="/" onClick={logout}>      
+                  <h3>LOGOUT</h3>
+          </Link>
+                </li>
+            </>
+        ) : ( 
+          <>
+          <li className="nav-item">
+          <Link to="/login">
+          <h3>LOGIN</h3>
+          </Link>
           </li>
-          <li class="nav-item">
-          <a class="nav-link" href="/signup">SIGNUP</a>
-            </li>
-            <li class="nav-item">
-          <a class="nav-link" href="/checkout">CHECKOUT</a>
-          </li>
+          
+          </>
+        )}
         </ul>
       </div>
     </div>
