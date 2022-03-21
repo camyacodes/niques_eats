@@ -1,0 +1,15 @@
+
+
+
+.menu-nav-buttons-dinner{
+	background-color: var(--tertiary);
+	text-align-last: center;
+	margin: 2rem;
+	font-size: 1.5rem;
+}
+.menu-nav-buttons-dinner:hover{
+	background-color: rgb(178, 167, 155);
+	color: var(--dark);
+	text-align-last: center;
+
+}

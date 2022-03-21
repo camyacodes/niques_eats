@@ -1,0 +1,133 @@
+
+#dinner-menu {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:black;
+}
+
+#dinner-background {
+	background-image: url('../assets/dinner-menu-background.png');
+	background-size: 100%;
+    background-repeat: no-repeat;
+	padding: 5rem;
+	
+}
+
+
+#title {
+	font-size: 5vw;
+	text-align: center;
+}
+
+#active-tab-dinner {
+	background-color: black;
+    color: var(--light);
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+#not-active-tab-dinner {
+	background-color: #b9b9b9;
+	color: #000000b4;
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+#not-active-tab-dinner:hover {
+	background-color: #f6e9d7;
+	color: #512b00ef;
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+
+#brunch {
+	background-color: var(--tertiary);
+	padding: 2vw;
+	border: 0px;
+}
+
+
+#brunch-background {
+	background-image: url('../assets/brunch-menu-background.png');
+	padding: 5rem;
+	
+}
+
+#brunch {
+	background-color: var(--tertiary);
+	padding: 2vw;
+	border: 0px;
+}
+
+#brunch-dishes {
+	align-items: center;
+}
+
+#title {
+	font-size: 5vw;
+	text-align: center;
+}
+
+#active-tab {
+	background-color: var(--tertiary);
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+#not-active-tab {
+	background-color: #cbc1b4;
+	color: #512b00b4;
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+#not-active-tab:hover {
+	background-color: #f6e9d7;
+	color: #512b00ef;
+	padding: 0.75vw 0.75vw 0.75vw 3vw;
+	margin: 0;
+	border: 0;
+	font-size: 3vw;
+}
+
+
+#nav-buttons-row {
+	position: relative;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
