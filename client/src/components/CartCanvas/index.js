@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
-import Offcanvas from "react-bootstrap/Offcanvas";
-import Button from "react-bootstrap/Button";
+// import Offcanvas from "react-bootstrap/Offcanvas";
+// import Button from "react-bootstrap/Button";
 import "../CartCanvas/style.css";
 
 export default function CartCanvas() {
