@@ -18,6 +18,7 @@ import Success from './pages/Success';
 import Detail from './pages/Detail';
 import { StoreProvider } from "./utils/GlobalState";
 import OrderHistory from './pages/OrderHistory';
+import Checkout from './pages/Checkout';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -61,6 +62,7 @@ function App() {
                 <Route exact path="/orderHistory" component={OrderHistory} />
                 <Route exact path="/products/:id" component={Detail} />
                 <Route exact path="/success" component={Success} />
+                <Route exact path="/checkout" component={Checkout} />
                 <Route component={NoMatch} />
               </Switch>
           </div>
