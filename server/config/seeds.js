@@ -1,6 +1,9 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
 
+
+
+
 db.once('open', async () => {
   await Category.deleteMany();
 
@@ -18,33 +21,32 @@ db.once('open', async () => {
   await Product.deleteMany();
 
   const products = await Product.insertMany([
+    // {
+    //   name: 'Salmon Croquettes',
+    //   description: 'Biscuit cheesecake jelly beans muffin dragée caramels macaroon. Cotton candy sugar plum I love carrot cake oat cake. Macaroon sugar plum cookie jelly I love I love bear claw sesame snaps.',
+    //   image: 'salmon_croquette.jpg',
+    //   category: categories[0]._id,
+    //   price: 17,
+    //   quantity: 16
+    // },
     {
-      name: 'Beef Stew',
+      name: 'Shrimp and Grits',
       description:
         'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'beef-stew.jpg',
+      image: 'shrimp-n-grits.jpg',
       category: categories[0]._id,
-      price: 12,
-      quantity: 16
+      price:18,
+      quantity: 10
     },
-    {
-        name: 'Chicken Salad',
-        description:
-          'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        image: 'chicken_meal.jpg',
-        category: categories[0]._id,
-        price: 15,
-        quantity: 13
-      },
-      {
-        name: 'Biscuit',
-        description:
-          'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        image: 'Biscuits.jpg',
-        category: categories[1]._id,
-        price: 5,
-        quantity: 45
-      },
+      // {
+      //   name: 'Chicken and Waffles',
+      //   description:
+      //     'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
+      //   image: 'chicken-waffle.jpg',
+      //   category: categories[0]._id,
+      //   price: 15,
+      //   quantity: 45
+      // },
       {
         name: 'Chocolate Brownie',
         description:
@@ -63,15 +65,7 @@ db.once('open', async () => {
         price:18,
         quantity: 10
       },
-      {
-        name: 'Shrimp and Grits',
-        description:
-          'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-        image: 'shrimp-n-grits.jpg',
-        category: categories[3]._id,
-        price:18,
-        quantity: 10
-      },
+   
       {
         name: 'Stir fry veggies',
         description:
