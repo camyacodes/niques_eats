@@ -51,8 +51,12 @@ const MenuDinner = () => {
           </div>
         </div>
         <Cart />
-      </div>
+        <div id="scroll-to-top" className ="footer">
+  <a href="#title"> <h4>Scroll To Top ^</h4> </a>
+  </div>
     </div>
+      </div>
+     
 
   );
 };
