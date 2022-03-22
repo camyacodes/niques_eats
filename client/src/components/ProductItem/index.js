@@ -7,7 +7,7 @@ import { idbPromise } from "../../utils/helpers";
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button, Col, Row,
-  Container, Modal, ModalHeader, ModalBody, ModalFooter, NavItem
+  Container,  
 } from 'reactstrap';
 import Calendar from '../Calendar';
 
@@ -53,6 +53,7 @@ const addToCart = () => {
 
 
   return (
+    <div>
     <Container className="themed-container p-5" fluid={true} id="dish-card">
     <Col>
       <Card>
@@ -67,14 +68,49 @@ const addToCart = () => {
             <CardTitle tag="h5" class="col text-start">{name}</CardTitle>
             <CardSubtitle tag="h5" className="col text-end">${price}</CardSubtitle>
           </div>
-          <button type="button" class="btn btn-primary" data-bs-toggle="modal"  onClick={addToCart}>
+          {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal"  onClick={addToCart}> */}
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Add to Cart
-          </button>
+          </button> 
         </CardBody>
       
       </Card>
-    </Col>
+    </Col>   
   </Container>
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">   
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+            <Link to={`/products/${_id}`}>
+            <CardImg top width="100%" src={`/images/${image}`} alt={name} id="dish-img" class="rounded mx-auto d-block" />
+            </Link>
+            <div class="row align-items-center">
+            <CardTitle tag="h5" class="col text-start">{name}</CardTitle>
+            <CardSubtitle tag="h5" className="col text-end">${price}</CardSubtitle>
+            <Calendar />
+          </div>
+
+
+
+            </div>
+
+
+            <div class="modal-footer">
+             
+              <button type="button"  data-bs-dismiss="modal" onClick={addToCart}>Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
   );
 }
 
