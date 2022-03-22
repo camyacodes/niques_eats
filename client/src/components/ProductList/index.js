@@ -6,6 +6,7 @@ import spinner from '../../assets/spinner.gif';
 import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
+import { useProductReducer } from '../../utils/reducers';
 
 function ProductList({  }) {
   const [state, dispatch] = useStoreContext();
@@ -56,6 +57,7 @@ function ProductList({  }) {
               image={product.image}
               name={product.name}
               price={product.price}
+              description={product.description}
             />
           ))}
         </div>

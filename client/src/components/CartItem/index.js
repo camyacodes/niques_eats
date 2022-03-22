@@ -41,6 +41,7 @@ const CartItem = ({ item }) => {
     return (
         <div className="flex-row">
             <div>
+                <div>Date: Input from Calendar component </div>
                 <img
                     src={`/images/${item.image}`}
                     alt=""

@@ -8,6 +8,7 @@ import { idbPromise } from "../../utils/helpers";
 import { QUERY_CHECKOUT } from '../../utils/queries';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
+import { Link } from "react-router-dom";
 
 
 
@@ -89,14 +90,10 @@ const Cart = () => {
           ))}
           <div className="flex-row space-between">
             <strong>Total: ${calculateTotal()}</strong>
-            {
-              Auth.loggedIn() ?
-                <button onClick={submitCheckout}>
-                  Checkout
-                </button>
-                :
-                <span>(log in to check out)</span>
-            }
+           
+                <h6>(log in for faster checkout)</h6>
+           
+           <Link to="/checkout"> <button>Guest Checkout</button> </Link>
           </div>
         </div>
       ) : (

@@ -2,6 +2,7 @@ import React from "react";
 import "../checkout-info/style.css";
 
 export default function CheckoutInfo() {
+	
 	return (
 		<div className="col-2">
 			{/* container start */}
