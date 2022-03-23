@@ -21,7 +21,7 @@ function OrderHistory() {
         {user ? (
           <>
             <h2>
-              Order History for {user.firstName} {user.lastName}
+              Order History for {user.name} 
             </h2>
             {user.orders.map((order) => (
               <div key={order._id} className="my-2">

@@ -36,6 +36,12 @@ body {
 	font-family: "Lilita One", cursive;
 }
 
+#content {
+	padding: 15px; 
+	box-sizing: border-box;
+	text-align: center;
+}
+
 h1,
 h2,
 h3,
@@ -287,13 +293,6 @@ div.col-sm.info-section {
 	height:300px;
 }
 
-/* FOOTER */
-footer {
-	position: absolute;
-	background-color: var(--light);
-	color: var(--dark);
-	right: 0;
-}
 
 /* CHECKOUT PAGE STYLING */
 
