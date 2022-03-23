@@ -20,6 +20,7 @@ function ProductItem(item) {
     _id,
     price,
    description, 
+   menu,
   } = item;
 
   const [state, dispatch] = useStoreContext();

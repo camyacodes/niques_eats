@@ -11,6 +11,7 @@ const typeDefs = gql`
     name: String
     description: String
     image: String
+    menu: String
     quantity: Int
     price: Float
     category: Category
