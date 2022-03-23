@@ -16,6 +16,7 @@ import "../styles/menus.css";
 import ProductList from "../components/ProductList";
 import CategoryMenuBrunch from "../components/CategoryMenuBrunch";
 import Cart from '../components/Cart';
+import BrunchDishes from '../components/BrunchDishes'
 
 
 
@@ -48,7 +49,8 @@ const MenuBrunch = () => {
         </div>
 
         <div id="brunch-dishes">
-		  <ProductList />
+            {/* <ProductList /> */}
+		  <BrunchDishes />
 		
         </div>
     </div>
