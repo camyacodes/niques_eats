@@ -1,5 +1,6 @@
 import React from "react";
 import "../checkout-info/style.css";
+import PaymentBtn from "../PaymentBtn";
 
 export default function CheckoutInfo() {
 	
@@ -131,11 +132,12 @@ export default function CheckoutInfo() {
 					{/* Payment */}
 					<div class="row mt-5">
 						<div className="col d-flex justify-content-center">
-							<input
+							{/* <input
 								type="button"
 								value="CONTINUE TO PAYMENT"
 								className="cont-btn"
-							/>
+							/> */}
+							<PaymentBtn />
 						</div>
 					</div>
 				</div>
