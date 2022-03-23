@@ -66,9 +66,9 @@ const CheckoutCartItem = ({ item }) => {
 		//     </div>
 		// </div>
 		<div>
-			<div class="container cart-cards">
+			<div class="container ">
 				<div class="row">
-					<div class="col">
+					<div class="col cart-card">
 						<div class="d-flex justify-content-between date">
 							<p>Monday</p>
 							<p>03/12/2022</p>
