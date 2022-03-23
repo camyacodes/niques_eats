@@ -52,7 +52,6 @@ function ProductList({  }) {
       {state.products.length ? (
         <div className="row row-cols-1 row-cols-md-3">
           {filterProducts().map((product) => (
-       
             <ProductItem
               key={product._id}
               _id={product._id}

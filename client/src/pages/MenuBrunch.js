@@ -49,8 +49,8 @@ const MenuBrunch = () => {
         </div>
 
         <div id="brunch-dishes">
-            <ProductList />
-		  {/* <BrunchDishes /> */}
+            {/* <ProductList /> */}
+		  <BrunchDishes />
 		
         </div>
     </div>
