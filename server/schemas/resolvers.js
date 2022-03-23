@@ -11,6 +11,7 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
+
     products: async (parent, { category, name }) => {
       const params = {};
 
@@ -26,9 +27,16 @@ const resolvers = {
 
       return await Product.find(params).populate('category');
     },
+
+
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate('category');
     },
+
+    users: async () => {
+      return await User.find();
+    },
+
     user: async (parent, args, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -43,6 +51,7 @@ const resolvers = {
 
       throw new AuthenticationError('Not logged in');
     },
+
     order: async (parent, { _id }, context) => {
       if (context.user) {
         const user = await User.findById(context.user._id).populate({
@@ -143,8 +152,14 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+    },
+
+
+    addItem: async (parent, args) =>{
+    const product = new Product({ ...args });
+ return product;
+      }
     }
-  }
 };
 
 module.exports = resolvers;

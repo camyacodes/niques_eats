@@ -22,7 +22,7 @@ export const ADD_ORDER = gql`
         price
         quantity
         category {
-          name
+        name
         }
       }
     }
@@ -31,14 +31,13 @@ export const ADD_ORDER = gql`
 
 export const ADD_USER = gql`
   mutation addUser(
-    $firstName: String!
-    $lastName: String!
+    $name: String!
+
     $email: String!
     $password: String!
   ) {
     addUser(
-      firstName: $firstName
-      lastName: $lastName
+      name: $name
       email: $email
       password: $password
     ) {
@@ -48,4 +47,27 @@ export const ADD_USER = gql`
       }
     }
   }
+`;
+
+export const ADD_ITEM = gql`
+mutation addItem(
+  $name:String!
+  $price: Int
+  $image: String!
+  $description: String!
+){
+  addItem(
+    name:$name
+    price:$price
+    image:$image
+    description:$description
+  ){
+   
+      _id
+      name
+      description
+      price       
+    
+  }
+}
 `;

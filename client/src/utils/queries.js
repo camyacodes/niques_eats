@@ -41,10 +41,10 @@ export const QUERY_CATEGORIES = gql`
 `;
 
 export const QUERY_USERS = gql`
-query Users {
+{
   users {
      _id
-    username
+   name
     email
   }
 }
@@ -53,8 +53,7 @@ query Users {
 export const QUERY_USER = gql`
   {
     user {
-      firstName
-      lastName
+      name
       orders {
         _id
         purchaseDate

@@ -1,5 +1,6 @@
 const db = require('./connection');
 const { User, Product, Category } = require('../models');
+const { faker } = require('@faker-js/faker');
 
 
 
@@ -400,11 +401,14 @@ db.once('open', async () => {
 
   console.log('products seeded');
 
+  const orders = await Product.insertMany([
+  ])
+
   await User.deleteMany();
 
   await User.create({
-    firstName: 'Test1',
-    lastName: 'Test1',
+
+    name: 'Test1',
     email: 'test1@test.com',
     password: 'test1',
     orders: [
@@ -415,8 +419,8 @@ db.once('open', async () => {
   });
 
   await User.create({
-    firstName: 'Test2',
-    lastName: 'Test2',
+    name: 'Test2',
+
     email: 'test2@test.com',
     password: 'test2'
   });

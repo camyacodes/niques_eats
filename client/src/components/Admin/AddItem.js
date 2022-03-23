@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { Form } from "reactstrap";
+import {useMutation} from '@apollo/client';
+import { ADD_ITEM} from '../../utils/mutations'
+
 
  function AddItem() {
     const[name, setname] = useState('')
@@ -7,7 +10,12 @@ import { Form } from "reactstrap";
     const[image, setimage] = useState('')
     const[description, setdescription] = useState('')
 
-    function formhandler(e){
+    const [addItem] = useMutation(ADD_ITEM)
+
+
+
+
+   async function formhandler(e){
         e.preventDefault();
         const product = {
             name,
@@ -16,6 +24,11 @@ import { Form } from "reactstrap";
             description
         }
         console.log (product);
+
+        await addItem({
+            variables:{...product, price: parseInt(product.price)}
+        })
+
     }
 
 
