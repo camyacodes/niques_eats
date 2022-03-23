@@ -15,7 +15,8 @@ function BrunchDishes() {
 
     const { categories } = state;
     const { loading, data: categoryData } = useQuery(QUERY_CATEGORIES);
- 
+   
+
   return (
     <div >
          {categories.map(item => (
