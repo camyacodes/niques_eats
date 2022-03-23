@@ -1,0 +1,16 @@
+
+
+.menu-nav-buttons{
+	background-color: #e8b16d;
+	text-align-last: center;
+    color:#603f16;
+	margin: 3vw;
+	font-size: 1.6rem;
+}
+.menu-nav-buttons:hover{
+	background-color: var(--primary);
+	color: var(--quatrinary);
+	text-align-last: center;
+}
+
+

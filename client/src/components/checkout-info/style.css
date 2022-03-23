@@ -18,24 +18,27 @@
   }
   
   .deliver-method {
-    margin-left: 100px;
+    /* margin-left: 100px; */
     margin-top: 5px;
     height: 50px;
-    width: 150px;
-    font-size: 25px;
+    width: 250px;
+    font-size: 28px;
     border-radius: 30px;
     background-color: #77480e;
     color: #f4e9dc;
     border: none;
   }
+
+  .deliver {
+    margin-right: 60px
+  }
   
   .cont-btn {
     border-radius: 20px;
     height: 50px;
-    width: 300px;
-    font-size: 25px;
+    width: 350px;
+    font-size: 30px;
     margin-top: 20px;
-    margin-left: 150px;
     background-color: #77480e;
     color: #f4e9dc;
     border: none;
