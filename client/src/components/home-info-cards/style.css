@@ -54,9 +54,6 @@ padding: 0;
 		filter: brightness(70%);
 		height:50vw;
 		object-fit:none;
-		/* background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat; */
 	}
 	.info-text {
 		position:absolute;	

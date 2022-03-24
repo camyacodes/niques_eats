@@ -105,19 +105,7 @@ a:visited {
 
 
 
-/* ABOUT ME SECTION */
-#about {
-	font-size: 35px;
-	color: var(--primary);
-}
 
-.about {
-	font-size: 1rem;
-	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-		"Lucida Sans", Arial, sans-serif;
-	font-style: italic;
-}
-/* ABOUT ME SECTION ENDS */
 
 /* CONTACT SECTION */
 #contact {
