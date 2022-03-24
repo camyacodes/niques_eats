@@ -7,6 +7,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
 import { useProductReducer } from '../../utils/reducers';
+import { ADD_ORDER } from '../../utils/mutations';
 
 function ProductList({  }) {
   const [state, dispatch] = useStoreContext();
@@ -59,6 +60,7 @@ function ProductList({  }) {
               name={product.name}
               price={product.price}
               description={product.description}
+              
             />
           ))}
         </div>

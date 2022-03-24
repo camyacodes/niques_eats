@@ -15,6 +15,7 @@ export const ADD_ORDER = gql`
   mutation addOrder($products: [ID]!) {
     addOrder(products: $products) {
       purchaseDate
+      deliverDate
       products {
         _id
         name
@@ -55,6 +56,7 @@ mutation addItem(
   $price: Int
   $image: String!
   $description: String!
+  $deliverDate: String!
 ){
   addItem(
     name:$name
@@ -62,12 +64,10 @@ mutation addItem(
     image:$image
     description:$description
   ){
-   
       _id
       name
       description
       price       
-    
   }
 }
 `;

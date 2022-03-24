@@ -9,7 +9,9 @@ import {
 } from 'reactstrap';
 import Calendar from '../Calendar';
 import  './style.css';
-
+import "react-datetime/css/react-datetime.css";
+import Datetime from "react-datetime";
+import moment from 'moment';
 
 
 
@@ -20,6 +22,7 @@ function ProductItem(item) {
     _id,
     price,
    description, 
+   deliverDate,
   } = item;
 
   const [state, dispatch] = useStoreContext();
@@ -50,6 +53,17 @@ const addToCart = () => {
   }
 }
 
+// Calendar functions
+function onChange (e) {
+    const deliverDate = e['_d'] ;
+    console.log (deliverDate)
+}
+
+var valid = function (current) {
+  const start = moment ().add(3,'days')
+      const end = moment().add (10, 'days')
+  return moment(current).isBetween(start , end);
+};
 
 
   return (
@@ -94,7 +108,7 @@ const addToCart = () => {
              
             <CardTitle tag="h5" class="col text-start">{name}</CardTitle>
             <CardSubtitle tag="h5" className="col text-end">${price}</CardSubtitle>
-            <Calendar />
+            <Datetime value={"Choose a Date"} timeFormat={false} isValidDate={ valid }  onChange={onChange} />
           </div>
 
 

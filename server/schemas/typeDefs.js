@@ -19,6 +19,7 @@ const typeDefs = gql`
   type Order {
     _id: ID
     purchaseDate: String
+    deliverDate: String
     products: [Product]
   }
 
@@ -26,7 +27,7 @@ const typeDefs = gql`
     _id: ID
     name: String
     email: String
-   orders: [Order]
+    orders: [Order]
   }
 
   type Checkout {

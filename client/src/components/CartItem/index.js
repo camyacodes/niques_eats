@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { useStoreContext } from '../../utils/GlobalState';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
+
 
 const CartItem = ({ item }) => {
     const [, dispatch] = useStoreContext();
@@ -41,7 +42,7 @@ const CartItem = ({ item }) => {
     return (
         <div className="flex-row">
             <div>
-                <div>Date: Input from Calendar component </div>
+                <div>{item.deliverDate}</div>
                 <img
                     src={`/images/${item.image}`}
                     alt=""
