@@ -7,6 +7,7 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
 import { useProductReducer } from '../../utils/reducers';
+import "../../styles/admin.css"
 
 function ProductList({  }) {
   const [state, dispatch] = useStoreContext();
@@ -49,24 +50,39 @@ function ProductList({  }) {
 
   return (
     <div >
-      {state.products.length ? (
-        <div className="row row-cols-1 row-cols-md-3">
-          {filterProducts().map((product) => (
-            //   product.category === categories[0]._id ||
-            <ProductItem
-              key={product._id}
-              _id={product._id}
-              image={product.image}
-              name={product.name}
-              price={product.price}
-              description={product.description}
-            />
-          ))}
-        </div>
-      ) : (
-        <h3>You haven't added any products yet!</h3>
-      )}
       {loading ? <img src={spinner} alt="loading" /> : null}
+      <table className='table'>
+        <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Prices</th>
+                    <th>Image</th>
+                    <th>Description</th>
+                    {/* <th>Category</th> */}
+                    <th>Actions</th>
+                </tr>
+        </thead>
+
+        <tbody>
+       {filterProducts().map(product=> {
+           return <tr>
+               <td>{product.name}</td>
+               <td>{product.price}</td>
+               <td><img id="item-image" src={`/images/${product.image}`} alt="products images"/></td>
+               <td id="description">{product.description}</td>
+               {/* <td>{product.menu}</td> */}
+               <td>
+                   <i className='fa fa-trash m-2'></i>
+                   <i className='fa fa-edit m-2'></i>
+               </td>
+
+           </tr>
+       })}
+
+        </tbody>
+
+
+      </table>
     </div>
   );
 }
