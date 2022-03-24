@@ -13,8 +13,6 @@ import { ADD_ITEM} from '../../utils/mutations'
     const [addItem] = useMutation(ADD_ITEM)
 
 
-
-
    async function formhandler(e){
         e.preventDefault();
         const product = {
@@ -30,9 +28,6 @@ import { ADD_ITEM} from '../../utils/mutations'
         })
 
     }
-
-
-
 
     return (
         <div  className="position-relative">

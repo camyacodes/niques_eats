@@ -40,6 +40,11 @@
     font-size: 30px;
     margin-top: 20px;
     background-color: #77480e;
-    color: #f4e9dc;
+    color: #f4e9dc !important;
     border: none;
+  }
+
+  #spinner {
+    height:2rem;
+
   }

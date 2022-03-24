@@ -10,5 +10,6 @@ export default function Calendar() {
         const end = moment().add (10, 'days')
 		return moment(current).isBetween(start , end);
 	};
+	
 	return <Datetime value={"Choose a Date"} timeFormat={false} isValidDate={ valid } />;
 }
