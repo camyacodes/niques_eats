@@ -22,24 +22,31 @@
 
 html,
 body {
-	min-height: 100vh;
+	width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
 }
 
 body {
 	margin: 0;
 	padding: 0;
+	border:0;
 	font-weight: 400;
 	line-height: 1.5;
 	font-size: 1.5vw;
 	color: var(--dark);
 	background-color: #fffaf4;
 	font-family: "Lilita One", cursive;
+	min-width:100vw;
 }
 
 #content {
-	padding: 15px; 
+	border:0;
+	margin:0;
+	/* padding: 15px; 
 	box-sizing: border-box;
-	text-align: center;
+	text-align: center; */
 }
 
 h1,
@@ -94,29 +101,7 @@ a:visited {
 	text-align: center;
 }
 
-/* HOME PAGE INFO CARDS SECTION */
 
-#home-info-cards {
-	background-color: #E6D7C4;
-}
-
-.info-img {
-	width: 300px;
-	height: 300px;
-}
-
-.info-text {
-	padding: 120px 0;
-	text-align: center;
-}
-
-.info-section {
-	margin: 0px;
-}
-
-div.col-sm.info-section {
-	padding: 0px;
-}
 
 
 
