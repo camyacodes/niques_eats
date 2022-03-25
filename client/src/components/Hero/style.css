@@ -27,7 +27,13 @@
 }
 
 @media screen and (max-width: 768px) {
-
+	.bgimage{
+		position: relative;
+	}
+	#hero-text {
+		position: absolute;
+		top: 30vw;
+	}
 	#sub-title {
 		font-size: 3.5vw;
 	}
