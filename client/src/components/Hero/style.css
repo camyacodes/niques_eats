@@ -42,12 +42,12 @@
 
 @media screen and (max-width: 398px) {
 	#hero-text {	
-		top: 40vw;		
+		top: 30vw;		
 	}
 }
 
 @media screen and (max-width: 272px) {
 	#hero-text {	
-		top: 50vw;		
+		top: 30vw;		
 	}
 }

@@ -22,10 +22,13 @@
 }
 
 @media screen and (max-width: 767px) {
-    #about-section {
-        
+    #about-text {
+        padding:0;
+        top:0;
+        margin:0;
+        border:0;
     }
     #profile-img{
-     height:30vw;
+     height:40vw;
      }
     }

@@ -59,29 +59,29 @@ padding: 0;
 		position:absolute;	
 	}
 	.quanlity {
-		top:55vh;
-		font-size: 8vw;
+		top:50vh;
+		font-size: 6vw;
 		text-align: left;
 		z-index: 1000;
 		background-color:#eec088ab;
 	}
 	.customizable {
-		top:93vh;
-		font-size: 8vw;
+		top:88vh;
+		font-size: 6vw;
 		left:36vw;
 		text-align: right;
 		z-index: 1000;
 	}
 	.southern {
-		top:125vh;
-		font-size: 8vw;
+		top:118vh;
+		font-size: 6vw;
 		right:36vw;
 		text-align: left;
 		z-index: 1000;
 	}
 	.convenient{
-		top:170vh;
-		font-size: 9vw;
+		top:150vh;
+		font-size: 6vw;
 		right:38vw;
 		text-align: left;
 		z-index: 1000;
@@ -151,18 +151,47 @@ padding: 0;
 
 @media screen and (max-width: 385px) {
 	.quanlity {
+		top:35vh;
+	}
+	.customizable {
+		top:60vh;
+	}
+	.southern {
+		top:80vh;
+	}
+	.convenient{
+		top:108vh;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.quanlity {
 		top:40vh;
 	}
 	.customizable {
-		top:71vh;
+		top:72vh;
 	}
 	.southern {
-		top:97vh;
+		top:100vh;
 	}
 	.convenient{
 		top:130vh;
 	}
+}
 
+@media screen and (max-width: 360px) {
+	.quanlity {
+		top:40vh;
+	}
+	.customizable {
+		top:65vh;
+	}
+	.southern {
+		top:88vh;
+	}
+	.convenient{
+		top:114vh;
+	}
 }
 
 @media screen and (max-width: 357px) {
