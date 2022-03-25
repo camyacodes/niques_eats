@@ -406,24 +406,18 @@ db.once('open', async () => {
 
   await User.deleteMany();
 
-  await User.create({
+  // create user data
+  const userData = [];
 
-    name: 'Test1',
-    email: 'test1@test.com',
-    password: 'test1',
-    orders: [
-      {
-        products: [products[0]._id, products[0]._id, products[1]._id]
-      }
-    ]
-  });
+  for (let i = 0; i < 50; i += 1) {
+    const username = faker.internet.userName();
+    const email = faker.internet.email(username);
+    const password = faker.internet.password();
 
-  await User.create({
-    name: 'Test2',
+    userData.push({ username, email, password });
+  }
 
-    email: 'test2@test.com',
-    password: 'test2'
-  });
+  const createdUsers = await User.collection.insertMany(userData);
 
   console.log('users seeded');
 

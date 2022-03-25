@@ -33,23 +33,23 @@ const resolvers = {
       return await Product.findById(_id).populate('category');
     },
 
+    me: async (parent, args, context) => {
+      if (context.user) {
+        const userData = await User.findOne({ _id: context.user._id })
+
+        return userData;
+      }
+
+      throw new AuthenticationError('Not logged in');
+    },
+
     users: async () => {
       return await User.find();
     },
 
-    user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
-          path: 'orders.products',
-          populate: 'category'
-        });
-
-        user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
-
-        return user;
-      }
-
-      throw new AuthenticationError('Not logged in');
+    user: async (parent, { username }) => {
+      return User.findOne({ username })
+  
     },
 
     order: async (parent, { _id }, context) => {
