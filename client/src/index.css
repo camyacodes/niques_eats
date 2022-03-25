@@ -77,29 +77,8 @@ a:visited {
 
 
 
-/* SOCIAL MEDIA LINKS */
 
-.social-buttons {
-	position: fixed;
-	width: 60px;
-	margin-top: 250px;
-	transition: all 0.3s linear;
-	box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.4);
-}
 
-#tiktok-btn {
-	fill: #512b00;
-}
-
-.social-buttons ul {
-	margin: auto;
-}
-
-.social-buttons li {
-	list-style: none;
-	text-decoration: none;
-	text-align: center;
-}
 
 .btn,
 .pill {
