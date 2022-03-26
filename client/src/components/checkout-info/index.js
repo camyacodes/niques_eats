@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../checkout-info/style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
@@ -7,15 +7,16 @@ import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import spinner from "../../assets/spinner.gif";
-import { useState } from "react";
+
+
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+
+
 
 export default function CheckoutInfo() {
 	const flState = "Florida";
-
 	const flCity = "Orlando";
-
-	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
+	
 	const [formData, setFormData] = useState({
 		firstName: "",
 		lastName: "",
@@ -25,6 +26,8 @@ export default function CheckoutInfo() {
 		email: "",
 		phone: "",
 	});
+
+	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
 	const [state, dispatch] = useStoreContext();
 
 	function handleChange(e) {
@@ -62,7 +65,6 @@ export default function CheckoutInfo() {
 			},
 			products: state.cart,
 		});
-
 		const productIds = [];
 
 		state.cart.forEach((item) => {
@@ -228,14 +230,14 @@ export default function CheckoutInfo() {
 						<div className="col d-flex justify-content-center">
 							{loading ? (
 								<img src={spinner} alt="loading" id="spinner" />
-							) : null}
+							) : null}							
 							<button
 								type="button"
 								className="cont-btn"
 								onClick={submitCheckout}
-							>
-								Continue to Payment
+							>Continue to Payment
 							</button>
+
 						</div>
 					</div>
 				</div>
