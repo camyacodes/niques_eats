@@ -1,20 +1,38 @@
 import React, { useEffect } from "react";
 import "../checkout-info/style.css";
 import { useStoreContext } from "../../utils/GlobalState";
-import {  ADD_MULTIPLE_TO_CART } from "../../utils/actions";
+import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
-import spinner from '../../assets/spinner.gif';
+import spinner from "../../assets/spinner.gif";
+import { useState } from "react";
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
-
-
 export default function CheckoutInfo() {
+	const flState = "Florida";
+
+	const flCity = "Orlando";
+
 	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
+	const [formData, setFormData] = useState({
+		firstName: "",
+		lastName: "",
+		address: "",
+		address2: "",
+		zipCode: "",
+		email: "",
+		phone: "",
+	});
 	const [state, dispatch] = useStoreContext();
-	
+
+	function handleChange(e) {
+		setFormData({
+			...formData,
+			[e.target.name]: e.target.value,
+		});
+	}
 
 	useEffect(() => {
 		async function getCart() {
@@ -35,8 +53,16 @@ export default function CheckoutInfo() {
 		}
 	}, [data]);
 
-
 	function submitCheckout() {
+		console.log({
+			form: {
+				...formData,
+				flCity,
+				flState,
+			},
+			products: state.cart,
+		});
+
 		const productIds = [];
 
 		state.cart.forEach((item) => {
@@ -49,9 +75,7 @@ export default function CheckoutInfo() {
 			variables: { products: productIds },
 		});
 	}
-	
-	
-	
+
 	return (
 		<div className="col-2">
 			{/* container start */}
@@ -74,8 +98,16 @@ export default function CheckoutInfo() {
 						{/* buttons */}
 						<p className="mt-4">DELIVERY METHOD</p>
 						<div className="d-flex justify-content-center">
-							<input type="button" value="DELIVER" className="deliver-method deliver" />
-							<input type="button" value="PICKUP" className="deliver-method pickup" />
+							<input
+								type="button"
+								value="DELIVER"
+								className="deliver-method deliver"
+							/>
+							<input
+								type="button"
+								value="PICKUP"
+								className="deliver-method pickup"
+							/>
 						</div>
 					</div>
 					{/* only column end */}
@@ -91,6 +123,8 @@ export default function CheckoutInfo() {
 								className="form-control"
 								placeholder="First name*"
 								aria-label="First name"
+								name="firstName"
+								onChange={handleChange}
 							/>
 						</div>
 						{/* last name */}
@@ -100,6 +134,8 @@ export default function CheckoutInfo() {
 								className="form-control"
 								placeholder="Last name*"
 								aria-label="Last name"
+								onChange={handleChange}
+								name="lastName"
 							/>
 						</div>
 					</div>
@@ -112,6 +148,8 @@ export default function CheckoutInfo() {
 								className="form-control"
 								placeholder="Address*"
 								aria-label="Address"
+								onChange={handleChange}
+								name="address"
 							/>
 						</div>
 						{/* APT */}
@@ -121,6 +159,8 @@ export default function CheckoutInfo() {
 								className="form-control"
 								placeholder="Apt, suite, etc."
 								aria-label="Apt"
+								onChange={handleChange}
+								name="address2"
 							/>
 						</div>
 					</div>
@@ -131,8 +171,8 @@ export default function CheckoutInfo() {
 							<input
 								className="form-control"
 								type="text"
-								placeholder="Jacksonville"
-								aria-label="Jacksonville"
+								placeholder={flCity}
+								aria-label={flCity}
 								disabled
 							/>
 						</div>
@@ -141,8 +181,8 @@ export default function CheckoutInfo() {
 							<input
 								className="form-control"
 								type="text"
-								placeholder="Florida"
-								aria-label="Florida"
+								placeholder={flState}
+								aria-label={flState}
 								disabled
 							/>
 						</div>
@@ -153,6 +193,8 @@ export default function CheckoutInfo() {
 								className="form-control"
 								placeholder="Zip Code*"
 								aria-label="Zip Code"
+								onChange={handleChange}
+								name="zipCode"
 							/>
 						</div>
 					</div>
@@ -165,6 +207,8 @@ export default function CheckoutInfo() {
 								className="form-control"
 								placeholder="Email*"
 								aria-label="Email"
+								onChange={handleChange}
+								name="email"
 							/>
 						</div>
 						{/* phone */}
@@ -174,18 +218,24 @@ export default function CheckoutInfo() {
 								className="form-control"
 								placeholder="Phone Number*"
 								aria-label="Phone Number"
+								onChange={handleChange}
+								name="phone"
 							/>
 						</div>
 					</div>
 					{/* Payment */}
 					<div class="row mt-5">
 						<div className="col d-flex justify-content-center">
-						{loading ? <img src={spinner} alt="loading" id="spinner" /> : null}
-							<button type="button" className="cont-btn" onClick={submitCheckout}>
+							{loading ? (
+								<img src={spinner} alt="loading" id="spinner" />
+							) : null}
+							<button
+								type="button"
+								className="cont-btn"
+								onClick={submitCheckout}
+							>
 								Continue to Payment
 							</button>
-								
-						
 						</div>
 					</div>
 				</div>

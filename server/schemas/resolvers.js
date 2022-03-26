@@ -33,16 +33,6 @@ const resolvers = {
       return await Product.findById(_id).populate('category');
     },
 
-    me: async (parent, args, context) => {
-      if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id })
-
-        return userData;
-      }
-
-      throw new AuthenticationError('Not logged in');
-    },
-
     users: async () => {
       return await User.find();
     },
@@ -63,6 +53,10 @@ const resolvers = {
       }
 
       throw new AuthenticationError('Not logged in');
+    },
+
+    orders: async () => {
+      return await Order.find();
     },
 
     checkout: async (parent, args, context) => {
