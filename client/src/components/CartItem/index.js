@@ -3,7 +3,6 @@ import { useStoreContext } from '../../utils/GlobalState';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
 
-
 const CartItem = ({ item }) => {
     const [, dispatch] = useStoreContext();
 
@@ -38,11 +37,10 @@ const CartItem = ({ item }) => {
 
 
 
-
     return (
         <div className="flex-row">
             <div>
-                <div>{item.deliverDate}</div>
+                <div>Date: {new Date(item.date).toDateString()}</div>
                 <img
                     src={`/images/${item.image}`}
                     alt=""

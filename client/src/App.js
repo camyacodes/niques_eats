@@ -21,9 +21,6 @@ import OrderHistory from './pages/OrderHistory';
 import Checkout from './pages/Checkout';
 import Admin from './pages/Admin'
 
-const httpLink = createHttpLink({
-  uri: '/graphql',
-});
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -35,11 +32,14 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3001/graphql',
 });
 
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache(),
+});
 
 
 function App() {

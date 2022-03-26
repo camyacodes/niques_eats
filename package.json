@@ -25,9 +25,10 @@
     "moment": "^2.29.1",
     "mongoose": "^6.2.7",
     "nodemon": "^2.0.15",
+    "react-date-picker": "^8.4.0",
     "react-datepicker": "^4.7.0",
     "react-datetime": "^3.1.1",
-    "yargs": "^17.4.0",
-    "react-redux": "^7.2.6"
+    "react-redux": "^7.2.6",
+    "yargs": "^17.4.0"
   }
 }

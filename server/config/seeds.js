@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User, Product, Category, Order } = require('../models');
 const { faker } = require('@faker-js/faker');
 
 
@@ -19,6 +19,22 @@ db.once('open', async () => {
   ]);
 
   console.log('categories seeded');
+
+  await Order.deleteMany();
+
+  const orders = await Order.insertMany([
+    {
+      user: "Test3",
+      address: "123 jordan lane",
+      purchaseDate: "may 21 2022",
+      price: 26
+    },
+  ])
+
+  console.log('orders seeded');
+
+
+
 
   await Product.deleteMany();
 
@@ -401,15 +417,12 @@ db.once('open', async () => {
 
   console.log('products seeded');
 
-  const orders = await Product.insertMany([
-  ])
-
   await User.deleteMany();
 
   // create user data
   const userData = [];
 
-  for (let i = 0; i < 50; i += 1) {
+  for (let i = 0; i < 10; i += 1) {
     const username = faker.internet.userName();
     const email = faker.internet.email(username);
     const password = faker.internet.password();
