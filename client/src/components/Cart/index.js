@@ -12,9 +12,7 @@ import { Link } from "react-router-dom";
 
 
 
-const stripePromise = loadStripe('pk_test_TYooMQauvdEDq54NiTphI7jx');
 const Cart = () => {
-  const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
   const [state, dispatch] = useStoreContext();
 
   useEffect(() => {
@@ -29,13 +27,7 @@ const Cart = () => {
   }, [state.cart.length, dispatch]);
 
 
-  useEffect(() => {
-    if (data) {
-      stripePromise.then((res) => {
-        res.redirectToCheckout({ sessionId: data.checkout.session });
-      });
-    }
-  }, [data]);
+
 
   
 
@@ -51,19 +43,7 @@ const Cart = () => {
     return sum.toFixed(2);
   }
 
-  function submitCheckout() {
-    const productIds = [];
 
-    state.cart.forEach((item) => {
-      for (let i = 0; i < item.purchaseQuantity; i++) {
-        productIds.push(item._id);
-      }
-    });
-
-    getCheckout({
-      variables: { products: productIds }
-    });
-  }
 
   if (!state.cartOpen) {
     return (

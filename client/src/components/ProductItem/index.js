@@ -5,16 +5,12 @@ import { idbPromise } from "../../utils/helpers";
 import {
 	Card,
 	CardImg,
-	CardText,
 	CardBody,
 	CardTitle,
 	CardSubtitle,
-	Button,
 	Col,
-	Row,
 	Container,
 } from "reactstrap";
-import Calendar from "../Calendar";
 import "./style.css";
 import "react-datetime/css/react-datetime.css";
 import Datetime from "react-datetime";
@@ -38,15 +34,19 @@ function ProductItem(item) {
 			});
 			idbPromise("cart", "put", {
 				...itemInCart,
-        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
-        date: deliveryDate
+				purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1,
+				date: deliveryDate,
 			});
 		} else {
 			dispatch({
 				type: ADD_TO_CART,
-				product: { ...item, purchaseQuantity: 1, date: deliveryDate},
+				product: { ...item, purchaseQuantity: 1, date: deliveryDate },
 			});
-			idbPromise("cart", "put", { ...item, purchaseQuantity: 1, date: deliveryDate});
+			idbPromise("cart", "put", {
+				...item,
+				purchaseQuantity: 1,
+				date: deliveryDate,
+			});
 			console.log(itemInCart);
 		}
 	};
@@ -58,8 +58,8 @@ function ProductItem(item) {
 	// }
 
 	function onDateChange(e) {
-    const deliverDate = e["_d"];
-  
+		const deliverDate = e["_d"];
+
 		setDeliveryDate(deliverDate);
 	}
 
@@ -151,7 +151,7 @@ function ProductItem(item) {
 									value={"Choose a Date"}
 									timeFormat={false}
 									isValidDate={valid}
-                  onChange={onDateChange}
+									onChange={onDateChange}
 								/>
 							</div>
 						</div>

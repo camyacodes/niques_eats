@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button, Col, Row,
-  Container, Modal, ModalHeader, ModalBody, ModalFooter, NavItem
+  Card, CardImg, CardBody,
+  CardTitle, CardSubtitle, Col, 
+  Container
 } from 'reactstrap';
 import Calendar from '../Calendar';
 // import QtyPicker from 'react-quantity-picker';
