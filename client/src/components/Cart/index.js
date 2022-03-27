@@ -68,12 +68,12 @@ const Cart = () => {
           {state.cart.map(item => (
             <CartItem key={item._id} item={item} />
           ))}
-          <div className="flex-row space-between">
+          <div className="flex-row space-between" id="total">
             <strong>Total: ${calculateTotal()}</strong>
            
                 <h6>(log in for faster checkout)</h6>
            
-           <Link to="/checkout"> <button>Guest Checkout</button> </Link>
+           <Link to="/checkout"> <button id="guest-checkout">Guest Checkout</button> </Link>
           </div>
         </div>
       ) : (

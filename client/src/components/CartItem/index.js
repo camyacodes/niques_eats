@@ -29,6 +29,7 @@ const CartItem = ({ item }) => {
             dispatch({
               type: UPDATE_CART_QUANTITY,
               _id: item._id,
+              date: item.date,
               purchaseQuantity: parseInt(value)
             });
           
@@ -57,6 +58,7 @@ const CartItem = ({ item }) => {
                         placeholder="1"
                         value={item.purchaseQuantity}
                         onChange={onChange}
+                        id="quantity"
                     />
                     <span
                         role="img"

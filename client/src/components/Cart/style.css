@@ -4,8 +4,8 @@
     right: 0;
     min-width: 20%;
     max-width: 30%;
-    max-height: 60%;
-    background-color: var(--light);
+    max-height: 80%;
+    background-color: #fffaf4ed;
     overflow: auto;
     padding: .5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, .5);
@@ -58,6 +58,17 @@
     width: 50px;
     padding: 0;
     margin: 0 .5rem 1rem 0;
+  }
+
+  #total {
+    text-align:  center;
+  }
+
+  #guest-checkout {
+    background-color: var(--primary);
+    color:var(--quatrinary);
+    border-radius: 8%;
+    border:0;
   }
   
   @media screen and (max-width: 768px) {
