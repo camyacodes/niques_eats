@@ -18,11 +18,9 @@
   }
   
   .deliver-method {
-    /* margin-left: 100px; */
-    margin-top: 5px;
-    height: 50px;
-    width: 250px;
-    font-size: 28px;
+    height: 4vw;
+    width:20vw;
+    font-size: 2vw;
     border-radius: 30px;
     background-color: #77480e;
     color: #f4e9dc;
@@ -30,15 +28,14 @@
   }
 
   .deliver {
-    margin-right: 60px
+    margin-right: 3vw;
   }
   
   .cont-btn {
     border-radius: 20px;
-    height: 50px;
-    width: 350px;
-    font-size: 30px;
-    margin-top: 20px;
+    height: 5vw;
+    width: 40vw;
+    font-size: 3vw;
     background-color: #77480e;
     color: #f4e9dc !important;
     border: none;
@@ -47,4 +44,11 @@
   #spinner {
     height:2rem;
 
+  }
+
+  .form-control {
+    background-color: #f4e9dc !important;
+    text-align: center;
+    color: #512b00;
+    font-size: 1.7vw;
   }

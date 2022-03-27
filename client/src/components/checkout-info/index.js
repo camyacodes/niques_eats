@@ -110,7 +110,7 @@ export default function CheckoutInfo() {
 						 
 						{/* buttons */}
 						<p className="mt-4">DELIVERY METHOD</p>
-						<div className="d-flex justify-content-center">
+						<div className="d-flex justify-content-center button">
 							<input
 								type="button"
 								value="DELIVER"

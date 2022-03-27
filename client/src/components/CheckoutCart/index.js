@@ -34,11 +34,11 @@ const CheckoutCart = () => {
 	
 
 	return (
-		<div className="col-1">
+		<div className="col-1" id="checkout-summary">
 			{state.cart.length ? (
 				<div >
 					{state.cart.map((item) => (
-						<CheckoutCartItem key={item._id} item={item} id="checkout-summary"/>
+						<CheckoutCartItem key={item._id} item={item} />
 					))}
 					<div className="container">
 						<div class="row total">
