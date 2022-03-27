@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
-
 import Auth from '../utils/auth';
+import '../index.css'
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -38,7 +38,7 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex-row justify-center mb-4" id ="signup">
       <div className="col-12 col-md-6">
         <div className="card">
           <h4 className="card-header">Sign Up</h4>
