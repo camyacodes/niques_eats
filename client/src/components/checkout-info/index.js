@@ -23,6 +23,8 @@ export default function CheckoutInfo() {
 		lastName: "",
 		address: "",
 		address2: "",
+		city: "",
+		state: "",
 		zipCode: "",
 		email: "",
 		phone: "",
@@ -33,6 +35,8 @@ export default function CheckoutInfo() {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value,
+			city: flCity,
+			state: flState,
 		});
 	}
 
@@ -65,9 +69,7 @@ export default function CheckoutInfo() {
 			}
 		});
 
-		const order = [formData,
-			flCity,
-			flState, productIds]
+		const order = [formData, productIds]
 		console.log(order)
 		
 
