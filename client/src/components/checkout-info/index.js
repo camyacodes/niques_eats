@@ -74,6 +74,8 @@ export default function CheckoutInfo() {
 		getCheckout({
 			variables: { products: productIds },
 		});
+
+		window.location.assign("/success");
 	}
 
 	return (
@@ -234,7 +236,7 @@ export default function CheckoutInfo() {
 								className="cont-btn"
 								onClick={submitCheckout}
 							>
-								Continue to Payment
+								PLACE ORDER
 							</button>
 						</div>
 					</div>

@@ -36,7 +36,7 @@ function Success() {
             <Jumbotron>
                 <h1>Success!</h1>
                 <h2>
-                    Thank you for your purchase!
+                    Your order has been placed!
                 </h2>
                 <h2>
                     You will now be redirected to the homepage
