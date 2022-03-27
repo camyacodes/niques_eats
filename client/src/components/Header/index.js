@@ -3,6 +3,7 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client';
 import {QUERY_ME} from '../../utils/queries'
+import './style.css'
 
 const Header = () => {
 
@@ -44,8 +45,8 @@ const Header = () => {
         {Auth.loggedIn() ? (
             <>
          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            ME
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><Link to="/orderhistory" >ORDER HISTORY</Link></li>

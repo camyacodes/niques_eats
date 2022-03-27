@@ -1,0 +1,12 @@
+#navbarDropdown {
+    color: var(--dark);
+	/* background-color: #5f3d13; */
+    font-size: 2.2vw !important;
+}
+
+.dropdown-menu {
+    background-color: #fffaf4; 
+    color: var(--dark);
+    text-align: center;
+    /* margin: 2vw; */
+}
