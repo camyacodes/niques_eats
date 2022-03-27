@@ -420,7 +420,7 @@ db.once("open", async () => {
 			lastName: "testlast",
 			phone: "5555555555",
 			zipCode: "32697",
-			products: [products[0]],
+     
 		},
 	]);
 
