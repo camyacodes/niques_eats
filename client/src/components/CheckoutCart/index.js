@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import CheckoutCartItem from "../CheckoutCartItem";
 import Auth from "../../utils/auth";
-import "../CheckoutCart/style.css";
+import "./style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 // import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
@@ -36,15 +36,15 @@ const CheckoutCart = () => {
 	return (
 		<div className="col-1">
 			{state.cart.length ? (
-				<div>
+				<div >
 					{state.cart.map((item) => (
-						<CheckoutCartItem key={item._id} item={item} />
+						<CheckoutCartItem key={item._id} item={item} id="checkout-summary"/>
 					))}
 					<div className="container">
 						<div class="row total">
 							<div class="col">Total:</div>
 							<div class="col">
-								<p class="text-end">${calculateTotal()}</p>
+								<p class="text-center">${calculateTotal()}</p>
 							</div>
 						</div>
 					</div>
