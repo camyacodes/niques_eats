@@ -3,9 +3,11 @@ import Auth from "../../utils/auth";
 import { Link } from "react-router-dom";
 import { useQuery } from '@apollo/client';
 import {QUERY_ME} from '../../utils/queries'
+import { UserInputError } from "apollo-server-express";
 
 const Header = () => {
 
+  // const { loading, data } = useQuery(QUERY_ME);
 
   const logout = event => {
     event.preventDefault();
@@ -43,11 +45,13 @@ const Header = () => {
           </li>
         {Auth.loggedIn() ? (
             <>
-          <li class="nav-item">
-          <Link to="/" onClick={logout}>      
-            <h3>LOGOUT</h3>
-          </Link>
-                </li>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown</a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><Link to="/" class="dropdown-item" onClick={logout}>LOGOUT</Link></li>
+          <li><Link to="/orderhistory" class="dropdown-item"/>Order History</li>
+          </ul>
+           </li>   
             </>
         ) : ( 
           <>
