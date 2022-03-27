@@ -7,7 +7,7 @@ import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import spinner from "../../assets/spinner.gif";
-
+import Auth from "../../utils/auth";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -88,7 +88,13 @@ export default function CheckoutInfo() {
 					<div class="col">
 						{/* Header */}
 
-						<div className="login-prompt mb-3">
+						{Auth.loggedIn() ? (
+							<>
+						
+						</>
+						) :(
+							<>
+							<div className="login-prompt mb-3">
 							<p>
 								Already have an account?{" "}
 								<a href="/login">
@@ -97,6 +103,9 @@ export default function CheckoutInfo() {
 								for a faster checkout
 							</p>
 						</div>
+							</>
+						 )}
+
 						{/* buttons */}
 						<p className="mt-4">DELIVERY METHOD</p>
 						<div className="d-flex justify-content-center">
