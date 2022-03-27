@@ -73,7 +73,7 @@ function ProductItem(item) {
 		<div>
 			<Container className="themed-container p-5" fluid={true} id="dish-card">
 				<Col>
-					<Card>
+					<Card id="dish-card-content">
 						<div>
 							{/* <Link to={`/products/${_id}`}> */}
 							<CardImg
