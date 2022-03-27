@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import "../checkout-info/style.css";
 import { useStoreContext } from "../../utils/GlobalState";
+import { useMutation } from "@apollo/client";
+import { ADD_ORDER } from "../../utils/mutations";
 import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { QUERY_CHECKOUT } from "../../utils/queries";
@@ -14,7 +16,7 @@ export default function CheckoutInfo() {
 	const flState = "Florida";
 
 	const flCity = "Orlando";
-
+	const [addOrder] = useMutation(ADD_ORDER);
 	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
 	const [formData, setFormData] = useState({
 		firstName: "",
@@ -45,23 +47,15 @@ export default function CheckoutInfo() {
 		}
 	}, [state.cart.length, dispatch]);
 
-	useEffect(() => {
-		if (data) {
-			stripePromise.then((res) => {
-				res.redirectToCheckout({ sessionId: data.checkout.session });
-			});
-		}
-	}, [data]);
-
 	function submitCheckout() {
-		console.log({
-			form: {
-				...formData,
-				flCity,
-				flState,
-			},
-			products: state.cart,
-		});
+		// console.log({
+		// 	form: {
+		// 		...formData,
+		// 		flCity,
+		// 		flState,
+		// 	},
+		// 	products: state.cart,
+		// });
 
 		const productIds = [];
 
@@ -71,12 +65,43 @@ export default function CheckoutInfo() {
 			}
 		});
 
-		getCheckout({
-			variables: { products: productIds },
-		});
+		const order = [formData,
+			flCity,
+			flState, productIds]
+		console.log(order)
+		
 
-		window.location.assign("/success");
+
+		// getCheckout({
+		// 	variables: { products: productIds },
+		// });
+
+		// window.location.assign("/success");
 	}
+
+
+	// useEffect(() => {
+	// 	async function saveOrder() {
+	// 		const cart = await idbPromise("cart", "get");
+	// 		const products = cart.map((item) => item._id);
+
+	// 		if (products.length) {
+	// 			const { data } = await addOrder({ variables: { products } });
+	// 			const productData = data.addOrder.products;
+
+	// 			productData.forEach((item) => {
+	// 				idbPromise("cart", "delete", item);
+	// 			});
+	// 		}
+
+	// 		setTimeout(() => {
+	// 			window.location.assign("/");
+	// 		}, 3000);
+	// 	}
+
+	// 	saveOrder();
+	// }, [addOrder]);
+
 
 	return (
 		<div className="col-2">
