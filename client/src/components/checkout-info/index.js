@@ -8,13 +8,38 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import spinner from "../../assets/spinner.gif";
 import Auth from "../../utils/auth";
-
-
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+import PaymentBtn from "../PaymentBtn";
+const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc')
 
 
 
 export default function CheckoutInfo() {
+	
+	app.post('/create-checkout-session', async (req, res) => {
+		const session = await stripe.checkout.sessions.create({
+		  line_items: [
+			{
+			  price_data: {
+				currency: 'usd',
+				product_data: {
+				  name: 'T-shirt',
+				},
+				unit_amount: 2000,
+			  },
+			  quantity: 1,
+			},
+		  ],
+		  mode: 'payment',
+		  success_url: 'https://example.com/success',
+		  cancel_url: 'https://example.com/cancel',
+		});
+	  
+		res.redirect(303, session.url);
+	  });
+	  
+	  app.listen(4242, () => console.log(`Listening on port ${4242}!`));
+
+
 	const flState = "Florida";
 	const flCity = "Orlando";
 	
@@ -28,8 +53,6 @@ export default function CheckoutInfo() {
 		phone: "",
 	});
 
-	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
-	const [state, dispatch] = useStoreContext();
 
 	function handleChange(e) {
 		setFormData({
@@ -38,46 +61,16 @@ export default function CheckoutInfo() {
 		});
 	}
 
-	useEffect(() => {
-		async function getCart() {
-			const cart = await idbPromise("cart", "get");
-			dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
-		}
-
-		if (!state.cart.length) {
-			getCart();
-		}
-	}, [state.cart.length, dispatch]);
-
-	useEffect(() => {
-		if (data) {
-			stripePromise.then((res) => {
-				res.redirectToCheckout({ sessionId: data.checkout.session });
-			});
-		}
-	}, [data]);
-
-	function submitCheckout() {
+	function submitAddress () {
 		console.log({
 			form: {
 				...formData,
 				flCity,
 				flState,
 			},
-			products: state.cart,
-		});
-		const productIds = [];
+	// products: state.cart,
+	})};
 
-		state.cart.forEach((item) => {
-			for (let i = 0; i < item.purchaseQuantity; i++) {
-				productIds.push(item._id);
-			}
-		});
-
-		getCheckout({
-			variables: { products: productIds },
-		});
-	}
 
 	return (
 		<div className="col-2">
@@ -239,16 +232,18 @@ export default function CheckoutInfo() {
 					{/* Payment */}
 					<div class="row mt-5">
 						<div className="col d-flex justify-content-center">
-							{loading ? (
-								<img src={spinner} alt="loading" id="spinner" />
-							) : null}							
+														
 							<button
 								type="button"
 								className="cont-btn"
-								onClick={submitCheckout}
+								onClick={submitAddress}
 							>Continue to Payment
 							</button>
 
+							
+							<form action="/create-checkout-session" method="POST">
+     					 <button type="submit">Checkout</button>
+    						</form>
 						</div>
 					</div>
 				</div>
