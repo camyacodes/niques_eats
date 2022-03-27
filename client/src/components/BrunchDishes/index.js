@@ -60,7 +60,7 @@ function ProductList({}) {
 	return (
 		<div>
 			{state.products.length ? (
-				<div className="row row-cols-1 row-cols-md-3">
+				<div className="row row-cols-4 row-cols-md-4">
 					{filterProducts().map( product => (	
 					!product.description.includes('Brunch') ||		
 						<ProductItem
