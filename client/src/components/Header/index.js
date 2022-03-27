@@ -43,11 +43,15 @@ const Header = () => {
           </li>
         {Auth.loggedIn() ? (
             <>
-          <li class="nav-item">
-          <Link to="/" onClick={logout}>      
-            <h3>LOGOUT</h3>
-          </Link>
-                </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><Link to="/orderhistory" >ORDER HISTORY</Link></li>
+            <li><Link to="/" onClick={logout}>LOGOUT</Link></li>
+          </ul>
+        </li>
             </>
         ) : ( 
           <>
