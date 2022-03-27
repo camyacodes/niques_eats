@@ -1,0 +1,9 @@
+#date{
+    font-size: 1.1vw;
+    background-color: var(--quatrinary);
+    text-align: center;
+}
+
+#image{
+    margin:0.3vw;
+}

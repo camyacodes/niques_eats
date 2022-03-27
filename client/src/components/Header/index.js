@@ -50,6 +50,7 @@ const Header = () => {
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><Link to="/orderhistory" >ORDER HISTORY</Link></li>
+            <li><Link to="/checkout">CHECKOUT</Link></li>
             <li><Link to="/" onClick={logout}>LOGOUT</Link></li>
           </ul>
         </li>
