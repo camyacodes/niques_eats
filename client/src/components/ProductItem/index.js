@@ -144,22 +144,25 @@ function ProductItem(item) {
 								{description}
 							</h6>
 							<div class="row align-items-center">
-								<CardTitle tag="h5" class="col text-start">
+								<CardTitle tag="h5" class="col text-start" id="name">
 									{name}
 								</CardTitle>
-								<CardSubtitle tag="h5" className="col text-end">
+								<CardSubtitle tag="h5" className="col text-end" id="price">
 									${price}
 								</CardSubtitle>
-								<Datetime
+
+
+								
+							</div>
+						</div>
+
+						<div class="modal-footer">
+						<Datetime
 									value={"Choose a Date"}
 									timeFormat={false}
 									isValidDate={valid}
 									onChange={onDateChange}
 								/>
-							</div>
-						</div>
-
-						<div class="modal-footer">
 							<button 
 							type="button" 
 							class="add-to-cart"

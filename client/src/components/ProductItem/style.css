@@ -1,10 +1,19 @@
+.modal {
+    max-width:40%;
+  
+    left:22vw;
+}
+
 .modal-body {
     display: flex;
     align-items: center;
+    height: 20vw;
+ 
+    position:relative;
 }
 
 #dish-img-nav {
-   height:20vh;
+   height:10vw;
    width: auto;
 }
 
@@ -19,7 +28,18 @@
     border-radius: 15px;
     font-size: 1.2vw;
 }
+#name {
+    font-size: 1.5vw;
+}
 
+#price {
+    font-size: 2vw;
+   
+ right: 2vw;
+ bottom: 0.4vw;  
+ position: absolute;
+    
+}
 #card-btn {
 position:relative;
 height: 4.5vw;
@@ -39,6 +59,18 @@ height: 4.5vw;
 }
 
 @media screen and (max-width: 540px) {
+    .modal {
+        max-width:70%;
+      
+        left:18vw;
+    }
+    .modal-body {
+        display: flex;
+        align-items: center;
+        height: 30vw;
+        position:relative;
+    }
+    
     #dish-card-content {
         width: 20vw;
     }
@@ -64,6 +96,18 @@ height: 4.5vw;
 }
 
 @media screen and (max-width: 418px) {
+    .modal {
+        max-width:70%;
+      
+        left:22vw;
+    }
+    .modal-body {
+        display: flex;
+        align-items: center;
+        height: 30vw;
+        position:relative;
+    }
+    
     #dish-card-content {
         width: 20vw;
     }
@@ -89,6 +133,18 @@ height: 4.5vw;
 }
 
 @media screen and (max-width: 390px) {
+    .modal {
+        max-width:70%;
+      
+        left:22vw;
+    }
+    .modal-body {
+        display: flex;
+        align-items: center;
+        height: 30vw;
+        position:relative;
+    }
+
     #dish-card-content {
         width: 20vw;
     }
@@ -111,6 +167,9 @@ height: 4.5vw;
     /* margin: 0; */
   
 }
+
+
+
 }
 
 @media screen and (max-width: 375px) {

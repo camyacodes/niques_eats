@@ -27,3 +27,10 @@
 #dropdown-text{
     font-size: 1.5vw;
 }
+.navbar-toggler{
+ 
+}
+.navbar-toggler-icon {
+    height:2vw;
+    width: 2vw;
+}
