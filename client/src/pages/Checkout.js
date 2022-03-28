@@ -11,8 +11,11 @@ export default function Checkout() {
 			
 			<div className="row">
 			<h1 className="mt-5 ps-5">CHECKOUT</h1>
-				<CheckoutInfo />
-				<CheckoutCart id="checkout-cart" />
+		
+				<CheckoutInfo class="checkout-info"/>
+				
+				<CheckoutCart class="checkout-cart" />
+				
 			</div>
 			
 			</body>
