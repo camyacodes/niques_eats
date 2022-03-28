@@ -73,6 +73,7 @@
   }
 #faster-checkout {
   font-size: 1.4vw;
+  text-decoration: underline;
 }
   #guest-checkout {
     background-color: var(--primary);

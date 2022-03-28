@@ -80,9 +80,7 @@ const Cart = () => {
            </>
             ) : (
               <>
-              <h6 id="faster-checkout"><a href="/login">(log in for faster checkout)</a></h6>
-           
-           <Link to="/checkout"> <button id="guest-checkout">Guest Checkout</button> </Link>
+              <h6 id="faster-checkout"><a href="/login">Log in to Checkout</a></h6>
            </>
             )}
           </div>
