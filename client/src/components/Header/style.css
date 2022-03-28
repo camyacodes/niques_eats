@@ -8,5 +8,18 @@
     background-color: #fffaf4; 
     color: var(--dark);
     text-align: center;
-    /* margin: 2vw; */
+    margin: 4vw;
+}
+
+#navbarDropdown {
+    font-size: 2vw;
+    padding:0.5vw;
+}
+#nav-text {
+    font-size: 2vw !important;
+    padding:0.5vw;
+}
+.nav-item:hover {
+	color: var(--secondary);
+	background-color: var(--quatrinary);
 }

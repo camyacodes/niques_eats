@@ -19,7 +19,6 @@
 }
 
 
-
 html,
 body {
 	width: 100%;
@@ -70,10 +69,6 @@ a:visited {
 	color: inherit;
 }
 
-.nav-item:hover {
-	color: var(--secondary);
-	background-color: var(--quatrinary);
-}
 
 
 #login {

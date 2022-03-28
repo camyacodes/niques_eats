@@ -88,11 +88,8 @@ export default function CheckoutInfo() {
 					{/* Only column begin */}
 					<div class="col">
 						{/* Header */}
-
-					
  						{Auth.loggedIn() ? (
  							<>
-							 
  						</>
  						) :(
  							<>
@@ -107,27 +104,14 @@ export default function CheckoutInfo() {
  						</div>
  							</>
  						 )}
-						 
 						{/* buttons */}
-						<p className="mt-4">DELIVERY METHOD</p>
-						<div className="d-flex justify-content-center button">
-							<input
-								type="button"
-								value="DELIVER"
-								className="deliver-method deliver"
-							/>
-							<input
-								type="button"
-								value="PICKUP"
-								className="deliver-method pickup"
-							/>
-						</div>
+						<p className="delivery-info">Delivery Info:</p>
 					</div>
 					{/* only column end */}
 				</div>
 				{/* ^ whole column end */}
 				{/* FORM COlumn start */}
-				<div class="container">
+				<div class="container" id="delivery-form">
 					<div class="row row mt-5">
 						{/* first name */}
 						<div class="col padding-left">
@@ -246,7 +230,7 @@ export default function CheckoutInfo() {
 								type="button"
 								className="cont-btn"
 								onClick={submitCheckout}
-							>Continue to Payment
+							>PLACE ORDER
 							</button>
 
 						</div>

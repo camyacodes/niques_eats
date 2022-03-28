@@ -6,7 +6,13 @@
     background-color: #512b00 !important; 
     border-color: #512b00 !important;
 }
-
+#delivery-form {
+  /* background-color: #512b00; */
+  top: 0;
+  /* padding: 0; */
+  margin:0;
+  
+}
 .login-prompt {
     background-color: #e8b16d;
     height: 75px;
@@ -16,7 +22,13 @@
     padding-top: 13px;
   
   }
-  
+  .delivery-info {
+    font-size: 2.7vw;
+    margin-left:5vw;
+    margin-top: 2vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
   .deliver-method {
     height: 4vw;
     width:20vw;
@@ -42,13 +54,14 @@
   }
 
   #spinner {
-    height:2rem;
+    height:2vw;
 
   }
 
   .form-control {
-    background-color: #f4e9dc !important;
+    background-color: #ddd2c6;
     text-align: center;
     color: #512b00;
     font-size: 1.7vw;
+    top:0,
   }

@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import { LOGIN } from '../utils/mutations';
 import Auth from '../utils/auth';
 import '../index.css'
+import Cart from '../components/Cart';
+
+
 function Login(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
   const [login, { error }] = useMutation(LOGIN);
@@ -31,6 +34,7 @@ function Login(props) {
 
   return (
     <div className="container my-1" id="login">
+        <Cart />
       <Link to="/signup">← Go to Signup</Link>
 
       <h2 id="title">Login</h2>

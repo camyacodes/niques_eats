@@ -51,14 +51,6 @@ function App() {
         <div className="flex-column justify-flex-start min-100-vh">
           <StoreProvider>
             <Header />
-            {/* {Auth.loggedIn() ? (
-              <>
-                <Cart />
-              </>
-            ) : (
-              <></>
-            )} */}
-
             <SocialButtons />
             <div>
               <Switch>

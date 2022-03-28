@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../utils/queries';
 import "../index.css"
+import Cart from '../components/Cart';
 
 function OrderHistory() {
   const { data } = useQuery(QUERY_USER);
@@ -17,6 +18,7 @@ function OrderHistory() {
     <>
       <div className="container my-1">
         <Link to="/">← Back to Products</Link>
+        <Cart />
 
         {user ? (
           <>

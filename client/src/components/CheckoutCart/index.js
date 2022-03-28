@@ -44,7 +44,7 @@ const CheckoutCart = () => {
 						<div class="row total">
 							<div class="col">Total:</div>
 							<div class="col">
-								<p class="text-center">${calculateTotal()}</p>
+								<p class="text-end">${calculateTotal()}</p>
 							</div>
 						</div>
 					</div>

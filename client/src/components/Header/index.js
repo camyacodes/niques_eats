@@ -24,34 +24,33 @@ const Header = () => {
         <ul class="navbar-nav nav-fill w-100">
           <li class="nav-item">
           <Link to="/">
-          <h3>HOME</h3>
+          <h3 id="nav-text">HOME</h3>
           </Link>
           </li>
           <li class="nav-item">
           <Link to="/menu">
-          <h3>MENU</h3>
+          <h3 id="nav-text">MENU</h3>
           </Link>
           </li>
           <li class="nav-item">      
           <a href="/#about">
-          <h3>ABOUT</h3>
+          <h3 id="nav-text">ABOUT</h3>
           </a>         
           </li>
           <li class="nav-item">
           <a href="/#contact">         
-          <h3>CONTACT</h3>
+          <h3 id="nav-text">CONTACT</h3>
           </a>
           </li>
         {Auth.loggedIn() ? (
             <>
          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+          <a class="nav-link dropdown-toggle nav-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             ME
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><Link to="/orderhistory" >ORDER HISTORY</Link></li>
-            <li><Link to="/checkout">CHECKOUT</Link></li>
-            <li><Link to="/" onClick={logout}>LOGOUT</Link></li>
+            <li><Link to="/orderhistory"  >ORDER HISTORY</Link></li>
+            <li><Link to="/" onClick={logout} >LOGOUT</Link></li>
           </ul>
         </li>
             </>
@@ -59,7 +58,7 @@ const Header = () => {
           <>
           <li class="nav-item">
           <Link to="/login">
-          <h3>LOGIN</h3>
+          <h3 id="nav-text">LOGIN</h3>
           </Link>
           </li>
           

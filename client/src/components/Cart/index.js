@@ -9,6 +9,7 @@ import { QUERY_CHECKOUT } from '../../utils/queries';
 import { loadStripe } from '@stripe/stripe-js';
 import { useLazyQuery } from '@apollo/client';
 import { Link } from "react-router-dom";
+import '../home-info-cards/style.css'
 
 
 
@@ -64,16 +65,26 @@ const Cart = () => {
       <div className="close" onClick={toggleCart}>[close]</div>
       <h2>Shopping Cart</h2>
       {state.cart.length ? (
-        <div>
+        <div id="cart">
           {state.cart.map(item => (
             <CartItem key={item._id} item={item} />
           ))}
-          <div className="flex-row space-between" id="total">
-            <strong>Total: ${calculateTotal()}</strong>
-           
-                <h6>(log in for faster checkout)</h6>
+          <div className="flex-row space-between" id="cart-end">
+            <strong id="total">Total: ${calculateTotal()}</strong>
+ 
+            {Auth.loggedIn() ? (
+              <>
+              <div>
+                <Link to="/checkout"> <button id="guest-checkout">Checkout</button> </Link>
+                </div>
+           </>
+            ) : (
+              <>
+              <h6 id="faster-checkout"><a href="/login">(log in for faster checkout)</a></h6>
            
            <Link to="/checkout"> <button id="guest-checkout">Guest Checkout</button> </Link>
+           </>
+            )}
           </div>
         </div>
       ) : (

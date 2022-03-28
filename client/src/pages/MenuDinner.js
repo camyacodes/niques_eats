@@ -16,7 +16,7 @@ const MenuDinner = () => {
 
   return (
     <div id="dinner-menu">
-
+  <Cart />
       <div id="title">
         <span >MENU </span>
       </div>
@@ -52,10 +52,10 @@ const MenuDinner = () => {
           <DinnerDishes />
           </div>
         </div>
-        <Cart />
-        <div id="scroll-to-top" className ="footer">
+      
+        {/* <div id="scroll-to-top" className ="footer">
   <a href="#title"> <h4>Scroll To Top ^</h4> </a>
-  </div>
+  </div> */}
     </div>
       </div>
      
