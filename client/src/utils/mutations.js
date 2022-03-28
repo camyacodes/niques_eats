@@ -18,20 +18,20 @@ export const ADD_ORDER = gql`
 		$address2: String!
 		$email: String!
 		$firstName: String!
-		$flCity: String!
-		$flState: String!
+		$city: String!
+		$state: String!
 		$lastName: String!
 		$phone: String!
 		$zipCode: String!
-		$products: [ID]
+		$products: [ID!]
 	) {
 		addOrder(
 			address: $address
 			address2: $address2
 			email: $email
 			firstName: $firstName
-			flCity: $flCity
-			flState: $flState
+			city: $city
+			state: $state
 			lastName: $lastName
 			phone: $phone
 			zipCode: $zipCode
@@ -42,23 +42,13 @@ export const ADD_ORDER = gql`
 			address2
 			email
 			firstName
-			flCity
-			flState
+			city
+			state
 			lastName
 			phone
 			zipCode
 			purchaseDate
-			products {
-				_id
-				name
-				description
-				image
-				price
-				category {
-					_id
-					name
-				}
-			}
+			products
 		}
 	}
 `;

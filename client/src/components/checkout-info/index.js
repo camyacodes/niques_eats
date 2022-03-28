@@ -23,8 +23,8 @@ export default function CheckoutInfo() {
 		lastName: "",
 		address: "",
 		address2: "",
-		city: "",
-		state: "",
+		city: "Orlando",
+		state: "Florida",
 		zipCode: "",
 		email: "",
 		phone: "",
@@ -35,8 +35,6 @@ export default function CheckoutInfo() {
 		setFormData({
 			...formData,
 			[e.target.name]: e.target.value,
-			city: flCity,
-			state: flState,
 		});
 	}
 
@@ -51,7 +49,8 @@ export default function CheckoutInfo() {
 		}
 	}, [state.cart.length, dispatch]);
 
-	function submitCheckout() {
+	const submitCheckout = async () => {
+	 
 		// console.log({
 		// 	form: {
 		// 		...formData,
@@ -69,10 +68,14 @@ export default function CheckoutInfo() {
 			}
 		});
 
-		const order = [formData, productIds]
-		console.log(order)
 		
 
+		const order = {...formData, products: productIds}
+		console.log(order)
+		
+		 const { data } = await addOrder({
+			variables: { ...order },
+		  });
 
 		// getCheckout({
 		// 	variables: { products: productIds },
