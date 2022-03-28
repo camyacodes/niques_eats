@@ -2,6 +2,7 @@ import React, {useContext} from 'react';
 import { useStoreContext } from '../../utils/GlobalState';
 import { REMOVE_FROM_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
+import './style.css'
 
 const CartItem = ({ item }) => {
     const [, dispatch] = useStoreContext();
@@ -28,6 +29,7 @@ const CartItem = ({ item }) => {
             dispatch({
               type: UPDATE_CART_QUANTITY,
               _id: item._id,
+              date: item.date,
               purchaseQuantity: parseInt(value)
             });
           
@@ -40,10 +42,11 @@ const CartItem = ({ item }) => {
     return (
         <div className="flex-row">
             <div>
-                <div>Date: {new Date(item.date).toDateString()}</div>
+                <div id="date">{new Date(item.date).toDateString()}</div>
                 <img
                     src={`/images/${item.image}`}
                     alt=""
+                    id="image"
                 />
             </div>
             <div>
@@ -55,6 +58,7 @@ const CartItem = ({ item }) => {
                         placeholder="1"
                         value={item.purchaseQuantity}
                         onChange={onChange}
+                        id="quantity"
                     />
                     <span
                         role="img"

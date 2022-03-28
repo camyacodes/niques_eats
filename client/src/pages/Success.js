@@ -30,6 +30,9 @@ function Success() {
         saveOrder();
       }, [addOrder]);
 
+      setTimeout(() => {
+        window.location.assign('/');
+      }, 2000);
 
     return (
         <div>

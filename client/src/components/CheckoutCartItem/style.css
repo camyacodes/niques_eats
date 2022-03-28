@@ -4,14 +4,20 @@
     /* padding-top: 8px; */
     background-color: #77480e;
     color: #f4e9dc;
-    padding-bottom: 50px;
+    /* padding-bottom: 50px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 10px; */
+    
 
 }
 
+#date-text {
+    /* background-color: aquamarine; */
+    text-align: center;
+}
+
 .item {
-    font-size: 30px;
+    font-size: 1.3vw;
 }
 
 .items {
@@ -20,9 +26,9 @@
 
 #quantity {
     width: 10%;
-    background-color: transparent;
+    background-color: #f4e9dc;
     border: none;
-    padding-left: 10px;
+    text-align: center;
 }
 
 .col-1 {

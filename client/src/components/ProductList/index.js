@@ -8,6 +8,7 @@ import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { idbPromise } from "../../utils/helpers";
 import { useProductReducer } from '../../utils/reducers';
 import { ADD_ORDER } from '../../utils/mutations';
+import './style.css'
 
 function ProductList({  }) {
   const [state, dispatch] = useStoreContext();
@@ -49,9 +50,9 @@ function ProductList({  }) {
   }
 
   return (
-    <div >
+    <div  >
       {state.products.length ? (
-        <div className="row row-cols-1 row-cols-md-3">
+        <div className="row" id="item-list"  >
           {filterProducts().map((product) => (
             <ProductItem
               key={product._id}

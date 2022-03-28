@@ -69,14 +69,14 @@ const CheckoutCartItem = ({ item }) => {
 			<div class="container ">
 				<div class="row">
 					<div class="col cart-card">
-						<div class="d-flex justify-content-between date">
-						<div>{new Date(item.date).toDateString()}</div>
+						<div class="date">
+						<div id="date-text">{new Date(item.date).toDateString()}</div>
 						</div>
 						<div class="d-flex justify-content-between items">
 							<div className="item">{item.name}</div>
 							<p className="item">${item.price}</p>
 						</div>
-							<div >
+							<div class="item" >
 								<span>Qty:</span>
 								<input
 									id="quantity"
