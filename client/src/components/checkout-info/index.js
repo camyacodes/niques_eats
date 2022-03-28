@@ -118,6 +118,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="First name*"
 								aria-label="First name"
 								name="firstName"
@@ -129,6 +130,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Last name*"
 								aria-label="Last name"
 								onChange={handleChange}
@@ -143,6 +145,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Address*"
 								aria-label="Address"
 								onChange={handleChange}
@@ -154,6 +157,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Apt, suite, etc."
 								aria-label="Apt"
 								onChange={handleChange}
@@ -167,6 +171,7 @@ export default function CheckoutInfo() {
 						<div className="col-5 padding-left">
 							<input
 								className="form-control"
+								id="form-input-area-disable"
 								type="text"
 								placeholder={flCity}
 								aria-label={flCity}
@@ -178,6 +183,7 @@ export default function CheckoutInfo() {
 							<input
 								className="form-control"
 								type="text"
+								id="form-input-area-disable"
 								placeholder={flState}
 								aria-label={flState}
 								disabled
@@ -188,6 +194,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Zip Code*"
 								aria-label="Zip Code"
 								onChange={handleChange}
@@ -202,6 +209,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Email*"
 								aria-label="Email"
 								onChange={handleChange}
@@ -213,6 +221,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Phone Number*"
 								aria-label="Phone Number"
 								onChange={handleChange}

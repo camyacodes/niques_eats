@@ -58,8 +58,16 @@
 
   }
 
-  .form-control {
-    background-color: #ddd2c6;
+#form-input-area {
+    background-color: #f8e3cd;
+    text-align: center;
+    color: #512b00;
+    font-size: 1.7vw;
+    top:0,
+  }
+
+  #form-input-area-disable {
+    background-color: #bcb2a7;
     text-align: center;
     color: #512b00;
     font-size: 1.7vw;
