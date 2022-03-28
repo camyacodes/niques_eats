@@ -225,13 +225,15 @@ export default function CheckoutInfo() {
 						<div className="col d-flex justify-content-center">
 							{loading ? (
 								<img src={spinner} alt="loading" id="spinner" />
-							) : null}							
+							) : null}	
+							<a href="/success">					
 							<button
 								type="button"
 								className="cont-btn"
-								onClick={submitCheckout}
+								// onClick={submitCheckout}
 							>PLACE ORDER
 							</button>
+							</a>	
 
 						</div>
 					</div>
