@@ -10,6 +10,7 @@ import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import spinner from "../../assets/spinner.gif";
 import { useState } from "react";
+
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 export default function CheckoutInfo() {
@@ -130,22 +131,7 @@ console.log(state.cart)
 					{/* Only column begin */}
 					<div class="col">
 						{/* Header */}
- 						{Auth.loggedIn() ? (
- 							<>
- 						</>
- 						) :(
- 							<>
- 							<div className="login-prompt mb-3">
- 							<p>
- 								Already have an account?{" "}
- 								<a href="/login">
-									<u>Log in</u>
-								</a>{" "}
- 								for a faster checkout
- 							</p>
- 						</div>
- 							</>
- 						 )}
+ 						
 						{/* buttons */}
 						<p className="delivery-info">Delivery Info:</p>
 					</div>
