@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "../checkout-info/style.css";
 import { useStoreContext } from "../../utils/GlobalState";
+import { useMutation } from "@apollo/client";
+import { ADD_ORDER } from "../../utils/mutations";
 import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { QUERY_CHECKOUT } from "../../utils/queries";
@@ -12,17 +14,17 @@ import Auth from "../../utils/auth";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
-
-
 export default function CheckoutInfo() {
 	const flState = "Florida";
 	const flCity = "Orlando";
-	
+
 	const [formData, setFormData] = useState({
 		firstName: "",
 		lastName: "",
 		address: "",
 		address2: "",
+		city: "Orlando",
+		state: "Florida",
 		zipCode: "",
 		email: "",
 		phone: "",
@@ -49,23 +51,19 @@ export default function CheckoutInfo() {
 		}
 	}, [state.cart.length, dispatch]);
 
-	useEffect(() => {
-		if (data) {
-			stripePromise.then((res) => {
-				res.redirectToCheckout({ sessionId: data.checkout.session });
-			});
-		}
-	}, [data]);
 
-	function submitCheckout() {
-		console.log({
-			form: {
-				...formData,
-				flCity,
-				flState,
-			},
-			products: state.cart,
-		});
+	const submitCheckout = async () => {
+	 
+		// console.log({
+		// 	form: {
+		// 		...formData,
+		// 		flCity,
+		// 		flState,
+		// 	},
+		// 	products: state.cart,
+		// });
+
+
 		const productIds = [];
 
 		state.cart.forEach((item) => {
@@ -74,10 +72,45 @@ export default function CheckoutInfo() {
 			}
 		});
 
-		getCheckout({
-			variables: { products: productIds },
-		});
+		
+
+		const order = {...formData, products: productIds}
+		console.log(order)
+		
+		 const { data } = await addOrder({
+			variables: { ...order },
+		  });
+
+		// getCheckout({
+		// 	variables: { products: productIds },
+		// });
+
+		// window.location.assign("/success");
 	}
+
+
+	// useEffect(() => {
+	// 	async function saveOrder() {
+	// 		const cart = await idbPromise("cart", "get");
+	// 		const products = cart.map((item) => item._id);
+
+	// 		if (products.length) {
+	// 			const { data } = await addOrder({ variables: { products } });
+	// 			const productData = data.addOrder.products;
+
+	// 			productData.forEach((item) => {
+	// 				idbPromise("cart", "delete", item);
+	// 			});
+	// 		}
+
+	// 		setTimeout(() => {
+	// 			window.location.assign("/");
+	// 		}, 3000);
+	// 	}
+
+	// 	saveOrder();
+	// }, [addOrder]);
+
 
 	return (
 		<div className="col-2">
@@ -239,8 +272,10 @@ export default function CheckoutInfo() {
 							<button
 								type="button"
 								className="cont-btn"
-								// onClick={submitCheckout}
-							>PLACE ORDER
+
+								onClick={submitCheckout}
+							>
+								PLACE ORDER
 							</button>
 							</a>	
 

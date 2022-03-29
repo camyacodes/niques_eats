@@ -415,12 +415,17 @@ db.once("open", async () => {
 			address2: "Apt 2",
 			email: "test@test.com",
 			firstName: "Test",
-			flCity: "Orlando",
-			flState: "Florida",
+			city: "Orlando",
+			state: "Florida",
 			lastName: "testlast",
 			phone: "5555555555",
 			zipCode: "32697",
-     
+
+			products: [
+				"623fd7623abaf3b6fb149b40",
+				"623fd7623abaf3b6fb149b41",
+				"623fd7623abaf3b6fb149b43"
+			  ]
 		},
 	]);
 

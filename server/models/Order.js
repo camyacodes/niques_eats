@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 
 const { Schema } = mongoose;
 
+const Product = require("./Product");
+
 const orderSchema = new Schema({
 	address: {
 		type: String,
@@ -9,16 +11,23 @@ const orderSchema = new Schema({
 	address2: { type: String },
 	email: { type: String },
 	firstName: { type: String },
-	flCity: { type: String },
-	flState: { type: String },
+	city: { type: String },
+	state: { type: String },
 	lastName: { type: String },
 	phone: { type: String },
 	zipCode: { type: String },
+	products: [
+		{
+		  type: Schema.Types.ObjectId,
+		  ref: 'Product'
+		}
+	],
 	purchaseDate: {
 		type: Date,
 		default: Date.now,
-	},
-	products: [],
+		get: date => new Date(date).toISOString()
+	  },
+	
 });
 
 const Order = mongoose.model("Order", orderSchema);
