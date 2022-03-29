@@ -4,7 +4,7 @@
     border:0;
     margin:0;
 	position: fixed;
-	width: 6vw;
+	width: 4vw;
     top: 25vh;
 	transition: all 0.3s linear;
 	box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.4);
@@ -21,7 +21,7 @@
 
 .social-buttons ul {
 	padding:0vw 0vw 0vw 0vw ;
-    margin:0vw 0vw 0vw 3vw ;
+    margin:0vw 0vw 0vw 1vw ;
     border:0;
 }
 

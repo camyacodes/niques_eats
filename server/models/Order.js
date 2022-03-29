@@ -27,6 +27,7 @@ const orderSchema = new Schema({
 		default: Date.now,
 		get: (date) => new Date(date).toISOString(),
 	},
+	total: { type: Number },
 });
 
 const Order = mongoose.model("Order", orderSchema);

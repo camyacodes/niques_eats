@@ -424,7 +424,8 @@ db.once("open", async () => {
 			"623fd7623abaf3b6fb149b40",
 			"623fd7623abaf3b6fb149b41",
 			"623fd7623abaf3b6fb149b43"
-		  ]
+		  ],
+		total: "33"
 	},
 ]);
 

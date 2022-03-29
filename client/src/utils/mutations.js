@@ -24,6 +24,7 @@ export const ADD_ORDER = gql`
 		$phone: String!
 		$zipCode: String!
 		$products: [ID!]
+		$total: String
 	) {
 		addOrder(
 			address: $address
@@ -36,6 +37,7 @@ export const ADD_ORDER = gql`
 			phone: $phone
 			zipCode: $zipCode
 			products: $products
+			total: $total
 		) {
 			_id
 			address
@@ -49,6 +51,7 @@ export const ADD_ORDER = gql`
 			zipCode
 			purchaseDate
 			products
+			total
 		}
 	}
 `;

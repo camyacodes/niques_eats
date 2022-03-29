@@ -96,7 +96,8 @@ export const QUERY_ORDERS = gql`
 			phone
 			zipCode
 			purchaseDate
-			products 
+			products
+			total 
 		}
 	}
 `;

@@ -52,6 +52,19 @@ export default function CheckoutInfo() {
 		}
 	}, [state.cart.length, dispatch]);
 
+	// console.log(state.cart)
+	function calculateTotal () {
+		let sum = 0;
+		state.cart.forEach(item => {
+		  sum += item.price * item.purchaseQuantity;
+		});
+		return sum.toFixed(2);
+	}
+	
+	
+console.log(state.cart)
+
+
 	const submitCheckout = async () => {
 	 
 		// console.log({
@@ -63,6 +76,7 @@ export default function CheckoutInfo() {
 		// 	products: state.cart,
 		// });
 
+	
 		const productIds = [];
 
 		state.cart.forEach((item) => {
@@ -70,11 +84,10 @@ export default function CheckoutInfo() {
 				productIds.push(item._id);
 			}
 		});
-
 		
 		
-		const order = {...formData, products: productIds}
-		console.log(order)
+		const order = {...formData, products: productIds, total: calculateTotal()}
+		// console.log(order)
 		
 		 const { data } = await addOrder({
 			variables: { ...order },

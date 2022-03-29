@@ -52,10 +52,10 @@ function OrderHistory() {
 				<thead>
 					<tr>
 						<th>Order ID</th>
-						<th>Name</th>
-						<th>Address</th>
-						<th>Purchase Date</th>
-						<th>Products</th>
+						<th>Order Date</th>
+						<th>Delivery Address</th>
+						<th>Total</th>
+						<th>Status</th>
 						{/* <th>Status</th> */}
 					</tr>
 				</thead>
@@ -68,10 +68,12 @@ function OrderHistory() {
 		   <tbody key={order._id}>
 					<tr >
 						<td>{order._id}</td>
-							<td>{order.firstName} { order.lastName}</td>
-						<td>{order.address}</td>
 						<td>{new Date(order.purchaseDate).toDateString()}</td>
-						<td id="product-content">{order.products}</td>
+							
+					<td>{order.address} {order.address2}, {order.zipCode}</td>
+					<td id="product-content">${order.total}</td>
+					<td id="product-content">Pending</td>
+					
 						{/* <td class="row">
 							<input type="checkbox" id="scales" name="deliver" checked />
 							<label for="scales">Delivered</label>
