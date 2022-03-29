@@ -7,7 +7,7 @@ import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
-import { useLazyQuery } from "@apollo/client";
+import { useLazyQuery, loading } from "@apollo/client";
 import spinner from "../../assets/spinner.gif";
 import Auth from "../../utils/auth";
 
@@ -19,12 +19,9 @@ const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 export default function CheckoutInfo() {
 	const flState = "Florida";
 	const flCity = "Orlando";
-<<<<<<< HEAD
 	const [addOrder] = useMutation(ADD_ORDER);
-	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
-=======
+
 	
->>>>>>> features/styling
 	const [formData, setFormData] = useState({
 		firstName: "",
 		lastName: "",
@@ -37,7 +34,6 @@ export default function CheckoutInfo() {
 		phone: "",
 	});
 
-	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
 	const [state, dispatch] = useStoreContext();
 
 	function handleChange(e) {
@@ -58,7 +54,6 @@ export default function CheckoutInfo() {
 		}
 	}, [state.cart.length, dispatch]);
 
-<<<<<<< HEAD
 	const submitCheckout = async () => {
 	 
 		// console.log({
@@ -70,25 +65,6 @@ export default function CheckoutInfo() {
 		// 	products: state.cart,
 		// });
 
-=======
-	useEffect(() => {
-		if (data) {
-			stripePromise.then((res) => {
-				res.redirectToCheckout({ sessionId: data.checkout.session });
-			});
-		}
-	}, [data]);
-
-	function submitCheckout() {
-		console.log({
-			form: {
-				...formData,
-				flCity,
-				flState,
-			},
-			products: state.cart,
-		});
->>>>>>> features/styling
 		const productIds = [];
 
 		state.cart.forEach((item) => {
@@ -290,21 +266,15 @@ export default function CheckoutInfo() {
 					{/* Payment */}
 					<div class="row mt-5">
 						<div className="col d-flex justify-content-center">
-							{loading ? (
+							{/* {loading ? (
 								<img src={spinner} alt="loading" id="spinner" />
-							) : null}	
+							) : null}	 */}
 							<a href="/success">					
 							<button
 								type="button"
 								className="cont-btn"
-<<<<<<< HEAD
 								onClick={submitCheckout}
-							>
-								PLACE ORDER
-=======
-								// onClick={submitCheckout}
 							>PLACE ORDER
->>>>>>> features/styling
 							</button>
 							</a>	
 
