@@ -123,17 +123,10 @@ const resolvers = {
 
 			return { token, user };
 		},
-    addOrder: async (parent, args, context) => {
-      if (context.user) {
-      const order = await Order.create(args);
+		addOrder: async (parent, args) => {
+			const order = await Order.create(args);
 
-        await User.findByIdAndUpdate(context.user._id, { $push: { orders: order } });
-
-        return order;
-      }
-      
-      throw new AuthenticationError('Not logged in');
-     
+			return order;
 		},
     updateProduct: async (parent, { _id, name }) => {
 
