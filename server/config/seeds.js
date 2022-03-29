@@ -409,20 +409,24 @@ db.once("open", async () => {
   
   await Order.deleteMany();
 
-	const orders = await Order.insertMany([
-		{
-			address: "123 jefferson lane",
-			address2: "Apt 2",
-			email: "test@test.com",
-			firstName: "Test",
-			flCity: "Orlando",
-			flState: "Florida",
-			lastName: "testlast",
-			phone: "5555555555",
-			zipCode: "32697",
-     
-		},
-	]);
+  const orders = await Order.insertMany([
+	{
+		address: "123 jefferson lane",
+		address2: "Apt 2",
+		email: "test@test.com",
+		firstName: "Test",
+		city: "Orlando",
+		state: "Florida",
+		lastName: "testlast",
+		phone: "5555555555",
+		zipCode: "32697",
+		products: [
+			"623fd7623abaf3b6fb149b40",
+			"623fd7623abaf3b6fb149b41",
+			"623fd7623abaf3b6fb149b43"
+		  ]
+	},
+]);
 
 	console.log("orders seeded");
 
