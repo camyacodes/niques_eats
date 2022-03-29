@@ -56,7 +56,7 @@ function OrderHistory() {
 						<th>Address</th>
 						<th>Purchase Date</th>
 						<th>Products</th>
-						<th>Status</th>
+						{/* <th>Status</th> */}
 					</tr>
 				</thead>
 
