@@ -12,6 +12,7 @@ import spinner from "../../assets/spinner.gif";
 import Auth from "../../utils/auth";
 
 
+
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 export default function CheckoutInfo() {
@@ -51,7 +52,7 @@ export default function CheckoutInfo() {
 		}
 	}, [state.cart.length, dispatch]);
 
-
+	const [addOrder] = useMutation(ADD_ORDER);
 	const submitCheckout = async () => {
 	 
 		// console.log({
@@ -77,9 +78,11 @@ export default function CheckoutInfo() {
 		const order = {...formData, products: productIds}
 		console.log(order)
 		
-		 const { data } = await addOrder({
-			variables: { ...order },
-		  });
+		
+
+const { data } = await addOrder({
+	variables: { ...order },
+  });
 
 		// getCheckout({
 		// 	variables: { products: productIds },

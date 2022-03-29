@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useQuery } from "@apollo/client";
 import ProductItem from "../ProductItem";
-import { QUERY_PRODUCTS } from "../../utils/queries";
+import { QUERY_PRODUCTS} from "../../utils/queries";
 import spinner from "../../assets/spinner.gif";
 import { useStoreContext } from "../../utils/GlobalState";
 import { UPDATE_PRODUCTS } from "../../utils/actions";
@@ -13,9 +13,11 @@ function ProductList({}) {
 
 	const { currentCategory } = state;
 
-	const { loading, data } = useQuery(QUERY_PRODUCTS);
+	const { loading, data } = useQuery(QUERY_PRODUCTS , {
+		variables:{category: currentCategory}
+	});
 
-	const products = data?.products || [];
+	// const products = data?.products || [];
 	// console.log(products);
 
 	useEffect(() => {
@@ -41,6 +43,7 @@ function ProductList({}) {
 		}
 	}, [data, loading, dispatch]);
 
+	// console.log ()
 	function filterProducts() {
 
 		// products = products.filter(products => products.menu === 'dinner')
@@ -52,7 +55,7 @@ function ProductList({}) {
 		}
 
 		return state.products.filter(
-			(product) => product.category._id === currentCategory
+			(product) => product.category._id === currentCategory 
 			
 		);
 	}
