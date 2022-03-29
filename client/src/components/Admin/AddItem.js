@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Form } from "reactstrap";
 import {useMutation} from '@apollo/client';
 import { ADD_ITEM} from '../../utils/mutations'
-
+import './style.css'
 
  function AddItem() {
     const[name, setname] = useState('')
@@ -36,7 +36,7 @@ import { ADD_ITEM} from '../../utils/mutations'
                 <input type="text" className="form-control text-center" placeholder="price" value={price} onChange={(e)=>{setprice(e.target.value)}}  />
                 <input type="text" className="form-control text-center" placeholder="image url" value={image} onChange={(e)=>{setimage(e.target.value)}}  />
                 <input type="text" className="form-control text-center" placeholder="description" value={description} onChange={(e)=>{setdescription(e.target.value)}}  />
-               <button className="btn mt-5 position-absolute top-100 start-50 translate-middle" type="submit">Add Item</button>
+               <button className="btn mt-5 position-absolute top-100 start-50 translate-middle" type="submit" onClick={formhandler}>Add Item</button>
             </form>
         </div>
     )

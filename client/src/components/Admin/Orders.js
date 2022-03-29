@@ -14,12 +14,12 @@ import { QUERY_USER } from '../../utils/queries';
 
 //     }
 // ]
-function Orders () {
-//   const { data } = useQuery(QUERY_USER);
- 
+function Orders() {
+    //   const { data } = useQuery(QUERY_USER);
+
     return (
         <div>
-            <table>
+            <table className='table'>
                 <thead>
                     <tr>
                         <th>Order ID</th>
@@ -30,26 +30,33 @@ function Orders () {
                         <th>Status</th>
                     </tr>
                 </thead>
-        <tbody>
-       
-            {/* <tr>
-                <td>{order.id}</td>
-                <td>{order.email}</td>
-                <td>{order.userid}</td>
-                <td>{order.amount}</td>
-                <td>{order.date}</td>
-                <td>{order.status}</td>
-            </tr>
-      */}
 
-        </tbody>
+                <tbody>
 
+                    return <tr>
+                        <td>order.id</td>
+                        <td>user.email</td>
+                        <td>user.id</td>
+                        <td >order.amount</td>
+                        <th>order.Date</th>
+                        <td class="row">
+                            <input type="checkbox" id="scales" name="deliver"
+                                checked />
+                            <label for="scales">Delivered</label>
+                            <input type="checkbox" id="scales" name="deliver"
+                                 />
+                            <label for="scales">Not Delivered</label>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
 
 
             </table>
-
-
         </div>
+
     )
 }
 
