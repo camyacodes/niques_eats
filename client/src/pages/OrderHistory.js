@@ -74,7 +74,7 @@ function OrderHistory() {
 					<td id="product-content">${order.total}</td>
 					<td id="product-content">Pending</td>
 					
-						{/* <td class="row">
+						{/* <td className="row">
 							<input type="checkbox" id="scales" name="deliver" checked />
 							<label for="scales">Delivered</label>
 							<input type="checkbox" id="scales" name="deliver" />

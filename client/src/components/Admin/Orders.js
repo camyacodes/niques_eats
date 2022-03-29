@@ -39,7 +39,7 @@ function Orders() {
                         <td>user.address</td>
                         <td >order.amount</td>
                         <th>order.Date</th>
-                        <td class="row">
+                        <td className="row">
                             <input type="checkbox" id="scales" name="deliver"
                                 checked />
                             <label for="scales">Delivered</label>

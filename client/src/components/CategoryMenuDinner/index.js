@@ -52,7 +52,7 @@ function CategoryMenuDinner({  }) {
     {categories.map(item => (     
       // below is the way to ask the app to ignore these item in category list
       item.name === 'Main Dishes' || item.name === 'Sides' || item.name === 'Drinks' ||
-      <button class="menu-nav-buttons-dinner"
+      <button className="menu-nav-buttons-dinner"
         key={item._id}
         onClick={() => {
           handleClick(item._id);

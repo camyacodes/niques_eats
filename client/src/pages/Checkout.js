@@ -12,9 +12,9 @@ export default function Checkout() {
 			<div className="row">
 			<h1 className="mt-5 ps-5">CHECKOUT</h1>
 		
-				<CheckoutInfo class="checkout-info"/>
+				<CheckoutInfo className="checkout-info"/>
 				
-				<CheckoutCart class="checkout-cart" />
+				<CheckoutCart className="checkout-cart" />
 				
 			</div>
 			

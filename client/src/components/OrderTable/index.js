@@ -26,7 +26,7 @@ export default function OrderTable () {
                 <td>user.address</td>
                 <td>user.Purchasedate</td>
                 <td>order.products</td>
-                {/* <td class="row">
+                {/* <td className="row">
                     <input type="checkbox" id="scales" name="deliver" checked />
                     <label for="scales">Delivered</label>
                     <input type="checkbox" id="scales" name="deliver" />
