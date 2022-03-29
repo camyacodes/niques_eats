@@ -15,40 +15,40 @@ const Header = () => {
 
   return (
   
-    <nav class="navbar navbar-expand-md navbar-light">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
-        <span class="navbar-toggler-icon"></span>
+    <nav className="navbar navbar-expand-md navbar-light">
+    <div className="container-fluid">
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" >
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse nav-fill w-100" id="navbarNav">
-        <ul class="navbar-nav nav-fill w-100">
-          <li class="nav-item">
+      <div className="collapse navbar-collapse nav-fill w-100" id="navbarNav">
+        <ul className="navbar-nav nav-fill w-100">
+          <li className="nav-item">
           <Link to="/">
           <h3 id="nav-text">HOME</h3>
           </Link>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
           <Link to="/menu">
           <h3 id="nav-text">MENU</h3>
           </Link>
           </li>
-          <li class="nav-item">      
+          <li className="nav-item">      
           <a href="/#about">
           <h3 id="nav-text">ABOUT</h3>
           </a>         
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
           <a href="/#contact">         
           <h3 id="nav-text">CONTACT</h3>
           </a>
           </li>
         {Auth.loggedIn() ? (
             <>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle nav-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+         <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle nav-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             ME
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><Link to="/orderhistory" id="dropdown-text" >ORDER HISTORY</Link></li>
             <li><Link to="/" onClick={logout} id="dropdown-text">LOGOUT</Link></li>
           </ul>
@@ -56,7 +56,7 @@ const Header = () => {
             </>
         ) : ( 
           <>
-          <li class="nav-item">
+          <li className="nav-item">
           <Link to="/login">
           <h3 id="nav-text">LOGIN</h3>
           </Link>

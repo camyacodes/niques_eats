@@ -116,11 +116,11 @@ export default function CheckoutInfo() {
 	return (
 		<div className="col-2">
 			{/* container start */}
-			<div class="container">
+			<div className="container">
 				{/* whole column begin */}
-				<div class="row">
+				<div className="row">
 					{/* Only column begin */}
-					<div class="col">
+					<div className="col">
 						{/* Header */}
  						{Auth.loggedIn() ? (
  							<>
@@ -145,10 +145,10 @@ export default function CheckoutInfo() {
 				</div>
 				{/* ^ whole column end */}
 				{/* FORM COlumn start */}
-				<div class="container" id="delivery-form">
-					<div class="row row mt-5">
+				<div className="container" id="delivery-form">
+					<div className="row row mt-5">
 						{/* first name */}
-						<div class="col padding-left">
+						<div className="col padding-left">
 							<input
 								type="text"
 								className="form-control"
@@ -264,7 +264,7 @@ export default function CheckoutInfo() {
 						</div>
 					</div>
 					{/* Payment */}
-					<div class="row mt-5">
+					<div className="row mt-5">
 						<div className="col d-flex justify-content-center">
 							{/* {loading ? (
 								<img src={spinner} alt="loading" id="spinner" />

@@ -66,17 +66,17 @@ const CheckoutCartItem = ({ item }) => {
 		//     </div>
 		// </div>
 		<div>
-			<div class="container ">
-				<div class="row">
-					<div class="col cart-card">
-						<div class="date">
+			<div className="container ">
+				<div className="row">
+					<div className="col cart-card">
+						<div className="date">
 						<div id="date-text">{new Date(item.date).toDateString()}</div>
 						</div>
-						<div class="d-flex justify-content-between items">
+						<div className="d-flex justify-content-between items">
 							<div className="item">{item.name}</div>
 							<p className="item">${item.price}</p>
 						</div>
-							<div class="item" >
+							<div className="item" >
 								<span>Qty:</span>
 								<input
 									id="quantity"
@@ -97,9 +97,7 @@ const CheckoutCartItem = ({ item }) => {
 						
 						
 					</div>
-					{/* <div class=" cart-price">Add Order Notes</div>
-					<div >Subtotal</div>
-					<div >Delivery Fees</div> */}
+			
 				</div>
 			</div>
 		</div>

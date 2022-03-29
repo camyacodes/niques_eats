@@ -82,7 +82,7 @@ function ProductItem(item) {
 								src={`/images/${image}`}
 								alt={name}
 								id="dish-img"
-								class="rounded mx-auto d-block"
+								className="rounded mx-auto d-block"
 							/>
 							{/* </Link> */}
 						</div>
@@ -96,11 +96,11 @@ function ProductItem(item) {
 									${price}
 								</CardSubtitle>
 							</div>
-							{/* <button type="button" class="btn btn-primary" data-bs-toggle="modal"  onClick={addToCart}> */}
+							{/* <button type="button" className="btn btn-primary" data-bs-toggle="modal"  onClick={addToCart}> */}
 							<div id="card-btn">
 							<button
 								type="button"
-								class="btn btn-primary add-to-cart"
+								className="btn btn-primary add-to-cart"
 								data-bs-toggle="modal"
 								data-bs-target={`#modal${_id}`}
 								
@@ -114,15 +114,15 @@ function ProductItem(item) {
 			</Container>
 
 			<div
-				class="modal fade"
+				className="modal fade"
 				id={`modal${_id}`}
 				tabindex="-1"
 				aria-labelledby="exampleModalLabel"
 				aria-hidden="true"
 			>
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<div class="modal-header">
+				<div className="modal-dialog">
+					<div className="modal-content">
+						<div className="modal-header">
 							<button
 								type="button"
 								class="btn-close"
@@ -131,7 +131,7 @@ function ProductItem(item) {
 							></button>
 						</div>
 
-						<div class="modal-body row">
+						<div className="modal-body row">
 							<CardImg
 								top
 								width="100%"
@@ -140,11 +140,11 @@ function ProductItem(item) {
 								id="dish-img-nav"
 								class="rounded mx-auto d-block col"
 							/>
-							<h6 class="col" id="description">
+							<h6 className="col" id="description">
 								{description}
 							</h6>
-							<div class="row align-items-center">
-								<CardTitle tag="h5" class="col text-start" id="name">
+							<div className="row align-items-center">
+								<CardTitle tag="h5" className="col text-start" id="name">
 									{name}
 								</CardTitle>
 								<CardSubtitle tag="h5" className="col text-end" id="price">
@@ -156,7 +156,7 @@ function ProductItem(item) {
 							</div>
 						</div>
 
-						<div class="modal-footer">
+						<div className="modal-footer">
 						<Datetime
 									value={"Choose a Date"}
 									timeFormat={false}

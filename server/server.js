@@ -11,6 +11,11 @@ const app = express();
 
 const startServer = async () => {
   const server = new ApolloServer({
+    cors: {
+      origin: '*',			// <- allow request from all domains
+      credentials: true},
+
+
     typeDefs,
     resolvers,
     context: authMiddleware,
@@ -38,5 +43,6 @@ app.use(express.json());
 db.once('open', () => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
-  });
+  
+    });
 });

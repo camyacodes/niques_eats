@@ -48,16 +48,16 @@ export default function Dish({ photo }) {
 
 
             <div>
-              <CardImg top width="100%" src={photo.image} alt="Card image cap" id="dish-img" class="rounded mx-auto d-block" />
+              <CardImg top width="100%" src={photo.image} alt="Card image cap" id="dish-img" className="rounded mx-auto d-block" />
             </div>
 
 
             <CardBody>
-              <div class="row ">
-                <CardTitle tag="h5" class="col ">{photo.name}</CardTitle>
+              <div className="row ">
+                <CardTitle tag="h5" className="col ">{photo.name}</CardTitle>
                 <CardSubtitle tag="h5" className="col ">{photo.price}</CardSubtitle>
               </div>
-              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#meal${photo.id}`}>
+              <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target={`#meal${photo.id}`}>
                 Add to Cart
               </button>
             </CardBody>
@@ -66,37 +66,37 @@ export default function Dish({ photo }) {
       </Container>
 
 
-      <div class="dish-modal ">
-        <div class="modal fade "
+      <div className="dish-modal ">
+        <div className="modal fade "
           id={`meal${photo.id}`}
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
-          <div class="modal-dialog modal-sm">
-            <div class="modal-content">
+          <div className="modal-dialog modal-sm">
+            <div className="modal-content">
 
-              <div class="modal-header">
+              <div className="modal-header">
                 <button
                   type="button"
-                  class="btn-close"
+                  className="btn-close"
                   data-bs-dismiss="modal"
                   aria-label="Close"
                 ></button>
               </div>
 
 
-              <div class="modal-body">
-                <div class="row align-items-center">
-                  <CardImg top width="100%" src={photo.image} alt="Card image cap" id="dish-img" class="rounded mx-auto d-block" />
-                  <CardTitle tag="h5" class="col  text-start">{photo.name}</CardTitle>
+              <div className="modal-body">
+                <div className="row align-items-center">
+                  <CardImg top width="100%" src={photo.image} alt="Card image cap" id="dish-img" className="rounded mx-auto d-block" />
+                  <CardTitle tag="h5" className="col  text-start">{photo.name}</CardTitle>
                   <CardSubtitle tag="h5" className="col text-end">{photo.price}</CardSubtitle>
                 </div>
               </div>
 
-            <div class="container">
-              <div class="modal-footer row justify-content-center">
-                <Calendar class="col-2"/>
+            <div className="container">
+              <div className="modal-footer row justify-content-center">
+                <Calendar className="col-2"/>
 
                 <div className="input-group col-2">
                   <button type="button" onClick={handleDecrement} className="input-group-text col-1">-</button>
@@ -104,7 +104,7 @@ export default function Dish({ photo }) {
                   <button type="button" onClick={handleIncrement} className="input-group-text col-1">+</button>
                 </div>
 
-                <button type="button" class="btn btn-primary col-7 m-3">Add to Cart</button>
+                <button type="button" className="btn btn-primary col-7 m-3">Add to Cart</button>
               </div>
               </div>
 

@@ -41,10 +41,10 @@ const CheckoutCart = () => {
 						<CheckoutCartItem key={item._id} item={item} />
 					))}
 					<div className="container">
-						<div class="row total">
-							<div class="col">Total:</div>
-							<div class="col">
-								<p class="text-end">${calculateTotal()}</p>
+						<div className="row total">
+							<div className="col">Total:</div>
+							<div className="col">
+								<p className="text-end">${calculateTotal()}</p>
 							</div>
 						</div>
 					</div>
