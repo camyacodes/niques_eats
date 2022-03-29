@@ -6,6 +6,7 @@ import {QUERY_ME} from '../../utils/queries'
 import './style.css'
 
 const Header = () => {
+  const { data: userData } = useQuery(QUERY_ME);
 
 
   const logout = event => {
@@ -42,11 +43,11 @@ const Header = () => {
           <h3 id="nav-text">CONTACT</h3>
           </a>
           </li>
-        {Auth.loggedIn() ? (
+        {Auth.loggedIn() && userData ? (
             <>
          <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle nav-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
-            ME
+          {userData.me.username}
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><Link to="/orderhistory" id="dropdown-text" >ORDER HISTORY</Link></li>
