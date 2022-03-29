@@ -45,17 +45,9 @@ function OrderHistory() {
     
       
     return (
-        <div>
-            <div>
-			{orders &&
-        orders.map(order => (
-          <div key={order._id} className="card mb-3">
-            <p className="card-header">
-              
-              order on {order.address}
-				</p>
-				
-				<table className="table">
+        
+			<div>
+			<table className="table">
 				<thead>
 					<tr>
 						<th>Order ID</th>
@@ -67,12 +59,17 @@ function OrderHistory() {
 					</tr>
 				</thead>
 
-				<tbody>
+				{orders &&
+        orders.map(order => (
+          
+         
+			
+		   <tbody key={order._id}>
 					<tr>
 						<td>{order._id}</td>
 							<td>{order.firstName} { order.lastName}</td>
 						<td>{order.address}</td>
-						<td>{order.purchaseDate}</td>
+						<td>{new Date(order.purchaseDate).toDateString()}</td>
 						<td>{order.products}</td>
 						{/* <td class="row">
 							<input type="checkbox" id="scales" name="deliver" checked />
@@ -82,17 +79,17 @@ function OrderHistory() {
 						</td> */}
 					</tr>
 				</tbody>
-            </table>
-            <div>
-          
-            </div>
+				
+            
            
-          </div>
+          
         ))}
+            </table>
+		
          
            </div>
 		
-		</div>
+		
 	);
 }
 
