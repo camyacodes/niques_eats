@@ -121,6 +121,10 @@ export default function CheckoutInfo() {
 					<div class="col">
 						{/* Header */}
 
+						{Auth.loggedIn() ? (
+						<></>
+						):
+						(<>
 						<div className="login-prompt mb-3">
 							<p>
 								Already have an account?{" "}
@@ -130,6 +134,9 @@ export default function CheckoutInfo() {
 								for a faster checkout
 							</p>
 						</div>
+						</>)}
+
+
 						{/* buttons */}
 						<p className="mt-4">DELIVERY METHOD</p>
 						<div className="d-flex justify-content-center">
