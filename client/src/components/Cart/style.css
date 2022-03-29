@@ -5,7 +5,7 @@
   right: 0;
   min-width: 20%;
   max-width: 30%;
-  max-height: 40% !important;
+  max-height: 70% !important;
   background-color: #fffaf4ed;
   overflow: auto;
   padding: 2vw;
@@ -84,19 +84,19 @@ text-decoration: underline;
 }
 @media screen and (max-width: 1024px) {
   .cart {
-    max-height: 50%;
+  
 
   }}
 
 @media screen and (max-width: 768px) {
   .cart {
-    max-width: 10%;
+   
   }
   }
   @media screen and (max-width: 640px) {
     .cart {
       max-width: 30%;
-      max-height: 70% !important;
+     
     }
     .cart-closed {
       font-size: 6vw;
@@ -108,13 +108,13 @@ text-decoration: underline;
   @media screen and (max-width: 414px) {
     .cart {
       max-width: 37%;
-      max-height: 40% !important;
+     
     }
     }
   @media screen and (max-width: 390px) {
     .cart {
       max-width: 37%;
-      max-height: 35% !important;
+      
     }
     .cart-closed {
       font-size: 6vw;
