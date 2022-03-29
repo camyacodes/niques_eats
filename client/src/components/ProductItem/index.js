@@ -73,7 +73,7 @@ function ProductItem(item) {
 		<div>
 			<Container className="themed-container p-5" fluid={true} id="dish-card">
 				<Col>
-					<Card>
+					<Card id="dish-card-content">
 						<div>
 							{/* <Link to={`/products/${_id}`}> */}
 							<CardImg
@@ -88,23 +88,26 @@ function ProductItem(item) {
 						</div>
 
 						<CardBody>
-							<div class="row align-items-center">
-								<CardTitle tag="h5" class="col text-start">
+							<div className="row">
+								<CardTitle tag="h5" className="col " id="card-text">
 									{name}
 								</CardTitle>
-								<CardSubtitle tag="h5" className="col text-end">
+								<CardSubtitle tag="h5" className="col text-end" id="card-text">
 									${price}
 								</CardSubtitle>
 							</div>
 							{/* <button type="button" class="btn btn-primary" data-bs-toggle="modal"  onClick={addToCart}> */}
+							<div id="card-btn">
 							<button
 								type="button"
-								class="btn btn-primary"
+								class="btn btn-primary add-to-cart"
 								data-bs-toggle="modal"
 								data-bs-target={`#modal${_id}`}
+								
 							>
 								Add to Cart
 							</button>
+							</div>
 						</CardBody>
 					</Card>
 				</Col>
@@ -141,23 +144,31 @@ function ProductItem(item) {
 								{description}
 							</h6>
 							<div class="row align-items-center">
-								<CardTitle tag="h5" class="col text-start">
+								<CardTitle tag="h5" class="col text-start" id="name">
 									{name}
 								</CardTitle>
-								<CardSubtitle tag="h5" className="col text-end">
+								<CardSubtitle tag="h5" className="col text-end" id="price">
 									${price}
 								</CardSubtitle>
-								<Datetime
+
+
+								
+							</div>
+						</div>
+
+						<div class="modal-footer">
+						<Datetime
 									value={"Choose a Date"}
 									timeFormat={false}
 									isValidDate={valid}
 									onChange={onDateChange}
 								/>
-							</div>
-						</div>
-
-						<div class="modal-footer">
-							<button type="button" data-bs-dismiss="modal" onClick={addToCart}>
+							<button 
+							type="button" 
+							class="add-to-cart"
+							id="modal-btn" 
+							data-bs-dismiss="modal" 
+							onClick={addToCart}>
 								Add to Cart
 							</button>
 						</div>

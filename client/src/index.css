@@ -19,7 +19,6 @@
 }
 
 
-
 html,
 body {
 	width: 100%;
@@ -70,13 +69,17 @@ a:visited {
 	color: inherit;
 }
 
-.nav-item:hover {
-	color: var(--secondary);
-	background-color: var(--quatrinary);
+
+
+#login {
+	padding: 8vw 0;
+	text-align: center;
 }
 
-
-
+#signup {
+	padding: 8vw 8vw 8vw 35vw;
+	text-align: center;
+}
 
 
 

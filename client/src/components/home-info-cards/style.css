@@ -86,6 +86,10 @@ padding: 0;
 		text-align: left;
 		z-index: 1000;
 	}
+
+	.cart {
+		z-index: 1000;
+	}
 }
 
 @media screen and (max-width: 489px) {
@@ -137,9 +141,11 @@ padding: 0;
 @media screen and (max-width: 390px) {
 	.quanlity {
 		top:35vh;
+		z-index: 5;
 	}
 	.customizable {
 		top:60vh;
+		z-index: 5;
 	}
 	.southern {
 		top:80vh;
@@ -147,6 +153,9 @@ padding: 0;
 	.convenient{
 		top:108vh;
 	}
+	/* #cart {
+		z-index: 1;
+	} */
 }
 
 @media screen and (max-width: 385px) {

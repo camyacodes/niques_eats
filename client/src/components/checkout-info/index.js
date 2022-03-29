@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../checkout-info/style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import { useMutation } from "@apollo/client";
@@ -9,15 +9,15 @@ import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import spinner from "../../assets/spinner.gif";
-import { useState } from "react";
+import Auth from "../../utils/auth";
+
+
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 export default function CheckoutInfo() {
 	const flState = "Florida";
-
 	const flCity = "Orlando";
-	const [addOrder] = useMutation(ADD_ORDER);
-	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
+
 	const [formData, setFormData] = useState({
 		firstName: "",
 		lastName: "",
@@ -29,6 +29,8 @@ export default function CheckoutInfo() {
 		email: "",
 		phone: "",
 	});
+
+	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
 	const [state, dispatch] = useStoreContext();
 
 	function handleChange(e) {
@@ -49,6 +51,7 @@ export default function CheckoutInfo() {
 		}
 	}, [state.cart.length, dispatch]);
 
+
 	const submitCheckout = async () => {
 	 
 		// console.log({
@@ -59,6 +62,7 @@ export default function CheckoutInfo() {
 		// 	},
 		// 	products: state.cart,
 		// });
+
 
 		const productIds = [];
 
@@ -117,42 +121,37 @@ export default function CheckoutInfo() {
 					{/* Only column begin */}
 					<div class="col">
 						{/* Header */}
-
-						<div className="login-prompt mb-3">
-							<p>
-								Already have an account?{" "}
-								<a href="/login">
+ 						{Auth.loggedIn() ? (
+ 							<>
+ 						</>
+ 						) :(
+ 							<>
+ 							<div className="login-prompt mb-3">
+ 							<p>
+ 								Already have an account?{" "}
+ 								<a href="/login">
 									<u>Log in</u>
 								</a>{" "}
-								for a faster checkout
-							</p>
-						</div>
+ 								for a faster checkout
+ 							</p>
+ 						</div>
+ 							</>
+ 						 )}
 						{/* buttons */}
-						<p className="mt-4">DELIVERY METHOD</p>
-						<div className="d-flex justify-content-center">
-							<input
-								type="button"
-								value="DELIVER"
-								className="deliver-method deliver"
-							/>
-							<input
-								type="button"
-								value="PICKUP"
-								className="deliver-method pickup"
-							/>
-						</div>
+						<p className="delivery-info">Delivery Info:</p>
 					</div>
 					{/* only column end */}
 				</div>
 				{/* ^ whole column end */}
 				{/* FORM COlumn start */}
-				<div class="container">
+				<div class="container" id="delivery-form">
 					<div class="row row mt-5">
 						{/* first name */}
 						<div class="col padding-left">
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="First name*"
 								aria-label="First name"
 								name="firstName"
@@ -164,6 +163,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Last name*"
 								aria-label="Last name"
 								onChange={handleChange}
@@ -178,6 +178,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Address*"
 								aria-label="Address"
 								onChange={handleChange}
@@ -189,6 +190,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Apt, suite, etc."
 								aria-label="Apt"
 								onChange={handleChange}
@@ -202,6 +204,7 @@ export default function CheckoutInfo() {
 						<div className="col-5 padding-left">
 							<input
 								className="form-control"
+								id="form-input-area-disable"
 								type="text"
 								placeholder={flCity}
 								aria-label={flCity}
@@ -213,6 +216,7 @@ export default function CheckoutInfo() {
 							<input
 								className="form-control"
 								type="text"
+								id="form-input-area-disable"
 								placeholder={flState}
 								aria-label={flState}
 								disabled
@@ -223,6 +227,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Zip Code*"
 								aria-label="Zip Code"
 								onChange={handleChange}
@@ -237,6 +242,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Email*"
 								aria-label="Email"
 								onChange={handleChange}
@@ -248,6 +254,7 @@ export default function CheckoutInfo() {
 							<input
 								type="text"
 								className="form-control"
+								id="form-input-area"
 								placeholder="Phone Number*"
 								aria-label="Phone Number"
 								onChange={handleChange}
@@ -260,14 +267,18 @@ export default function CheckoutInfo() {
 						<div className="col d-flex justify-content-center">
 							{loading ? (
 								<img src={spinner} alt="loading" id="spinner" />
-							) : null}
+							) : null}	
+							<a href="/success">					
 							<button
 								type="button"
 								className="cont-btn"
+
 								onClick={submitCheckout}
 							>
 								PLACE ORDER
 							</button>
+							</a>	
+
 						</div>
 					</div>
 				</div>
