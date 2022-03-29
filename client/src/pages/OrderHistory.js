@@ -15,40 +15,44 @@ function OrderHistory() {
   }
 
   return (
-    <>
-      <div className="container my-1">
-        <Link to="/">← Back to Products</Link>
-        <Cart />
+    <div>
+            <table className='table'>
+                <thead>
+                    <tr>
+                    <th>Order ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Purchase Date</th>
+                        <th>Products</th>
+                        <th>Status</th>
+                        </tr>
+                </thead>
 
-        {user ? (
-          <>
-            <h2>
-              Order History for {user.name} 
-            </h2>
-            {user.orders.map((order) => (
-              <div key={order._id} className="my-2">
-                <h3>
-                  {new Date(parseInt(order.purchaseDate)).toLocaleDateString()}
-                </h3>
-                <div className="flex-row" id="order-history-items">
-                  {order.products.map(({ _id, image, name, price }, index) => (
-                    <div key={index} className="card px-1 py-1">
-                      <Link to={`/products/${_id}`}>
-                        <img alt={name} src={`/images/${image}`} id="order-history-image" />
-                        <p>{name}</p>
-                      </Link>
-                      <div>
-                        <span>${price}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </>
-        ) : null}
-      </div>
-    </>
+                <tbody>
+
+                     <tr>
+                        <td>order.id</td>
+                        <td>username</td>
+                        <td>user.address</td>
+                        <td>user.Purchasedate</td>
+                        <td >order.products</td>
+                        <td class="row">
+                            <input type="checkbox" id="scales" name="deliver"
+                                checked />
+                            <label for="scales">Delivered</label>
+                            <input type="checkbox" id="scales" name="deliver"
+                                 />
+                            <label for="scales">Not Delivered</label>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+
+            </table>
+        </div>
   );
 }
 

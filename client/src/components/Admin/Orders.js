@@ -33,10 +33,10 @@ function Orders() {
 
                 <tbody>
 
-                    return <tr>
+                     <tr>
                         <td>order.id</td>
                         <td>user.email</td>
-                        <td>user.id</td>
+                        <td>user.address</td>
                         <td >order.amount</td>
                         <th>order.Date</th>
                         <td class="row">
