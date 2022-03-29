@@ -23,6 +23,11 @@ import Admin from './pages/Admin';
 import Auth from "./utils/auth";
 import Cart from './components/Cart';
 
+
+const httpLink = createHttpLink({
+  uri: 'http://localhost:3001/graphql',
+});
+
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
   return {
@@ -33,12 +38,10 @@ const authLink = setContext((_, { headers }) => {
   };
 });
 
-const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
-});
+
 
 const client = new ApolloClient({
-  link: httpLink,
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 

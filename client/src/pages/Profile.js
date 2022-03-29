@@ -1,31 +1,37 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
-import { QUERY_USER } from '../utils/queries';
+import { QUERY_ME } from '../utils/queries';
+import Auth from '../utils/auth';
 
 
 const Profile = () => {
-  const { username: userParam } = useParams();
 
-  const { loading, data } = useQuery(QUERY_USER, {
-    variables: { username: userParam }
-  });
+  const { data: userData } = useQuery(QUERY_ME);
+  // const { username: userParam } = useParams();
 
-  const user = data?.user || {};
+  // const { loading, data } = useQuery(QUERY_USER, {
+  //   variables: { username: userParam }
+  // });
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
+  // const user = data?.user || {};
+  const loggedIn = Auth.loggedIn();
 
   return (
    
-      <div className="flex-row mb-3">
-        <h2 className="bg-dark text-secondary p-3 display-inline-block">
-          Viewing {user.username}'s profile.
-        </h2>
+    <div className="flex-row mb-3">
+   {loggedIn && userData ? (
+  <h2 className="bg-dark text-secondary p-3 display-inline-block">
+  Viewing {userData.me.username}'s profile.
+</h2>
+) : null}
       </div>
    
   );
 };
+
+{/* <h2 className="bg-dark text-secondary p-3 display-inline-block">
+          Viewing {data.username}'s profile.
+        </h2> */}
 
 export default Profile;
