@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useQuery } from "@apollo/client";
 import { QUERY_ORDERS } from "../utils/queries";
-import "../index.css";
+import "../styles/orderHistory.css";
 import Cart from "../components/Cart";
 
 function OrderHistory() {
@@ -46,8 +46,9 @@ function OrderHistory() {
       
     return (
         
-			<div>
-			<table className="table">
+			<div id="order-history">
+			<h1 className='title text-center'>Order History</h1>
+			<table className="table" >
 				<thead>
 					<tr>
 						<th>Order ID</th>
@@ -55,7 +56,7 @@ function OrderHistory() {
 						<th>Address</th>
 						<th>Purchase Date</th>
 						<th>Products</th>
-						<th>Status</th>
+						{/* <th>Status</th> */}
 					</tr>
 				</thead>
 
@@ -65,12 +66,12 @@ function OrderHistory() {
          
 			
 		   <tbody key={order._id}>
-					<tr>
+					<tr >
 						<td>{order._id}</td>
 							<td>{order.firstName} { order.lastName}</td>
 						<td>{order.address}</td>
 						<td>{new Date(order.purchaseDate).toDateString()}</td>
-						<td>{order.products}</td>
+						<td id="product-content">{order.products}</td>
 						{/* <td class="row">
 							<input type="checkbox" id="scales" name="deliver" checked />
 							<label for="scales">Delivered</label>

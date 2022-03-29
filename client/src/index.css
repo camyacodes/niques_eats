@@ -70,7 +70,6 @@ a:visited {
 }
 
 
-
 #login {
 	padding: 8vw 0;
 	text-align: center;
@@ -106,6 +105,7 @@ a:visited {
 .btn-inline {
 	display: inline;
 }
+
 
 /* CARDS */
 .card {
