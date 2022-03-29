@@ -8,6 +8,7 @@ import "../styles/menus.css"
 import ProductList from "../components/ProductList";
 import CategoryMenuDinner from "../components/CategoryMenuDinner";
 import Cart from '../components/Cart';
+import DinnerDishes from '../components/DinnerDishes'
 
 
 const MenuDinner = () => {
@@ -15,7 +16,7 @@ const MenuDinner = () => {
 
   return (
     <div id="dinner-menu">
-
+  <Cart />
       <div id="title">
         <span >MENU </span>
       </div>
@@ -47,13 +48,14 @@ const MenuDinner = () => {
           </div>
 
           <div id="dinner-dishes">
-          <ProductList />
+          {/* <ProductList /> */}
+          <DinnerDishes />
           </div>
         </div>
-        <Cart />
-        <div id="scroll-to-top" className ="footer">
+      
+        {/* <div id="scroll-to-top" className ="footer">
   <a href="#title"> <h4>Scroll To Top ^</h4> </a>
-  </div>
+  </div> */}
     </div>
       </div>
      

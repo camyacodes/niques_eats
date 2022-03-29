@@ -7,9 +7,23 @@
 #dinner-background {
 	background-image: url('../assets/dinner-menu-background.png');
 	background-size: 100%;
-    background-repeat: no-repeat;
-	padding: 5rem;
-	
+   
+	padding: 5vw;
+}
+
+#brunch-background {
+	background-image: url('../assets/brunch-menu-background.png');
+	padding: 5vw;
+}
+
+#brunch {
+	background-color: #f4e9dce4;;
+	/* padding: 2vw; */
+	border: 0px;
+	margin: 0;
+	padding: 1vw;
+	width:100%;
+	align-items: center;
 }
 
 
@@ -45,29 +59,6 @@
 	font-size: 3vw;
 }
 
-
-#brunch {
-	background-color: var(--tertiary);
-	padding: 2vw;
-	border: 0px;
-}
-
-
-#brunch-background {
-	background-image: url('../assets/brunch-menu-background.png');
-	padding: 5rem;
-	
-}
-
-#brunch {
-	background-color: var(--tertiary);
-	padding: 2vw;
-	border: 0px;
-}
-
-#brunch-dishes {
-	align-items: center;
-}
 
 #title {
 	font-size: 5vw;
@@ -105,8 +96,39 @@
 	position: relative;
 	}
 
+/* DINNER MENU */
+/* #dinner-dishes {
+	padding: 1vw;
+} */
 
 
+#dinner-dishes button{
+	background-color: rgb(178, 167, 155);
+	color: #2c1802;
+	font-weight:640;
+}
+#dinner-dishes button:hover{
+	background-color: #f4e9dc;
+	color: #512b00;
+	font-weight:640;
+}
+#dish-card {
+	/* background-color: #2c1802; */
+	padding: 1vw !important;
+	width: 20vw;
+}
+
+#dish-card-content {
+	/* background-color: #2c1802; */
+	border:0;
+	box-shadow: 13px 8px 14px #3a2105e0;
+	border-radius: 7%;
+}
+
+
+
+
+/* 
 #scroll-to-top {
 	position: fixed;
 	width: 100%;
@@ -127,7 +149,7 @@
 	text-align: center;
 	background-color: #d6a05e44;
 	;
-	}
+	} */
 
 
 

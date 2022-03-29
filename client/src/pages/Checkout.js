@@ -1,7 +1,7 @@
 import React from "react";
 import CheckoutInfo from "../components/checkout-info";
 import CheckoutCart from "../components/CheckoutCart";
-// import DishModal from "../components/DishModal";
+import '../styles/checkout.css'
 
 export default function Checkout() {
 	return (
@@ -11,8 +11,11 @@ export default function Checkout() {
 			
 			<div className="row">
 			<h1 className="mt-5 ps-5">CHECKOUT</h1>
-				<CheckoutInfo />
-				<CheckoutCart />
+		
+				<CheckoutInfo class="checkout-info"/>
+				
+				<CheckoutCart class="checkout-cart" />
+				
 			</div>
 			
 			</body>

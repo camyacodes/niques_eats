@@ -19,8 +19,9 @@ import Detail from './pages/Detail';
 import { StoreProvider } from "./utils/GlobalState";
 import OrderHistory from './pages/OrderHistory';
 import Checkout from './pages/Checkout';
-import Admin from './pages/Admin'
-
+import Admin from './pages/Admin';
+import Auth from "./utils/auth";
+import Cart from './components/Cart';
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem('id_token');
@@ -48,10 +49,10 @@ function App() {
     <ApolloProvider client={client} id="content">
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
-        <StoreProvider>
-          <Header />
-          <SocialButtons />
-          <div>
+          <StoreProvider>
+            <Header />
+            <SocialButtons />
+            <div>
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route exact path="/login" component={Login} />
@@ -67,7 +68,7 @@ function App() {
                 <Route path="/admin" component={Admin} />
                 <Route component={NoMatch} />
               </Switch>
-          </div>
+            </div>
           </StoreProvider>
         </div>
         <Footer />

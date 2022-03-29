@@ -52,7 +52,7 @@ function CategoryMenuBrunch({  }) {
     {categories.map(item => (     
       // below is the way to ask the app to ignore these item in category list
       item.name === 'Main Dishes - Dinner' || item.name === 'Sides - Dinner' || item.name === 'Dessert - Dinner' || item.name === 'Drinks - Dinner' ||
-      <button class="menu-nav-buttons"
+      <button className="menu-nav-buttons"
         key={item._id}
         onClick={() => {
           handleClick(item._id);
