@@ -25,7 +25,7 @@ import Cart from './components/Cart';
 
 
 const httpLink = createHttpLink({
-  uri: 'http://localhost:3001/graphql',
+  uri: 'https://niques-eats.herokuapp.com/',
 });
 
 const authLink = setContext((_, { headers }) => {
