@@ -1,23 +1,21 @@
 import React, { useEffect } from "react";
 import "../checkout-info/style.css";
-import Auth from "../../utils/auth";
 import { useStoreContext } from "../../utils/GlobalState";
 import { useMutation } from "@apollo/client";
 import { ADD_ORDER } from "../../utils/mutations";
 import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
-import { QUERY_CHECKOUT, QUERY_ME } from "../../utils/queries";
+import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
 import { useLazyQuery } from "@apollo/client";
 import spinner from "../../assets/spinner.gif";
 import { useState } from "react";
-import { useQuery } from '@apollo/client';
+
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
 export default function CheckoutInfo() {
-	const { data: userData } = useQuery(QUERY_ME);
-// console.log(userData)
 	const flState = "Florida";
+
 	const flCity = "Orlando";
 	const [addOrder] = useMutation(ADD_ORDER);
 	const [getCheckout, { loading, data }] = useLazyQuery(QUERY_CHECKOUT);
@@ -133,22 +131,7 @@ console.log(state.cart)
 					{/* Only column begin */}
 					<div className="col">
 						{/* Header */}
- 						{Auth.loggedIn() ? (
- 							<>
- 						</>
- 						) :(
- 							<>
- 							<div className="login-prompt mb-3">
- 							<p>
- 								Already have an account?{" "}
- 								<a href="/login">
-									<u>Log in</u>
-								</a>{" "}
- 								for a faster checkout
- 							</p>
- 						</div>
- 							</>
- 						 )}
+ 						
 						{/* buttons */}
 						<p className="delivery-info">Delivery Info:</p>
 					</div>
