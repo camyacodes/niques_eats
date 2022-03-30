@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useQuery } from '@apollo/client';
 import { QUERY_USER } from '../../utils/queries';
-// import "../../index.css"
+import "../../styles/admin.css"
 
 
 // const orders = [

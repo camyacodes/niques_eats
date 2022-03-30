@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Form } from "reactstrap";
 import {useMutation} from '@apollo/client';
 import { ADD_ITEM} from '../../utils/mutations'
-import './style.css'
+import "../../styles/admin.css"
 
  function AddItem() {
     const[name, setname] = useState('')

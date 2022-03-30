@@ -2,7 +2,9 @@
 .table {
     text-align: center;
 }
- 
+.table thead tr th {
+    padding: 0vw 2vw 0vw 3vw;
+}
 .admin-nav {
     background-color:#77480e; 
     position: relative;

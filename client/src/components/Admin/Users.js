@@ -1,6 +1,7 @@
 import React from "react";
 import { QUERY_USERS } from "../../utils/queries";
 import { useQuery } from '@apollo/client';
+import "../../styles/admin.css"
 
 export default function Users() {
     const { loading, data } = useQuery(QUERY_USERS);
