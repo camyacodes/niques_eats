@@ -11,22 +11,18 @@ const app = express();
 
 const startServer = async () => {
   const server = new ApolloServer({
-    typeDefs,
+    typeDefs, 
     resolvers,
     context: authMiddleware,
-    introspection: true,
-    playground: true,
+    introspection: process.env.NODE_ENV !== 'production',
+    
   });
   await server.start();
+
   server.applyMiddleware({ app });
+
   console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
 };
-
-startServer()
-
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json());
-
 
 // Serve up static assets
 if (process.env.NODE_ENV === 'production') {
@@ -37,7 +33,10 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
+startServer()
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 db.once('open', () => {
   app.listen(PORT, () => {
