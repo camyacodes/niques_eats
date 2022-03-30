@@ -64,9 +64,8 @@ function ProductItem(item) {
 	}
 
 	var valid = function (current) {
-		const start = moment().add(3, "days");
-		const end = moment().add(10, "days");
-		return moment(current).isBetween(start, end);
+		
+		return moment(current);
 	};
 
 	return (
