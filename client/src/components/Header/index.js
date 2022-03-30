@@ -44,8 +44,8 @@ const Header = () => {
           </li>
         {Auth.loggedIn() && userData ? (
             <>
-         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle nav-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+         <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle nav-item" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
             {userData.me.username}
           </a>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -10,8 +10,8 @@ import '../components/home-info-cards/style.css'
 
 const Home = () => {
   return (
-    <body>
-      <div id="cart">
+    <div>
+    <div id="cart">
         <Cart />
         </div>
     <div>
@@ -26,7 +26,7 @@ const Home = () => {
     <div>
       <Contact />
     </div>
-  </body>
+    </div>
   );
 };
 

@@ -69,7 +69,7 @@ export default function Dish({ photo }) {
       <div className="dish-modal ">
         <div className="modal fade "
           id={`meal${photo.id}`}
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >

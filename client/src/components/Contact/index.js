@@ -33,7 +33,7 @@ const Contact = () => {
               </div>
 
               <div className="col-4" id="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d56083.89363755942!2d-81.3841312!3d28.5324043!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1647743123566!5m2!1sen!2sus" width="300" height="300" style={{border:0}} allowfullscreen="" loading="lazy"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d56083.89363755942!2d-81.3841312!3d28.5324043!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1647743123566!5m2!1sen!2sus" width="300" height="300" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
               <p id="map-description">Serving the Orlando area</p>
               </div>
 

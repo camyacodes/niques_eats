@@ -82,7 +82,7 @@ function ProductItem(item) {
 								src={`/images/${image}`}
 								alt={name}
 								id="dish-img"
-								class="rounded mx-auto d-block"
+								className="rounded mx-auto d-block"
 							/>
 							{/* </Link> */}
 						</div>
@@ -100,7 +100,7 @@ function ProductItem(item) {
 							<div id="card-btn">
 							<button
 								type="button"
-								class="btn btn-primary add-to-cart"
+								 className="btn btn-primary add-to-cart"
 								data-bs-toggle="modal"
 								data-bs-target={`#modal${_id}`}
 								
@@ -114,9 +114,9 @@ function ProductItem(item) {
 			</Container>
 
 			<div
-				class="modal fade"
+				 className="modal fade"
 				id={`modal${_id}`}
-				tabindex="-1"
+				tabIndex="-1"
 				aria-labelledby="exampleModalLabel"
 				aria-hidden="true"
 			>
@@ -125,7 +125,7 @@ function ProductItem(item) {
 						<div className="modal-header">
 							<button
 								type="button"
-								class="btn-close"
+								 className="btn-close"
 								data-bs-dismiss="modal"
 								aria-label="Close"
 							></button>
@@ -138,7 +138,7 @@ function ProductItem(item) {
 								src={`/images/${image}`}
 								alt={name}
 								id="dish-img-nav"
-								class="rounded mx-auto d-block col"
+								 className="rounded mx-auto d-block col"
 							/>
 							<h6 className="col" id="description">
 								{description}
@@ -165,7 +165,7 @@ function ProductItem(item) {
 								/>
 							<button 
 							type="button" 
-							class="add-to-cart"
+							 className="add-to-cart"
 							id="modal-btn" 
 							data-bs-dismiss="modal" 
 							onClick={addToCart}>
