@@ -1,8 +1,8 @@
 {
-  "name": "mern-client",
+  "name": "niques-eats",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001/",
+  "proxy": "https://niques-eats.herokuapp.com/",
   "dependencies": {
     "@apollo/client": "^3.3.7",
     "@stripe/stripe-js": "^1.25.0",
