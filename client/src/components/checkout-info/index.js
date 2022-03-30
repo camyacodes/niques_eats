@@ -51,20 +51,17 @@ export default function CheckoutInfo() {
 	}, [state.cart.length, dispatch]);
 
 	// console.log(state.cart)
-	function calculateTotal () {
+	function calculateTotal() {
 		let sum = 0;
-		state.cart.forEach(item => {
-		  sum += item.price * item.purchaseQuantity;
+		state.cart.forEach((item) => {
+			sum += item.price * item.purchaseQuantity;
 		});
 		return sum.toFixed(2);
 	}
-	
-	
-console.log(state.cart)
 
+	console.log(state.cart);
 
 	const submitCheckout = async () => {
-	 
 		// console.log({
 		// 	form: {
 		// 		...formData,
@@ -74,7 +71,6 @@ console.log(state.cart)
 		// 	products: state.cart,
 		// });
 
-	
 		const productIds = [];
 
 		state.cart.forEach((item) => {
@@ -82,22 +78,24 @@ console.log(state.cart)
 				productIds.push(item._id);
 			}
 		});
-		
-		
-		const order = {...formData, products: productIds, total: calculateTotal()}
+
+		const order = {
+			...formData,
+			products: productIds,
+			total: calculateTotal(),
+		};
 		// console.log(order)
-		
-		 const { data } = await addOrder({
+
+		const { data } = await addOrder({
 			variables: { ...order },
-		  });
+		});
 
 		// getCheckout({
 		// 	variables: { products: productIds },
 		// });
 
 		// window.location.assign("/success");
-	}
-
+	};
 
 	// useEffect(() => {
 	// 	async function saveOrder() {
@@ -121,7 +119,6 @@ console.log(state.cart)
 	// 	saveOrder();
 	// }, [addOrder]);
 
-
 	return (
 		<div className="col-2">
 			{/* container start */}
@@ -131,7 +128,7 @@ console.log(state.cart)
 					{/* Only column begin */}
 					<div className="col">
 						{/* Header */}
- 						
+
 						{/* buttons */}
 						<p className="delivery-info">Delivery Info:</p>
 					</div>
@@ -262,16 +259,16 @@ console.log(state.cart)
 						<div className="col d-flex justify-content-center">
 							{loading ? (
 								<img src={spinner} alt="loading" id="spinner" />
-							) : null}	
-							<a href="/success">					
-							<button
-								type="button"
-								className="cont-btn"
-								// onClick={submitCheckout}
-							>PLACE ORDER
-							</button>
-							</a>	
-
+							) : null}
+							<a href="/success">
+								<button
+									type="button"
+									className="cont-btn"
+									onClick={submitCheckout}
+								>
+									PLACE ORDER
+								</button>
+							</a>
 						</div>
 					</div>
 				</div>
