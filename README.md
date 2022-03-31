@@ -1,19 +1,46 @@
-# Nique's Eats
+# Nique's Eats 
+https://niques-eats.herokuapp.com/
+
+## Description
+Nique's Eats is a meal delivery service that delivers homemade meals to customers any day of the week. There are dozens of dishes to choose from as well as sides and desserts. Customers can navigate to this site, choose what meals they want, choose what day they would like their meals, and have them delivered right to their doorstep.
+
+## Table of Contents
+- [Description](#description)
+- [User Story](#user-story)
+- [Technologies](#technologies)
+
+## User Story 
+As a person with a busy schedule, living in Orlando Florida,
+I WANT to order prepared meals ahead of time and have them delivered to my home,
+SO THAT I can enjoy homemade meals without the hassle.
+
+## Technologies
+
+### Front-End:
+
+- HTML
+- CSS
+- Bootstrap
+- React
+- Javascript
+- Service Worker
+- Web vitals
+
+## Back-End:
+
+- Graphql
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcrypt
+- Faker
+- Apollo
+- Nodemon
 
 
-## Wireframes
+![website1](https://user-images.githubusercontent.com/87587644/161065278-35f7123b-e58f-4620-bad1-191cb9ba535f.jpg)
 
-### Landing page:
-![Landing-page](https://user-images.githubusercontent.com/72582349/156471975-37a5f921-4b6c-454b-9baa-e632adbd7f9e.png)
-<br /><br /><br />
 
-### Menu Pages: (video demonstration) 
-1/Brunch Menu <br />
-2/Dinner Menu<br />
-3/Dish modal pop-up after user click a dish<br />
-4/Cart pop-up after user add a dish in cart<br />
-https://drive.google.com/file/d/17PsJz40R_IyMQVwHqAmzpg0Oj-NCBcQV/view<br /><br /><br />
-
-### Checkout Page:
-![Checkout-page](https://user-images.githubusercontent.com/72582349/156472132-5ab47030-644a-4929-8a2c-8a6ba27fb155.png)
 
