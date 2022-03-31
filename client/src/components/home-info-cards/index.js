@@ -6,7 +6,7 @@ export default function HomeInfoCards() {
 		
 			<div className="container info-container" id="home-info-cards">
 				{/* First row of info cards */}
-				<div className="row info-row row-cols-1 row-cols-sm-2 row-cols-md-4 ">
+				<div className="row info-row row-cols-1 row-cols-sm-2 row-cols-md-4" id="quality-box">
 					<div className="col info-section">
 						<img
 							src="https://www.jessicagavin.com/wp-content/uploads/2018/06/ribeye-steak-with-red-wine-sauce-3-1200.jpg"
