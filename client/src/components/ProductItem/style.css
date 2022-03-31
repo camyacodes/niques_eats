@@ -1,5 +1,5 @@
 .modal {
-    max-width:40%;
+    max-width:45%;
     
     left:22vw;
 }
@@ -7,20 +7,20 @@
 .modal-body {
     display: flex;
     align-items: center;
-    height: 20vw;
+    height: 30vw;
     position:relative;
 }
 
 
 #dish-img-nav {
-   height:20vw;
+   height:15vw;
    width: auto;
 }
 
 #description {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     vertical-align: baseline;
-    font-size:2vw !important;
+    /* font-size:vw !important; */
 }
 
 .add-to-cart {
@@ -59,19 +59,22 @@ height: 4.5vw;
     text-align: center;
 }
 
+
 @media screen and (max-width: 540px) {
     .modal {
         max-width:70%;
-      
         left:18vw;
     }
     .modal-body {
         display: flex;
         align-items: center;
-        height: 30vw;
         position:relative;
     }
     
+#dish-img-nav {
+    height:23vw;
+    width: auto;
+ }
     #dish-card-content {
         width: 20vw;
     }
@@ -105,8 +108,9 @@ height: 4.5vw;
     .modal-body {
         display: flex;
         align-items: center;
-        height: 30vw;
+        height: 40vw;
         position:relative;
+        font-size: 2vw;
     }
     
     #dish-card-content {
@@ -123,7 +127,7 @@ height: 4.5vw;
    top:0;
 }
 #card-text {
-    font-size: 1.7vw;
+    /* font-size: 1.7vw; */
     /* padding: 0.3vw; */
     /* text-align: center; */
     margin:0vw 0vw 1vw 5vw;
@@ -131,6 +135,13 @@ height: 4.5vw;
     /* margin: 0; */
   
 }
+#name , #price{
+    font-size: 3vw;;
+}
+#modal-btn {
+    font-size: 3vw;
+}
+
 }
 
 @media screen and (max-width: 390px) {
@@ -142,9 +153,9 @@ height: 4.5vw;
     .modal-body {
         display: flex;
         align-items: center;
-        height: 40vw;
+       
         position:relative;
-        font-size: 5vw;
+        font-size: 2.3vw;
     }
 
     #dish-card-content {
@@ -161,7 +172,7 @@ height: 4.5vw;
    top:0;
 }
 #card-text {
-    font-size: 1.8vw;
+    font-size: 2vw;
     /* padding: 0.3vw; */
     /* text-align: center; */
     margin:0vw 0vw 1vw 5vw;
@@ -170,11 +181,12 @@ height: 4.5vw;
   
 }
 
-
-
 }
 
 @media screen and (max-width: 375px) {
+    .modal-body {
+        height:50vw;
+    }
     #dish-card-content {
         width: 20vw;
     }

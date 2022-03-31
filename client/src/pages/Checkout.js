@@ -1,7 +1,7 @@
 import React from "react";
 import CheckoutInfo from "../components/checkout-info";
 import CheckoutCart from "../components/CheckoutCart";
-import '../styles/checkout.css'
+
 
 export default function Checkout() {
 	return (
