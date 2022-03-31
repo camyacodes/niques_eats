@@ -162,6 +162,7 @@ function ProductItem(item) {
 									timeFormat={false}
 									isValidDate={valid}
 									onChange={onDateChange}
+									
 								/>
 							<button 
 							type="button" 

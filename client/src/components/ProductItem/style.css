@@ -1,6 +1,6 @@
 .modal {
     max-width:40%;
-  
+    
     left:22vw;
 }
 
@@ -8,19 +8,19 @@
     display: flex;
     align-items: center;
     height: 20vw;
- 
     position:relative;
 }
 
+
 #dish-img-nav {
-   height:14vw;
+   height:20vw;
    width: auto;
 }
 
 #description {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     vertical-align: baseline;
-    font-size:0.8vw !important;
+    font-size:2vw !important;
 }
 
 .add-to-cart {
@@ -30,7 +30,7 @@
     font-size: 1.2vw;
 }
 #name {
-    font-size: 1.5vw;
+    font-size: 2vw;
 }
 
 #price {
@@ -117,13 +117,13 @@ height: 4.5vw;
         }
 
     #card-btn button {
-   font-size: 1vw;
+   font-size: 1.3vw;
    padding-left : 0.5vw;
    padding-right: 0.5vw;
    top:0;
 }
 #card-text {
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     /* padding: 0.3vw; */
     /* text-align: center; */
     margin:0vw 0vw 1vw 5vw;
@@ -142,8 +142,9 @@ height: 4.5vw;
     .modal-body {
         display: flex;
         align-items: center;
-        height: 30vw;
+        height: 40vw;
         position:relative;
+        font-size: 5vw;
     }
 
     #dish-card-content {
@@ -160,7 +161,7 @@ height: 4.5vw;
    top:0;
 }
 #card-text {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
     /* padding: 0.3vw; */
     /* text-align: center; */
     margin:0vw 0vw 1vw 5vw;
