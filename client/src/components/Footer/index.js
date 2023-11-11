@@ -5,7 +5,7 @@ import "./style.css"
 const Footer = () => {
   return (
     <footer className='p-1'>
-      &copy;2022 by C²
+      &copy;C²
     </footer>
   );
 };

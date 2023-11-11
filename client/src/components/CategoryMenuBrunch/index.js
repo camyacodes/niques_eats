@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 import "./style.css"
 
-function CategoryMenuBrunch({  }) {
+function CategoryMenuBrunch() {
   const [state, dispatch] = useStoreContext();
 
   const { categories } = state;
@@ -36,7 +36,7 @@ function CategoryMenuBrunch({  }) {
         });
       });
     }
-  }, [categoryData, dispatch]);
+  }, [categoryData, dispatch, loading]);
 
    
   const handleClick = id => {

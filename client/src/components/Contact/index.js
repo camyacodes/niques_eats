@@ -15,13 +15,13 @@ const Contact = () => {
 
                   <li className="p-2">
                   <i className="material-icons p-2">email</i>
-                  <Link to="mailto:niqueseats@gmail.com" id="email">niqueseats@gmail.com</Link> 
+                  niqueseats@gmail.com
                   </li>
 
                   <li className="p-2">
                   <p>
                   <i className="material-icons p-2">call</i>
-                  407-354-6456</p>
+                  407-754-6556</p>
                   </li>
 
                   <li className="p-2">

@@ -257,6 +257,11 @@ export default function CheckoutInfo() {
 					{/* Payment */}
 					<div className="row mt-5">
 						<div className="col d-flex justify-content-center">
+							<p>*Payment will be collected during time of delivery</p>
+						</div>
+					</div>
+					<div className="row mt-5">
+						<div className="col d-flex justify-content-center">
 							{loading ? (
 								<img src={spinner} alt="loading" id="spinner" />
 							) : null}

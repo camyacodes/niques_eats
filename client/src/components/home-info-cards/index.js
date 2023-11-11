@@ -14,7 +14,7 @@ export default function HomeInfoCards() {
 						/>
 					</div>
 					<div className="col info-section">
-						<h2 className="info-text right quanlity">Quality Ingedients</h2>
+						<h2 className="info-text right quanlity">Quality Ingredients</h2>
 					</div>
 
 					<div className="col info-section">

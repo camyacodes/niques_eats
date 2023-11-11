@@ -1,3 +1,4 @@
+require('dotenv').config();
 const db = require("./connection");
 const { User, Product, Category, Order } = require("../models");
 const { faker } = require("@faker-js/faker");
@@ -44,7 +45,7 @@ db.once("open", async () => {
 		{
 			name: "Salmon Croquettes",
 			description:
-				"Biscuit cheesecake jelly beans muffin dragée caramels macaroon. Cotton candy sugar plum I love carrot cake oat cake. Macaroon sugar plum cookie jelly I love I love bear claw sesame snaps - Brunch",
+				"Crispy bites with savory salmon twist - Brunch",
 			image: "salmon_croquette.jpg",
 			category: categories[0]._id,
 			price: 17,
@@ -53,7 +54,7 @@ db.once("open", async () => {
 		{
 			name: "Shrimp and Grits",
 			description:
-				"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos - Brunch",
+				"Southern delight with creamy grits - Brunch",
 			image: "shrimp-n-grits.jpg",
 			category: categories[0]._id,
 			price: 18,
