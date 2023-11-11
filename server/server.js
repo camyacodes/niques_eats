@@ -9,6 +9,11 @@ const db = require('./config/connection');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+  // Optionally, log the stack trace
+});
+
 const startServer = async () => {
   const server = new ApolloServer({
     typeDefs,
