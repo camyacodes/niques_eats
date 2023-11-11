@@ -63,7 +63,7 @@ db.once("open", async () => {
 		{
 			name: "Chicken and Waffles",
 			description:
-				"Candy toffee caramels I love wafer icing. Pastry cake chocolate cake muffin cake carrot cake chocolate chocolate bar. Dragée danish lemon drops lemon drops I love candy - Brunch",
+				"Crispy chicken on fluffy waffles - Brunch",
 			image: "chicken-waffle.jpg",
 			category: categories[0]._id,
 			price: 15,
@@ -72,7 +72,7 @@ db.once("open", async () => {
 		{
 			name: "Strawberry Cheesecake Stuffed French Toast",
 			description:
-				"Bear claw danish candy soufflé apple pie. Pastry marzipan I love gummies ice cream carrot cake topping. Chupa chups gummi bears jelly chocolate bar jelly muffin croissant sugar plum marshmallow - Brunch",
+				" Indulgent French toast with strawberry cheesecake - Brunch",
 			image: "Strawberry-Cheesecake-Stuffed-French-Toast.jpg",
 			category: categories[0]._id,
 			price: 13,
@@ -81,7 +81,7 @@ db.once("open", async () => {
 		{
 			name: "Steak and Eggs",
 			description:
-				"Tart I love dessert I love candy canes soufflé. Oat cake jelly-o muffin powder I love toffee. Bonbon chocolate sweet roll sweet roll tart - Brunch",
+				"Hearty breakfast with succulent steak - Brunch",
 			image: "steak-n-egg.jpg",
 			category: categories[0]._id,
 			price: 18,
@@ -89,7 +89,7 @@ db.once("open", async () => {
 		},
 		{
 			name: "Breakfast Platter",
-			description: "Ingredients: sausage, bacon, eggs, biscuit, cheese grits - Brunch",
+			description: "Sausage, bacon, eggs for fulfilling breakfast - Brunch",
 			image: "breakfast-platter.jpg",
 			category: categories[0]._id,
 			price: 15,
@@ -98,7 +98,7 @@ db.once("open", async () => {
 		{
 			name: "Pancakes",
 			description:
-				"Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos - Brunch",
+				"Fluffy pancakes, a classic breakfast favorite - Brunch",
 			image: "pancakes.jpg",
 			category: categories[0]._id,
 			price: 12,
@@ -109,7 +109,7 @@ db.once("open", async () => {
 		{
 			name: "Home Fries",
 			description:
-				"I love marzipan bear claw powder tootsie roll gummi bears croissant icing candy. Chupa chups lollipop liquorice pudding tootsie roll marshmallow cupcake. Caramels sugar plum croissant bonbon pastry - Brunch",
+				"Crispy and seasoned potato delight - Brunch",
 			image: "home-fries.jpg",
 			category: categories[1]._id,
 			price: 6,
@@ -118,7 +118,7 @@ db.once("open", async () => {
 		{
 			name: "Fresh Fruit Cup",
 			description:
-				"Halvah pie tart sugar plum lemon drops powder tiramisu donut. Danish I love chocolate pudding halvah I love. Gummies pudding wafer apple pie caramels sugar plum cotton candy. Wafer cheesecake jelly-o cheesecake fruitcake chupa chups powder - Brunch",
+				"Refreshing blend of seasonal fruits - Brunch",
 			image: "fruit-cup.jpg",
 			category: categories[1]._id,
 			price: 4,
@@ -135,7 +135,7 @@ db.once("open", async () => {
 		{
 			name: "Biscuit",
 			description:
-				"icing lemon drops jelly. Halvah sweet bonbon sugar plum sesame snaps shortbread. Tootsie roll candy sweet brownie jelly ice cream toffee. Wafer caramels danish oat cake tart pie - Brunch",
+				"Buttery and flaky, a comforting side - Brunch",
 			image: "Biscuits.jpg",
 			category: categories[1]._id,
 			price: 3,
@@ -144,7 +144,7 @@ db.once("open", async () => {
 		{
 			name: "Parfait",
 			description:
-				"Dessert jelly beans fruitcake pie jelly beans biscuit bonbon. Cookie I love halvah icing cotton candy. Cake pie marzipan pie sweet roll. Sugar plum toffee pie soufflé jelly beans - Brunch",
+				"Layers of goodness with yogurt and granola - Brunch",
 			image: "parfaits.jpg",
 			category: categories[1]._id,
 			price: 4,
@@ -152,7 +152,7 @@ db.once("open", async () => {
 		},
 		{
 			name: "Sausage",
-			description: "Turkey sausage grill to perfection - Brunch",
+			description: "Turkey sausage grilled to perfection - Brunch",
 			image: "sausage.jpg",
 			category: categories[1]._id,
 			price: 4,
@@ -194,7 +194,7 @@ db.once("open", async () => {
 		},
 		{
 			name: "Water Bottle",
-			description: "Fuji Water Bottle - Brunch",
+			description: "Spring Water Bottle - Brunch",
 			image: "water.jpg",
 			category: categories[2]._id,
 			price: 3,
@@ -205,7 +205,7 @@ db.once("open", async () => {
 		{
 			name: "Gumbo",
 			description:
-				"Topping biscuit tiramisu cookie sesame snaps chocolate bar ice cream donut sugar plum. Wafer jelly beans marshmallow dragée muffin caramels. Topping pudding ice cream croissant I love gummi bears soufflé bear claw - Dinner",
+				"Hearty and flavorful Cajun stew - Dinner",
 			image: "gumbo.jpg",
 			category: categories[3]._id,
 			price: 21,
@@ -214,7 +214,7 @@ db.once("open", async () => {
 		{
 			name: "Crab Stuffed Salmon",
 			description:
-				"Jelly beans dessert cake chocolate bar pudding jelly beans bonbon pudding. Sugar plum caramels pastry toffee carrot cake marzipan. Biscuit I love chocolate cake chocolate dragée - Dinner",
+				"Elegant salmon stuffed with crab - Dinner",
 			image: "crab-stuffed-salmon.jpg",
 			category: categories[3]._id,
 			price: 25,
@@ -223,7 +223,7 @@ db.once("open", async () => {
 		{
 			name: "Tuscan Shrimp Alfredo",
 			description:
-				"Icing biscuit lemon drops candy canes cupcake powder macaroon sweet cupcake. Sugar plum I love I love powder sweet roll sugar plum marzipan. Cake chupa chups lemon drops soufflé apple pie sugar plum toffee chocolate cake gummi bears - Dinner",
+				"Creamy pasta with succulent shrimp - Dinner",
 			image: "tuscan-shrimp-alfredo.jpg",
 			category: categories[3]._id,
 			price: 27,
@@ -232,7 +232,7 @@ db.once("open", async () => {
 		{
 			name: "Rib-eye Steak",
 			description:
-				"Topping jelly beans biscuit pastry macaroon cheesecake lemon drops. Cotton candy tiramisu cotton candy sweet cotton candy. Cheesecake I love candy icing jelly-o dragée. Candy canes bear claw jelly cookie croissant wafer donut - Dinner",
+				"Juicy steak grilled to perfection - Dinner",
 			image: "rib-eye-steak.jpg",
 			category: categories[3]._id,
 			price: 27,
@@ -241,7 +241,7 @@ db.once("open", async () => {
 		{
 			name: "Loaded Baked Potatoes",
 			description:
-				"Toffee sugar plum sweet roll sesame snaps fruitcake sesame snaps wafer jelly-o. Apple pie jelly-o jelly bear claw lemon drops bear claw. Donut caramels I love jujubes chupa chups fruitcake. Toffee oat cake chocolate bar I love jelly-o chocolate cake wafer I love cotton candy - Dinner",
+				"Baked potatoes loaded with toppings - Dinner",
 			image: "loaded-baked-potato.jpg",
 			category: categories[3]._id,
 			price: 18,
@@ -250,7 +250,7 @@ db.once("open", async () => {
 		{
 			name: "Pulled Pork Sandwich",
 			description:
-				"I love halvah caramels lemon drops tart I love bonbon soufflé gingerbread. Candy oat cake chocolate tiramisu I love. Cake jelly-o gummies jelly oat cake gummi bears I love tootsie roll topping. Ice cream tart gummies soufflé I love cheesecake danish oat cake - Dinner",
+				"Tender pulled pork in savory sandwich - Dinner",
 			image: "pulled-pork-sandwich.jpg",
 			category: categories[3]._id,
 			price: 23,
@@ -259,7 +259,7 @@ db.once("open", async () => {
 		{
 			name: "Chicken Bacon Ranch Flatbread",
 			description:
-				"Liquorice fruitcake bear claw croissant cupcake cake dessert dessert. Soufflé I love chocolate sweet roll sesame snaps cheesecake tart. Macaroon I love icing brownie donut. Cookie lemon drops candy canes jelly wafer fruitcake tootsie roll brownie candy canes - Dinner",
+				" Flavorful flatbread with chicken and bacon - Dinner",
 			image: "chicken-bacon-ranch-flatbread.jpg",
 			category: categories[3]._id,
 			price: 24,
@@ -270,7 +270,7 @@ db.once("open", async () => {
 		{
 			name: "Mac n Cheese",
 			description:
-				"Jelly icing cookie tootsie roll danish. Icing croissant sesame snaps cookie oat cake bear claw halvah. Muffin pie I love pudding pudding. Jujubes candy bonbon marshmallow powder lemon drops bonbon - Dinner",
+				" Classic comfort, cheesy macaroni goodness - Dinner",
 			image: "mac-n-cheese.png",
 			category: categories[4]._id,
 			price: 5,
@@ -279,7 +279,7 @@ db.once("open", async () => {
 		{
 			name: "Grilled Brocolli",
 			description:
-				"Jelly icing cookie tootsie roll danish. Icing croissant sesame snaps cookie oat cake bear claw halvah. Muffin pie I love pudding pudding. Jujubes candy bonbon marshmallow powder lemon drops bonbon - Dinner",
+				"Nutritious broccoli grilled to perfection - Dinner",
 			image: "brocolli.jpg",
 			category: categories[4]._id,
 			price: 7,
@@ -288,7 +288,7 @@ db.once("open", async () => {
 		{
 			name: "Mashed Potatoes",
 			description:
-				"Apple pie sugar plum gummies I love I love. Toffee fruitcake cookie I love shortbread. Wafer candy cotton candy I love icing chocolate bar shortbread - Dinner",
+				"Creamy and buttery comfort classic - Dinner",
 			image: "mashed-potatoes.jpg",
 			category: categories[4]._id,
 			price: 5,
@@ -297,7 +297,7 @@ db.once("open", async () => {
 		{
 			name: "Ceasar Sald",
 			description:
-				"Danish chocolate bar carrot cake carrot cake wafer. Sesame snaps sweet roll I love brownie carrot cake tootsie roll. I love cupcake soufflé dragée lemon drops - Dinner",
+				"Fresh and crisp with tangy dressing - Dinner",
 			image: "ceasar-salad.jpg",
 			category: categories[4]._id,
 			price: 6,
@@ -306,7 +306,7 @@ db.once("open", async () => {
 		{
 			name: "Brussel Sprouts",
 			description:
-				"Apple pie I love sweet jelly beans I love I love jujubes. Brownie cotton candy liquorice liquorice pastry. Ice cream gingerbread pudding I love croissant jelly cake carrot cake - Dinner",
+				"Roasted with savory, crispy exterior - Dinner",
 			image: "brussel-sprouts.jpg",
 			category: categories[4]._id,
 			price: 8,
@@ -317,7 +317,7 @@ db.once("open", async () => {
 		{
 			name: "Red Velvet Cake",
 			description:
-				"Sesame snaps cupcake jelly beans pastry ice cream bonbon chocolate gingerbread tootsie roll. Wafer marshmallow bonbon wafer liquorice I love marzipan sugar plum. Pudding jujubes dragée gummi bears oat cake lollipop pie liquorice - Dinner",
+				"Rich and velvety dessert delight - Dinner",
 			image: "Red-Velvet.png",
 			category: categories[5]._id,
 			price: 8,
@@ -326,7 +326,7 @@ db.once("open", async () => {
 		{
 			name: "Chocolate Brownie",
 			description:
-				"Carrot cake biscuit gummi bears bear claw chupa chups tart dessert sugar plum chupa chups. Jelly beans jelly muffin candy canes I love lemon drops donut macaroon gummies. Gummi bears muffin apple pie powder croissant fruitcake I love - Dinner",
+				"Fudgy chocolatey brownie, sweet treat - Dinner",
 			image: "chocolate-brownie.jpg",
 			category: categories[5]._id,
 			price: 8,
@@ -335,7 +335,7 @@ db.once("open", async () => {
 		{
 			name: "Beignets",
 			description:
-				"Carrot cake jelly beans chocolate bar sweet roll I love cookie sweet I love. Dragée soufflé gummies jelly beans gummi bears I love cake macaroon. Halvah biscuit sweet roll I love sweet roll gingerbread cotton candy cheesecake dessert - Dinner",
+				" Light and fluffy New Orleans pastry - Dinner",
 			image: "beignets.jpg",
 			category: categories[5]._id,
 			price: 6,
@@ -344,7 +344,7 @@ db.once("open", async () => {
 		{
 			name: "Cheesecake bites",
 			description:
-				"Lemon drops cotton candy I love I love donut marshmallow. Cotton candy dragée fruitcake lemon drops I love topping. Soufflé candy canes tiramisu apple pie bear claw toffee - Dinner",
+				"Bite-sized delights for sweet indulgence - Dinner",
 			image: "strawberry-cheese-cake-bites.jpg",
 			category: categories[5]._id,
 			price: 8,
@@ -353,7 +353,7 @@ db.once("open", async () => {
 		{
 			name: "Nutella Crossaint Bread Pudding",
 			description:
-				"Tootsie roll jujubes I love cotton candy toffee sweet roll cheesecake sugar plum candy. Candy I love I love cake I love halvah cheesecake jujubes. Sweet pie lemon drops cake gummies chocolate cake pie I love candy canes. Danish danish powder pie apple pie - Dinner",
+				"Irresistible bread pudding infused with Nutella - Dinner",
 			image: "nutella-crossaint-bread-pudding.jpg",
 			category: categories[5]._id,
 			price: 6,
@@ -371,7 +371,7 @@ db.once("open", async () => {
 		},
 		{
 			name: "Water Bottle",
-			description: "Fuji Water Bottle - Dinner",
+			description: "Spring Water Bottle - Dinner",
 			image: "water.jpg",
 			category: categories[6]._id,
 			price: 3,
@@ -380,7 +380,7 @@ db.once("open", async () => {
 		{
 			name: "Arnold Palmer",
 			description:
-				"Gingerbread soufflé sesame snaps cheesecake fruitcake brownie. Fruitcake I love topping pudding halvah I love chupa chups marshmallow icing. Jelly ice cream biscuit I love I love - Dinner",
+				"Refreshing iced tea and lemonade blend - Dinner",
 			image: "arnold-palmer-drink.jpg",
 			category: categories[6]._id,
 			price: 8,
@@ -389,7 +389,7 @@ db.once("open", async () => {
 		{
 			name: "Strawberry Limeade",
 			description:
-				"Bonbon icing lemon drops powder marzipan. Chocolate bar I love biscuit bear claw bonbon chocolate bar. Sweet roll dragée chupa chups chocolate bar wafer brownie oat cake cookie pie. I love cotton candy muffin dragée marzipan dessert topping sesame snaps - Dinner",
+				"Zesty limeade with fresh strawberry burst - Dinner",
 			image: "strawberry-limemade.jpg",
 			category: categories[6]._id,
 			price: 5,
@@ -398,7 +398,7 @@ db.once("open", async () => {
 		{
 			name: "Shirley Temple",
 			description:
-				"Sweet chocolate cake powder biscuit cotton candy pudding. Cheesecake powder marshmallow chocolate bar gingerbread jelly-o. Marzipan bear claw jelly beans jujubes sugar plum sesame snaps donut gingerbread - Dinner",
+				"Sweet and fizzy mocktail delight - Dinner",
 			image: "shirley-temple.jpg",
 			category: categories[6]._id,
 			price: 8,
