@@ -3,7 +3,7 @@ import "../checkout-info/style.css";
 import { useStoreContext } from "../../utils/GlobalState";
 import { useMutation } from "@apollo/client";
 import { ADD_ORDER } from "../../utils/mutations";
-import { ADD_MULTIPLE_TO_CART } from "../../utils/actions";
+import { ADD_MULTIPLE_TO_CART, CLEAR_CART } from "../../utils/actions";
 import { idbPromise } from "../../utils/helpers";
 import { QUERY_CHECKOUT } from "../../utils/queries";
 import { loadStripe } from "@stripe/stripe-js";
@@ -48,7 +48,7 @@ export default function CheckoutInfo() {
 		if (!state.cart.length) {
 			getCart();
 		}
-	}, [state.cart.length, dispatch]);
+	}, [state.cart.length, dispatch, state.cart]);
 
 	// console.log(state.cart)
 	function calculateTotal() {
@@ -89,6 +89,18 @@ export default function CheckoutInfo() {
 		const { data } = await addOrder({
 			variables: { ...order },
 		});
+
+
+		dispatch({
+			type: CLEAR_CART,
+		  });
+		  
+		idbPromise('cart', 'clear');
+		  
+
+		
+		
+		
 
 		// getCheckout({
 		// 	variables: { products: productIds },
