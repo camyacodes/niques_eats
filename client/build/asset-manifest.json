@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.837f015b.chunk.css",
+    "main.js": "/static/js/main.4d26e598.chunk.js",
+    "main.js.map": "/static/js/main.4d26e598.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.c62b8046.js",
+    "runtime-main.js.map": "/static/js/runtime-main.c62b8046.js.map",
+    "static/css/2.d9ec06b4.chunk.css": "/static/css/2.d9ec06b4.chunk.css",
+    "static/js/2.b74fe278.chunk.js": "/static/js/2.b74fe278.chunk.js",
+    "static/js/2.b74fe278.chunk.js.map": "/static/js/2.b74fe278.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e3c67d9023e6c8b70037963733ca0805.js": "/precache-manifest.e3c67d9023e6c8b70037963733ca0805.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.d9ec06b4.chunk.css.map": "/static/css/2.d9ec06b4.chunk.css.map",
+    "static/css/main.837f015b.chunk.css.map": "/static/css/main.837f015b.chunk.css.map",
+    "static/js/2.b74fe278.chunk.js.LICENSE.txt": "/static/js/2.b74fe278.chunk.js.LICENSE.txt",
+    "static/media/menus.css": "/static/media/dinner-menu-background.df2648ab.png",
+    "static/media/profile2.jpg": "/static/media/profile2.ff105d6e.jpg",
+    "static/media/style.css": "/static/media/salmon_meal.71a95aec.jpg",
+    "static/media/spinner.gif": "/static/media/spinner.ab497855.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c62b8046.js",
+    "static/css/2.d9ec06b4.chunk.css",
+    "static/js/2.b74fe278.chunk.js",
+    "static/css/main.837f015b.chunk.css",
+    "static/js/main.4d26e598.chunk.js"
+  ]
+}
