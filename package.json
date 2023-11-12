@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server/server.js",
+  "homepage": "https://camyacodes.github.io/niques_eats",
   "engines": {
     "node": "14.21.3"
   },
@@ -25,6 +26,7 @@
     "apollo-server-express": "^3.6.4",
     "chalk": "^5.0.1",
     "dotenv": "^16.3.1",
+    "gh-pages": "^6.0.0",
     "graphql": "^16.3.0",
     "jquery": "^3.6.0",
     "moment": "^2.29.1",
