@@ -1,7 +1,9 @@
 # Nique's Eats 
 
-:construction: Note: The live deployment for this site is under maintenance. Fret not! Below is a live demostration of the site and it's functionality. :arrow_down:
-**https://drive.google.com/file/d/1dPq8m-y_NC9txXZplgzXhDgAqoAihkxo/view?usp=sharing**
+:construction: Note: The live deployment for this site is under maintenance. Fret not! Below is a live demostration of the site and it's functionality. 
+
+
+:movie_camera:**https://drive.google.com/file/d/1dPq8m-y_NC9txXZplgzXhDgAqoAihkxo/view?usp=sharing**
 ## Description
 Nique's Eats is a meal delivery service that delivers homemade meals to customers any day of the week. There are dozens of dishes to choose from as well as sides and desserts. Customers can navigate to this site, choose what meals they want, choose what day they would like their meals, and have them delivered right to their doorstep.
 
