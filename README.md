@@ -1,13 +1,7 @@
 # Nique's Eats 
-https://niques-eats.herokuapp.com/
 
 ## Description
 Nique's Eats is a meal delivery service that delivers homemade meals to customers any day of the week. There are dozens of dishes to choose from as well as sides and desserts. Customers can navigate to this site, choose what meals they want, choose what day they would like their meals, and have them delivered right to their doorstep.
-
-## Table of Contents
-- [Description](#description)
-- [User Story](#user-story)
-- [Technologies](#technologies)
 
 ## User Story 
 As a person with a busy schedule, living in Orlando Florida,
@@ -15,7 +9,7 @@ I WANT to order prepared meals ahead of time and have them delivered to my home,
 SO THAT I can enjoy homemade meals without the hassle.
 
 ## Technologies
-test
+
 ### Front-End:
 
 - HTML
