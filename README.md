@@ -1,6 +1,6 @@
 # Nique's Eats 
 
-:construction: THIS REPO IS NO LONGER MAINTAINED. PLEASE VISIT THE UPDATED REPO AND SITE: https://github.com/camyacodes/niques-eats :construction:
+--> THIS REPO IS NO LONGER MAINTAINED. PLEASE VISIT THE UPDATED REPO AND SITE: https://github.com/camyacodes/niques-eats :construction:
 
 <!--
 :movie_camera:**https://drive.google.com/file/d/1dPq8m-y_NC9txXZplgzXhDgAqoAihkxo/view?usp=sharing**
